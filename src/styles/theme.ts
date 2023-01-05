@@ -21,7 +21,7 @@ export const theme = extendTheme({
             "200": "#BCA4FF",
             "100": "#E4DAFF",
         },
-        black: "#111112",
+        black: "#0E1119",
         blue: {
             "500": "#0096B7",
             "400": "#2097ED",
@@ -49,20 +49,15 @@ export const theme = extendTheme({
 
     },
     fonts: {
-        heading: 'Rosario',
-        body: 'Inter'
+        heading: 'Prompt',
+        body: 'Prompt'
     },
     styles: {
         global: {
             body: {
-                bg: 'gray.100',
-                color: 'gray.900'
+                bg: 'black',
+                color: 'gray.100'
             }
         }
-    },
-    // components:{
-    //     Modal:{
-            
-    //     }
-    // }
+    }
 })

@@ -1,0 +1,15 @@
+<svg id="introLogo" class="introLogo" width="74" height="62" viewBox="0 0 74 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.5763 46.7618L54.4927 59.9399V46.7618V1.87359L24.8788 27.1905L1.98584 46.7618H42.5763Z" fill="url(#paint0_linear_404_2)" fill-opacity="0.45"/>
+<path d="M59.4545 37.9034L71.789 46.7618H1.98584L54.4927 1.87359V59.9399L1.98584 1.87359L25.9727 17.0417" stroke="black" stroke-width="1.10244"/>
+<path d="M59.4545 37.9034L71.789 46.7618H1.98584L54.4927 1.87359V59.9399L1.98584 1.87359L25.9727 17.0417" stroke="url(#paint1_linear_404_2)" stroke-width="1.10244"/>
+<defs>
+<linearGradient id="paint0_linear_404_2" x1="1.07156" y1="27.8418" x2="65.9573" y2="27.8418" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3BA1F0"/>
+<stop offset="1" stop-color="#7260DF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_404_2" x1="1.07156" y1="27.8418" x2="65.9573" y2="27.8418" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3BA1F0"/>
+<stop offset="1" stop-color="#7260DF"/>
+</linearGradient>
+</defs>
+</svg>
