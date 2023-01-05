@@ -100,3 +100,78 @@ background: #000;
 .intro{
     animation: 2s hall 7s ease forwards;
 }
+
+@keyframes starLight{
+    0%{
+      opacity: 0.1;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+.home_svg__home .home_svg__star{
+    transform: scale(0.5);
+    opacity: 0.1;
+    animation: starLight 3s ease infinite alternate;
+}
+
+@keyframes comet1{
+    0%{
+      transform: translate(-1000px, -1000px) rotate(45deg)
+    }
+    100%{
+      transform: translate(1000px, 1000px) rotate(45deg)
+    }
+}
+
+.home_svg__home .home_svg__line1{
+    transform: translate(-2000px, -2000px) rotate(45deg);
+    transform-origin: center center;
+    animation: 4s comet1 1s ease infinite alternate;
+ }
+
+ @keyframes comet2{
+    0%{
+        transform: translate(-2000px, 200px)
+    }
+    100%{
+        transform: translate(3000px, 200px)
+    }
+}
+
+.home_svg__home .home_svg__line2{
+    transform: translate(-2000px, 200px);
+    transform-origin: center center;
+    animation: 4s comet2 3s ease infinite alternate;
+}
+
+ @keyframes comet3{
+    0%{
+        transform: translate(-1000px, 400px) rotate(-45deg)
+    }
+    100%{
+        transform: translate(2000px, -2500px) rotate(-45deg)
+    }
+}
+
+.home_svg__home .home_svg__line3{
+    transform: translate(100px, 2000px) rotate(-40deg);
+    transform-origin: center center;
+    animation: 4s comet3 4s ease infinite alternate;
+ }
+
+ @keyframes peopleIconBordas{
+    0%{
+        stroke-dasharray: 1000 1600;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 1000 1600;
+        stroke-dashoffset: 4000;
+    }
+}
+
+ .people_logo_svg__icon_people path{
+    animation: peopleIconBordas 5s ease infinite alternate;
+}
