@@ -1,7 +1,6 @@
 import { InputGroup, InputLeftElement, FormControl, InputProps, Icon, Input as ChakraInput, FormErrorMessage } from "@chakra-ui/react";
 import { Ref, useEffect, useState } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
-import InputMask, {Props} from "react-input-mask";
 import { mask as applyMask, maskMoney as applyMoney } from "../../../utils/ReMask";
 
 interface FormInputProps extends InputProps{
@@ -77,14 +76,6 @@ export function MoneyInput({ name, type, icon, variant = "", value = "", mask = 
                 
         }
     }
-
-    return (
-        <InputMask mask="99/99/9999" value={value} onChange={onChange}>
-            {
-                (inputProps: any) => <ChakraInput {...inputProps} {...rest} type="tel" disableUnderline />
-            }
-        </InputMask>
-    );
 }
 
 //export default forwardRef(Input);
