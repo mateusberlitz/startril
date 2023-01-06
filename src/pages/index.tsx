@@ -25,6 +25,10 @@ import { WaveCard } from '../components/WaveCard';
 import { useState } from 'react';
 
 
+import DevIcon from '../../public/dev.svg';
+import MidiaIcon from '../../public/midia.svg';
+
+
 export default function Home() {
     const [activeBox, setActiveBox] = useState(1);
 
@@ -45,10 +49,10 @@ export default function Home() {
         </Flex>
 
         <Flex flexDir="column" w="100%">
-            <Flex flexDir="column" backgroundSize="100%" backgroundRepeat={"no-repeat"} backgroundPosition="0 -90px">
+            <Flex flexDir="column">
                 <Header/>
 
-                <Flex pos="absolute" zIndex={-1} w='100%'>
+                <Flex pos="absolute" zIndex={-1} w='100%' top="-215px">
                     <HomeBackground/>
                 </Flex>
 
@@ -95,18 +99,44 @@ export default function Home() {
                                 </HStack>
                             </HStack>
                         </Stack>
+                    </Stack>
+                </Flex>
 
-                        <Stack pt="48" spacing="20">
+                <Flex w="100%" bg="#080510">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Stack pt="32" spacing="20">
                             <Stack>
                                 <ColoredTag textAlign="center">O trabalho</ColoredTag>
                                 <Heading color="white" fontSize="6xl" fontWeight={"light"} textAlign="center">Foco em transformar</Heading>
                             </Stack>
 
-                            <HStack>
-                                <Stack spacing="8" bg="linear-gradient(90deg, rgba(59, 161, 240, 0.25) -1.31%, rgba(114, 96, 223, 0.25) 91.65%);" maxW="33%" p="10" border="1px solid" borderColor="gray.800">
+                            <HStack spacing="7">
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
                                 {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                                     <HStack spacing="6">
                                         <UiEUx/>
+                                        <Text color="gray.600">Sites e Sistemas</Text>
+                                    </HStack>
+                                    <Text fontSize={"2xl"} fontWeight="semibold">Desenvolvimento</Text>
+                                    <Text color="gray.500">Programamos a sua plataforma digital com todas as interações e transações necessárias entre a sua equipe e seu consumidor final, com alta performance e segurança.</Text>
+                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                </Stack>
+
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
+                                {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
+                                    <HStack spacing="6">
+                                        <DevIcon/>
+                                        <Text color="gray.600">Mídias sociais</Text>
+                                    </HStack>
+                                    <Text fontSize={"2xl"} fontWeight="semibold">Criação Conteúdo</Text>
+                                    <Text color="gray.500">Produzimos artes, publicações e anúncios que criam conectividade com o seu público alvo, assim acelerando os seus resultados e crescimento.</Text>
+                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                </Stack>
+
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
+                                {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
+                                    <HStack spacing="6">
+                                        <MidiaIcon/>
                                         <Text color="gray.600">UI & UX</Text>
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="semibold">Design de Interfaces</Text>
@@ -123,10 +153,10 @@ export default function Home() {
 
                             <Stack w="50%" spacing="12">
                                 <Stack spacing="6">
-                                    <TextTag>O propósito</TextTag>
+                                    <TextTag>O propósito é</TextTag>
                                     <StarDivider maxW="120px"/>
                                 </Stack>
-                                <Heading color="white" fontSize="6xl" fontWeight={"light"}>Faça a renovação digital da sua empresa</Heading>
+                                <Heading color="white" fontSize="6xl" fontWeight={"light"}>Fazer a renovação digital da sua empresa</Heading>
                                 <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
 
                             </Stack>
