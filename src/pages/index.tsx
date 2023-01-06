@@ -44,9 +44,9 @@ export default function Home() {
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 
-        <Flex className="intro" zIndex={99} w="100vw" h="100vh" position={"fixed"} bg="black" justifyContent={"center"} alignItems="center">
+        {/* <Flex className="intro" zIndex={99} w="100vw" h="100vh" position={"fixed"} bg="black" justifyContent={"center"} alignItems="center">
             <StartrilIcon/>
-        </Flex>
+        </Flex> */}
 
         <Flex flexDir="column" w="100%">
             <Flex flexDir="column">
