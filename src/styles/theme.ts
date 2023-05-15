@@ -47,6 +47,8 @@ export const theme = extendTheme({
             "500": "#28C76F"
         },
 
+        gradient: "linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%)"
+
     },
     fonts: {
         heading: 'Prompt',

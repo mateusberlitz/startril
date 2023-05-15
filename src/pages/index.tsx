@@ -27,6 +27,8 @@ import { useState } from 'react';
 
 import DevIcon from '../../public/dev.svg';
 import MidiaIcon from '../../public/midia.svg';
+import { DnaAnimation } from '../components/DnaAnimation';
+import { ProductAnimation } from '../components/ProductAnimation';
 
 
 export default function Home() {
@@ -61,8 +63,8 @@ export default function Home() {
 
                         <HStack alignItems={"flex-start"}>
                             <Stack w="55%" spacing="12">
-                                <Heading color="white" fontSize="6xl" fontWeight={"regular"}>Criamos Sites, Aplicações e Design para o seu objetivo.</Heading>
-                                <Text color="gray.300">Quer desenvolver uma aplicação de ponta, com telas que se diferencie no visual e no funcional?</Text>
+                                <Heading color="white" fontSize="6xl" fontWeight={"regular"}>Criamos aplicações para quem quer se destacar!</Heading>
+                                <Text color="gray.300">E estar na internet e demonstrar como é completo, diferente e se conecta com o cliente.</Text>
 
                                 <HStack spacing="8">
                                     <MainButton>Contratar</MainButton>
@@ -111,10 +113,21 @@ export default function Home() {
                             </Stack>
 
                             <HStack spacing="7">
-                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                                 {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                                     <HStack spacing="6">
                                         <UiEUx/>
+                                        <Text color="gray.600">UI & UX</Text>
+                                    </HStack>
+                                    <Text fontSize={"2xl"} fontWeight="semibold">Design de Interfaces</Text>
+                                    <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
+                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                </Stack>
+
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
+                                {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
+                                    <HStack spacing="6">
+                                        <DevIcon/>
                                         <Text color="gray.600">Sites e Sistemas</Text>
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="semibold">Desenvolvimento</Text>
@@ -122,33 +135,23 @@ export default function Home() {
                                     <OutlineButton>Ver detalhes</OutlineButton>
                                 </Stack>
 
-                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
+                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                                 {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                                     <HStack spacing="6">
-                                        <DevIcon/>
+                                        <MidiaIcon/>
                                         <Text color="gray.600">Mídias sociais</Text>
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="semibold">Criação Conteúdo</Text>
                                     <Text color="gray.500">Produzimos artes, publicações e anúncios que criam conectividade com o seu público alvo, assim acelerando os seus resultados e crescimento.</Text>
                                     <OutlineButton>Ver detalhes</OutlineButton>
                                 </Stack>
-
-                                <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900">
-                                {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
-                                    <HStack spacing="6">
-                                        <MidiaIcon/>
-                                        <Text color="gray.600">UI & UX</Text>
-                                    </HStack>
-                                    <Text fontSize={"2xl"} fontWeight="semibold">Design de Interfaces</Text>
-                                    <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
-                                    <OutlineButton>Ver detalhes</OutlineButton>
-                                </Stack>
                             </HStack>
                         </Stack>
 
                         <HStack pt="48" spacing="20">
-                            <Stack>
-                                <Img src="./working.png"/>
+                            <Stack w="50%">
+                                <DnaAnimation/>
+                                {/* <Img src="./working.png"/> */}
                             </Stack>
 
                             <Stack w="50%" spacing="12">
@@ -248,11 +251,11 @@ export default function Home() {
                                 </Stack>
                                 <Heading color="white" fontSize="5xl" fontWeight={"light"}>Crie seus projetos conectado inteiramente conosco.</Heading>
                                 <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação dos projetos mais incríveis e diferenciados.</Text>
-
+                                <MainButton>Ver Mais</MainButton>
                             </Stack>
 
                             <HStack>
-                                
+                                <ProductAnimation/>
                             </HStack>
                         </HStack>
                     </Stack>
