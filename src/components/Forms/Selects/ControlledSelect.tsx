@@ -9,6 +9,7 @@ interface FormSelectProps extends SelectProps{
     variant?: string;
     leftIcon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
     value?: string;
+    label?: string;
 
     error?: FieldError;
 }
@@ -18,14 +19,14 @@ interface ControlledSelectProps extends FormSelectProps{
     control?: any;
 }
 
-export function ControlledSelect({control, children, name, value, error, ...rest}:ControlledSelectProps){
+export function ControlledSelect({control, children, name, value, label, error, ...rest}:ControlledSelectProps){
     return(
         <Controller
             name={name}
             control={control}
             defaultValue={value}
             render={({ field: {ref, ...select} }) => 
-                <Select {...select} selectRef={ref} name={name} value={value} error={error} {...rest}>
+                <Select {...select} selectRef={ref} name={name} value={value} error={error} label={label} {...rest}>
                     {children}
                 </Select>
             }

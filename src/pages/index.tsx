@@ -13,9 +13,6 @@ import BackgroundStarLight from '../../public/bg_star_light.svg';
 import PeopleIcon from '../../public/people_logo.svg';
 import HomeBackground from '../../public/home.svg';
 import React from '../../public/react.svg';
-import Laravel from '../../public/laravel.svg';
-import Figma from '../../public/figma.svg';
-import Next from '../../public/next.svg';
 import UiEUx from '../../public/uieux.svg';
 import LogoWhite from '../../public/logo_tin_white.svg';
 import { Edit } from 'react-feather';
@@ -26,9 +23,14 @@ import { useState } from 'react';
 
 
 import DevIcon from '../../public/dev.svg';
-import MidiaIcon from '../../public/midia.svg';
+import BgCones from '../../public/bg_star_cones.svg';
+import AdsIcon from '../../public/ads.svg';
 import { DnaAnimation } from '../components/DnaAnimation';
 import { ProductAnimation } from '../components/ProductAnimation';
+import { SiteAnimation } from '../components/SiteAnimation';
+import { AdsAnimation } from '../components/AdsAnimation';
+import { Select } from '../components/Forms/Selects/Select';
+import { Footer } from '../components/Footer';
 
 
 export default function Home() {
@@ -63,12 +65,12 @@ export default function Home() {
 
                         <HStack alignItems={"flex-start"}>
                             <Stack w="55%" spacing="12">
-                                <Heading color="white" fontSize="6xl" fontWeight={"regular"}>Criamos aplicações para quem quer se destacar!</Heading>
+                                <Heading color="white" fontSize="5xl" fontWeight={"regular"}>Criamos aplicações para quem quer se destacar!</Heading>
                                 <Text color="gray.300">E estar na internet e demonstrar como é completo, diferente e se conecta com o cliente.</Text>
 
                                 <HStack spacing="8">
                                     <MainButton>Contratar</MainButton>
-                                    <Button variant='link' color="white">Ver serviços</Button>
+                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
                                 </HStack>
                             </Stack>
                             <Stack w="45%">
@@ -77,30 +79,11 @@ export default function Home() {
                             </Stack>
                         </HStack>
 
-                        <Stack spacing="5">
-                            <Text color="gray.300">Tecnologias utilizadas:</Text>
-                            <HStack spacing="7" color="white">
-                                <HStack>
-                                    <Figma/>
-                                    <Text>Figma</Text>
-                                </HStack>
+                        <Flex>
+                            <HStack>
 
-                                <HStack>
-                                    <React/>
-                                    <Text>React</Text>
-                                </HStack>
-
-                                <HStack>
-                                    <Next />
-                                    <Text>Next.js</Text>
-                                </HStack>
-
-                                <HStack>
-                                    <Laravel />
-                                    <Text>Laravel</Text>
-                                </HStack>
                             </HStack>
-                        </Stack>
+                        </Flex>
                     </Stack>
                 </Flex>
 
@@ -119,7 +102,7 @@ export default function Home() {
                                         <UiEUx/>
                                         <Text color="gray.600">UI & UX</Text>
                                     </HStack>
-                                    <Text fontSize={"2xl"} fontWeight="semibold">Design de Interfaces</Text>
+                                    <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                                     <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
                                     <OutlineButton>Ver detalhes</OutlineButton>
                                 </Stack>
@@ -130,7 +113,7 @@ export default function Home() {
                                         <DevIcon/>
                                         <Text color="gray.600">Sites e Sistemas</Text>
                                     </HStack>
-                                    <Text fontSize={"2xl"} fontWeight="semibold">Desenvolvimento</Text>
+                                    <Text fontSize={"2xl"} fontWeight="regular" color="white">Desenvolvimento</Text>
                                     <Text color="gray.500">Programamos a sua plataforma digital com todas as interações e transações necessárias entre a sua equipe e seu consumidor final, com alta performance e segurança.</Text>
                                     <OutlineButton>Ver detalhes</OutlineButton>
                                 </Stack>
@@ -138,11 +121,11 @@ export default function Home() {
                                 <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                                 {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                                     <HStack spacing="6">
-                                        <MidiaIcon/>
-                                        <Text color="gray.600">Mídias sociais</Text>
+                                        <AdsIcon/>
+                                        <Text color="gray.600">Tráfego Pago</Text>
                                     </HStack>
-                                    <Text fontSize={"2xl"} fontWeight="semibold">Criação Conteúdo</Text>
-                                    <Text color="gray.500">Produzimos artes, publicações e anúncios que criam conectividade com o seu público alvo, assim acelerando os seus resultados e crescimento.</Text>
+                                    <Text fontSize={"2xl"} fontWeight="regular" color="white">Anúncios e Impulsão</Text>
+                                    <Text color="gray.500">Posicionamos e direcionamos a sua empresa ao público certo, impulsionando a sua visibilidade e ampliando o retorno sobre o investimento.</Text>
                                     <OutlineButton>Ver detalhes</OutlineButton>
                                 </Stack>
                             </HStack>
@@ -160,7 +143,7 @@ export default function Home() {
                                     <StarDivider maxW="120px"/>
                                 </Stack>
                                 <Heading color="white" fontSize="6xl" fontWeight={"light"}>Fazer a renovação digital da sua empresa</Heading>
-                                <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
+                                <Text color="gray.500">Não deixe os seus resultados serem prejudicados por não estar atualizado! Transferimos a sua empresa para o digital!</Text>
 
                             </Stack>
                         </HStack>
@@ -239,7 +222,7 @@ export default function Home() {
                                     <StarDivider maxW="120px"/>
                                 </Stack>
                                 <Heading color="white" fontSize="5xl" fontWeight={"light"}>Desfrute da tecnologia ao seu favor</Heading>
-                                <Text color="gray.500">O mercado está cada vez mais competitivo, não só na quantidade, mas na qualidade dos serviços e produtos que são entregues aos seus consumidores finais. Grandes empresas no mercado atual são admiradas e confiadas por bilhões de pessoas sabe qual é o diferencial delas? A maneira em que usam a tecnologia e internet ao seu favor para automizar e agilizar as suas entregas.</Text>
+                                <Text color="gray.500">No mercado cada vez mais competitivo, destaque-se ao entregar serviços e produtos de qualidade aos consumidores finais. O diferencial das grandes empresas admiradas e confiáveis reside na utilização estratégica da tecnologia e internet para automatizar e agilizar suas operações.</Text>
                             </Stack>
                         </HStack>
 
@@ -249,8 +232,8 @@ export default function Home() {
                                     <TextTag>Product Design</TextTag>
                                     <StarDivider maxW="120px"/>
                                 </Stack>
-                                <Heading color="white" fontSize="5xl" fontWeight={"light"}>Crie seus projetos conectado inteiramente conosco.</Heading>
-                                <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação dos projetos mais incríveis e diferenciados.</Text>
+                                <Heading color="white" fontSize="5xl" fontWeight={"light"}>Desenvolvemos o seu produto digital</Heading>
+                                <Text color="gray.500">Construímos junto com você o seu negócio dentro do digital, como um e-commerce, SaaS, aplicativo, e entre outros.</Text>
                                 <MainButton>Ver Mais</MainButton>
                             </Stack>
 
@@ -258,6 +241,62 @@ export default function Home() {
                                 <ProductAnimation/>
                             </HStack>
                         </HStack>
+
+                        <HStack pt="48" spacing="20">
+                            <HStack>
+                                <SiteAnimation/>
+                            </HStack>
+
+                            <Stack w="50%" spacing="12">
+                                <Stack spacing="6">
+                                    <TextTag>Sites Incríveis</TextTag>
+                                    <StarDivider maxW="120px"/>
+                                </Stack>
+                                <Heading color="white" fontSize="5xl" fontWeight={"light"}>Criamos sites como ninguém</Heading>
+                                <Text color="gray.500">Podemos criar tudo aquilo que for necessário para engajar o usuário dentro do seu site, entendemos ele como ninguém e entregamos as melhores funcionalidades. Sites desenvolvidos por nós só conhecem alta velocidade e performance.</Text>
+                                <MainButton>Ver Mais</MainButton>
+                            </Stack>
+                        </HStack>
+
+                        <HStack pt="48" spacing="20">
+                            <Stack w="50%" spacing="12">
+                                <Stack spacing="6">
+                                    <TextTag>Tráfego Pago</TextTag>
+                                    <StarDivider maxW="120px"/>
+                                </Stack>
+                                <Heading color="white" fontSize="5xl" fontWeight={"light"}>Aumente suas vendas e engajamento fazendo anúncios</Heading>
+                                <Text color="gray.500">Posicionamos estrategicamente o seu negócio no digital para ter o maior alcance ao público alvo, aumentando suas vendas e engajamento para sua marca. Com maior visibilidade, atraia novos clientes e fortaleça o relacionamento com os seus clientes.</Text>
+                                <MainButton>Ver Mais</MainButton>
+                            </Stack>
+
+                            <HStack>
+                                <AdsAnimation/>
+                            </HStack>
+                        </HStack>
+                    </Stack>
+                </Flex>
+
+                <Flex w="100%" bg="#080510">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Flex pos="relative" bg="#3F3F3F">
+                            <Box pos="absolute" zIndex="1" w="100%">
+                                <BgCones/>
+                            </Box>
+
+                            <HStack justifyContent={"space-between"} w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h="275px" p="14">
+                                <Stack maxW="430px" spacing="6">
+                                    <Heading color="white">Comece agora</Heading>
+                                    <Text>Que tal solicitar nossos serviços através de um briefing prático que pode nos contar exatamente o que você precisa?</Text>
+                                </Stack>
+                                <Stack>
+                                    <Select name="demand" label="Selecione sua demanda">
+                                        <option value="" style={{ background: '#0E1119' }}>Selecionar</option>
+                                        <option value="Criar website" style={{ background: '#0E1119' }}>Criar website</option>
+                                        <option value="Criar telas" style={{ background: '#0E1119' }}>Criar telas</option>
+                                    </Select>
+                                </Stack>
+                            </HStack>
+                        </Flex>
                     </Stack>
                 </Flex>
             </Flex>
@@ -267,6 +306,7 @@ export default function Home() {
             <Heading color="white" fontSize="6xl" fontWeight={"regular"}>Desenvolvemos Sites, Aplicações e Design para o seu objetivo.</Heading>
 
         </Flex> */}
+        <Footer />
         
     </Box>
   )

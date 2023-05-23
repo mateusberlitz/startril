@@ -1,4 +1,4 @@
-import { FormControl, SelectProps, Select as ChakraSelect, FormErrorMessage } from "@chakra-ui/react";
+import { FormControl, SelectProps, Select as ChakraSelect, FormErrorMessage, FormLabel } from "@chakra-ui/react";
 import { ReactNode, Ref, useEffect, useState } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
 
@@ -9,6 +9,7 @@ interface FormSelectProps extends SelectProps{
     leftIcon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 
     value?: string;
+    label?: string;
     error?: FieldError;
     register?: UseFormRegister<any>;
     onChange?: (value: any) => void;
@@ -17,7 +18,7 @@ interface FormSelectProps extends SelectProps{
     selected?: number;
 }
 
-export function Select({ name, children, variant, selectRef, value = "", selected, error, register, onChange, ...rest } : FormSelectProps){
+export function Select({ name, children, variant, selectRef, label, isRequired, value = "", selected, error, register, onChange, ...rest } : FormSelectProps){
     const [controlledValue, setControlledValue] = useState("");
 
     function getRegister(){
@@ -49,7 +50,13 @@ export function Select({ name, children, variant, selectRef, value = "", selecte
 
     return(
         <FormControl pos="relative" isInvalid={!!error}>
-            <ChakraSelect {...getRegister()} borderRadius="3px" h="50px" fontWeight={controlledValue ? 'semibold' : 'regular'} name={name} fontSize="sm" borderColor={"gray.200"} bgColor={"gray.100"} _hover={ {bgColor: 'gray.500'} } size="lg" color={controlledValue ? "black" : "gray.700"} {...rest}>
+            {
+                label && (
+                    <FormLabel zIndex="1" cursor="text" color={variant === "white" ? "white" : "blue.primary"} transition="ease 0.2s" fontWeight="normal" fontSize={"md"} top={controlledValue === "" ? "14px" : "6px"}>{label} {isRequired && '*'}</FormLabel>
+                )
+            }
+
+            <ChakraSelect {...getRegister()} colorScheme="white" borderRadius="1px" h="50px" fontWeight={controlledValue ? 'semibold' : 'regular'} cursor="pointer" name={name} fontSize="sm" borderColor={"gray.800"} bgColor={"transparent"} _hover={ {bgColor: "rgba(255,255,255,0.04)", borderColor: "gray.600"} } size="lg" color={controlledValue ? "white" : "gray.text"} {...rest}>
                 {children}
             </ChakraSelect>
 

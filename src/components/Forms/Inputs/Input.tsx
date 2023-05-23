@@ -96,7 +96,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
             <InputGroup pos="relative">
                 <InputLeftElement w="55px" h="50px" pointerEvents="none" ><Icon as={icon}  stroke={error ? "#e53e3e" : (controlledValue === "" ? "#a0a3bd" : "#7FCEFF")} fill="none" w="18" h="18px" strokeWidth="3"/></InputLeftElement>
 
-                <ChakraInput {...getControlledInputAttributes()} fontWeight="semibold" pt="14px" name={name} h="50px" pl="55px" type={type} fontSize="sm" borderColor={variant === 'outline' ? ( colorScheme === 'dark' ? "gray.700"  : "gray.400" ) : "transparent"} bgColor={colorScheme === 'dark' ? 'gray.900' : '#eff0f6'} _hover={{borderColor: 'none', bg: 'gray.200'}} _focus={{borderColor:"blue.500", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} size="lg" _placeholder={{color: "gray.600"}} border="1px" borderRadius="3px" {...rest}/>
+                <ChakraInput {...getControlledInputAttributes()} fontWeight="semibold" pt="14px" name={name} h="50px" pl="55px" type={type} fontSize="sm" borderColor={variant === 'outline' ? ( colorScheme === 'dark' ? "gray.700"  : "gray.400" ) : "transparent"} bgColor={colorScheme === 'dark' ? 'gray.900' : '#eff0f6'} _hover={{borderColor: 'none', bg: 'gray.200'}} _focus={{borderColor:"blue.500", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} size="lg" _placeholder={{color: "gray.600"}} border="1px" borderRadius="1px" {...rest}/>
             </InputGroup>
 
             { !!error && (
@@ -111,7 +111,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
         <FormControl pos="relative" isInvalid={!!error} maxW={maxW}>
             {
                 label && (
-                    <FormLabel zIndex="1" cursor="text" color="gray.600" transition="ease 0.2s" pos="absolute" fontWeight="normal" fontSize={controlledValue === "" ? "sm" : "10px"} top={controlledValue === "" ? "14px" : "6px"}  _focus={{top: "6px", fontSize: "10", color: "black"}} left="17px">{label}</FormLabel>
+                    <FormLabel zIndex="1" cursor="text" color="white" transition="ease 0.2s" fontWeight="normal" fontSize={"11px"} textTransform={"uppercase"}>{label}</FormLabel>
                 )
             }
 
@@ -124,7 +124,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
 
                 {...getControlledInputAttributes()}
                 
-                name={name} pt="14px" h="50px" pl="4" type={type} fontWeight="semibold" fontSize="sm" borderColor="gray.200" bgColor={'gray.100'} size="lg" _hover={{borderColor: 'none', bg: 'gray.200'}} _focus={{borderColor:"black", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} _placeholder={{color: "gray.600"}} border="1px" borderRadius="3px" {...rest}
+                name={name} h="50px" pl="4" type={type} fontSize="sm" bgColor={'transparent'} border="1px solid" fontWeight="normal" borderColor="rgba(255,255,255,0.2)" size="lg" _hover={{borderColor: 'white'}} transition="all ease 0.5s" _focus={{borderColor:"white", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} _placeholder={{color: "rgba(255,255,255,0.4)", fontWeight: "normal"}} color="white" borderRadius="1px" {...rest}
             />
         
             { !!error && (

@@ -123,10 +123,10 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
                 <Stack bg="rgba(0,0,0,0.7)" zIndex={2} backdropFilter="blur(30px)" spacing="0" h="100%" maxW="fit-content">
                     <HStack spacing="0" borderBottom="1px solid" h="100px" borderTop="1px solid" borderColor="gray.800">
                         <Flex w="100px" h="100px" alignItems={"center"} justifyContent="center" borderRight="1px solid" borderColor="gray.800">
-                            <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"}>{number}</Text>
+                            <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} color="white">{number}</Text>
                         </Flex>
                         <Flex h="100px" alignItems={"center"} justifyContent="center" px="5">
-                            <Text fontWeight={"semibold"} fontSize="2xl">{title}</Text>
+                            <Text fontWeight={"semibold"} fontSize="2xl" color="white">{title}</Text>
                         </Flex>
                     </HStack>
                     <Stack p="12" spacing="10" h="100%">

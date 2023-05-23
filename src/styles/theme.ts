@@ -1,8 +1,9 @@
 import { extendTheme } from '@chakra-ui/react';
+import { switchTheme } from './switch';
 
 export const theme = extendTheme({
     shadows: {
-        outline: `0 0 0 3px #DB2C2C`,
+        outline: `0 0 0 3px #3BA1F0`,
     },
     colors: {
         gray: {
@@ -14,6 +15,7 @@ export const theme = extendTheme({
             "400": "#EFF0F6",
             "100": "#F7F7FC",
             "50" : "#FCFCFC",  
+            "text": "#BABABD",
         },
         purple: {
             "400": "#2A00A2",
@@ -58,8 +60,14 @@ export const theme = extendTheme({
         global: {
             body: {
                 bg: 'black',
-                color: 'gray.100'
-            }
+                color: 'gray.text',
+            },
         }
-    }
+    },
+    components: {
+        Heading: {
+            color: "#fff"
+        },
+        Switch: switchTheme
+    },
 })

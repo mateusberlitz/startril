@@ -1,17 +1,19 @@
-import { Button, HStack, Icon, Img, Stack, Text } from "@chakra-ui/react";
+import { Button, HStack, Icon, Img, Stack, Switch, Text } from "@chakra-ui/react";
 import gsap from "gsap";
 import Link from "next/link";
-import { useLayoutEffect, useRef } from "react";
+import { ChangeEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { OutlineButton } from "../Buttons/OutlineButton";
 import { ChevronDown } from "react-feather";
+import { useRouter } from "next/router";
 gsap.registerPlugin(ScrollTrigger);
 
 export function Header(){
     const navRef = useRef(null);
+    const router = useRouter();
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const attach = gsap.fromTo(navRef.current, { 
             backgroundColor: "transparent" ,
             position: "relative",
@@ -38,6 +40,8 @@ export function Header(){
           
         return () => ctx.revert();
     }, [])
+
+    const [isPortugueseLanguage, setIsPortugueseLanguage] = useState(true);
     
     return(
         <Stack as="nav" alignItems="center" pos="relative" top="0" w="100%" left="0" h="140px" transition="0.4s" justifyContent={"center"}>
@@ -47,11 +51,18 @@ export function Header(){
                 <Link href="/"><Img src="startril.svg"/></Link>
 
                 <HStack spacing="7">
-                    <Link href="Home">Home</Link>
-                    <Link href="Sobre Nós">Sobre nós</Link>
+                    <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
+                    <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
                     <Text fontWeight={"regular"} color="gray.600">|</Text>
-                    <Button rightIcon={<Icon as={ChevronDown} />} fontWeight="regular" variant="ghost" color="gray.600" _hover={{bg: "transparent", color:"white"}}>Idioma: PT</Button>
-                    <OutlineButton size="lg">Iniciar Projeto</OutlineButton>
+                    
+                    <HStack>
+                        <Text onClick={() => setIsPortugueseLanguage(true)} cursor="pointer" color={isPortugueseLanguage ? "white" : ""}>PT</Text>
+                        <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
+                        <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
+                    </HStack>
+                    {/* <Button rightIcon={<Icon as={ChevronDown} />} fontWeight="regular" variant="ghost" color="gray.600" _hover={{bg: "transparent", color:"white"}}>Idioma: PT</Button> */}
+                    
+                    <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
                 </HStack>
             </HStack>
         </Stack>
