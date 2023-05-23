@@ -3,9 +3,6 @@ import AdsSketch from '../../../public/ads_animation.svg';
 import { gsap } from 'gsap';
 import { HStack, Stack, Text } from '@chakra-ui/react';
 import { ArrowUp, BarChart, Heart } from 'react-feather';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-
-gsap.registerPlugin(DrawSVGPlugin);
 
 export function AdsAnimation(){
     useEffect(() => {
@@ -82,9 +79,12 @@ export function AdsAnimation(){
 
                 timeline
                 .fromTo(".ads_animation_svg__line_chart", { 
-                    drawSVG: '0%'
+                    //drawSVG: '0%'
+                    strokeDasharray: 500,
+                    strokeDashoffset: 500
                 }, {    
-                    drawSVG: '100%',
+                    //drawSVG: '100%',
+                    strokeDashoffset: 0,
                     duration: 4
                 })
                 .fromTo("#invest", { 
