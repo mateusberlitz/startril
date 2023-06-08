@@ -14,6 +14,7 @@ import PeopleIcon from '../../public/people_logo.svg';
 import HomeBackground from '../../public/home.svg';
 import React from '../../public/react.svg';
 import UiEUx from '../../public/uieux.svg';
+import Ui from '../../public/ui.svg';
 import LogoWhite from '../../public/logo_tin_white.svg';
 import { Edit } from 'react-feather';
 import { WaveEffect } from '../components/WaveEffect';
@@ -31,9 +32,11 @@ import { SiteAnimation } from '../components/SiteAnimation';
 import { AdsAnimation } from '../components/AdsAnimation';
 import { Select } from '../components/Forms/Selects/Select';
 import { Footer } from '../components/Footer';
+import { useRouter } from 'next/router';
 
 
 export default function Home() {
+    const router = useRouter();
     const [activeBox, setActiveBox] = useState(1);
 
     const handleActiveBox = (number: number) => {
@@ -44,7 +47,7 @@ export default function Home() {
     <Box pos="relative" className='main'>
         <Head>
             <title>Startril</title>
-            <meta name="description" content="Criamos Sites, Aplicações e Design para o seu objetivo." />
+            <meta name="description" content="Transformamos seu negócio com sites, anúncios e design" />
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 
@@ -95,16 +98,16 @@ export default function Home() {
                                 <Heading color="white" fontSize="6xl" fontWeight={"light"} textAlign="center">Foco em transformar</Heading>
                             </Stack>
 
-                            <HStack spacing="7">
+                            <Stack spacing="7" direction={["column", "column", "row", "row"]}>
                                 <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                                 {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                                     <HStack spacing="6">
-                                        <UiEUx/>
+                                        <Ui/>
                                         <Text color="gray.600">UI & UX</Text>
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                                     <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
-                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                    <OutlineButton onClick={() => router.push('/design')}>Ver detalhes</OutlineButton>
                                 </Stack>
 
                                 <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
@@ -115,7 +118,7 @@ export default function Home() {
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="regular" color="white">Desenvolvimento</Text>
                                     <Text color="gray.500">Programamos a sua plataforma digital com todas as interações e transações necessárias entre a sua equipe e seu consumidor final, com alta performance e segurança.</Text>
-                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                    <OutlineButton onClick={() => router.push('/dev')}>Ver detalhes</OutlineButton>
                                 </Stack>
 
                                 <Stack spacing="8" bg="rgba(255,255,255,0.03)" maxW="33%" p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
@@ -126,9 +129,9 @@ export default function Home() {
                                     </HStack>
                                     <Text fontSize={"2xl"} fontWeight="regular" color="white">Anúncios e Impulsão</Text>
                                     <Text color="gray.500">Posicionamos e direcionamos a sua empresa ao público certo, impulsionando a sua visibilidade e ampliando o retorno sobre o investimento.</Text>
-                                    <OutlineButton>Ver detalhes</OutlineButton>
+                                    <OutlineButton onClick={() => router.push('/ads')}>Ver detalhes</OutlineButton>
                                 </Stack>
-                            </HStack>
+                            </Stack>
                         </Stack>
 
                         <HStack pt="48" spacing="20">
@@ -285,7 +288,7 @@ export default function Home() {
 
                             <HStack justifyContent={"space-between"} w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h="275px" p="14">
                                 <Stack maxW="430px" spacing="6">
-                                    <Heading color="white">Comece agora</Heading>
+                                    <Heading color="white">É fácil começar agora</Heading>
                                     <Text>Que tal solicitar nossos serviços através de um briefing prático que pode nos contar exatamente o que você precisa?</Text>
                                 </Stack>
                                 <Stack>

@@ -1,11 +1,11 @@
-import { Button, HStack, Icon, Img, Stack, Switch, Text } from "@chakra-ui/react";
+import { Button, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, HStack, Icon, Img, Stack, Switch, Text, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { ChangeEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { OutlineButton } from "../Buttons/OutlineButton";
-import { ChevronDown } from "react-feather";
+import { ChevronDown, Menu } from "react-feather";
 import { useRouter } from "next/router";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +42,13 @@ export function Header(){
     }, [])
 
     const [isPortugueseLanguage, setIsPortugueseLanguage] = useState(true);
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    });
     
     return(
         <Stack as="nav" alignItems="center" pos="relative" top="0" w="100%" left="0" h="140px" transition="0.4s" justifyContent={"center"}>
@@ -50,7 +57,54 @@ export function Header(){
             {/* pos="fixed" top="12px" bg="rgba(0,0,0,0.4)" backdropFilter={"blur(40px)"} */}
                 <Link href="/"><Img src="startril.svg"/></Link>
 
-                <HStack spacing="7">
+                {
+                    isWideVersion ? (
+                        <HStack spacing="7">
+                            <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
+                            <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
+                            <Text fontWeight={"regular"} color="gray.600">|</Text>
+                            
+                            <HStack>
+                                <Text onClick={() => setIsPortugueseLanguage(true)} cursor="pointer" color={isPortugueseLanguage ? "white" : ""}>PT</Text>
+                                <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
+                                <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
+                            </HStack>
+                            {/* <Button rightIcon={<Icon as={ChevronDown} />} fontWeight="regular" variant="ghost" color="gray.600" _hover={{bg: "transparent", color:"white"}}>Idioma: PT</Button> */}
+                            
+                            <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
+                        </HStack>
+                    ) : (
+                        <>
+                            <Button bg="transparent" onClick={onOpen} px="2">
+                                <Text mr="3" color={"#fff"}>Menu</Text>
+                                <Icon as={Menu} w="26px" h="26px" stroke={"#fff"} fill="none"/>
+                            </Button>
+                            <Drawer
+                                isOpen={isOpen}
+                                placement='right'
+                                onClose={onClose}
+                                //finalFocusRef={btnRef}
+                            >
+                                <DrawerOverlay />
+                                <DrawerContent px="7" pr="16" bg="rgba(8, 5, 16, 0.7)" backdropFilter="blur(15px)" color="white">
+                                    <DrawerCloseButton fontSize="16px" top="3" right="4"/>
+                                    <Stack spacing="10" pt="12">
+                                        <HStack>
+                                            <Text onClick={() => setIsPortugueseLanguage(true)} cursor="pointer" color={isPortugueseLanguage ? "white" : ""}>PT</Text>
+                                            <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
+                                            <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
+                                        </HStack>
+                                        <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
+                                        <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
+                                        <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
+                                    </Stack>
+                                </DrawerContent>
+                            </Drawer>
+                        </>
+                    )
+                }
+
+                {/* <HStack spacing="7">
                     <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                     <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
                     <Text fontWeight={"regular"} color="gray.600">|</Text>
@@ -60,10 +114,9 @@ export function Header(){
                         <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
                         <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
                     </HStack>
-                    {/* <Button rightIcon={<Icon as={ChevronDown} />} fontWeight="regular" variant="ghost" color="gray.600" _hover={{bg: "transparent", color:"white"}}>Idioma: PT</Button> */}
                     
                     <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
-                </HStack>
+                </HStack> */}
             </HStack>
         </Stack>
     )

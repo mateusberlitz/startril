@@ -130,8 +130,8 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
                         </Flex>
                     </HStack>
                     <Stack p="12" spacing="10" h="100%">
-                        <Text>{description}</Text>
-                        <OutlineButton icon={Edit} w="100%" fontSize={"md"} h="55px">Briefing Guiado</OutlineButton>
+                        <Text opacity={isActive ? 1 : 0} transition={isActive ? "all .5s ease 0.9s" : "all .5s ease 0s"} transform={isActive ? "translateY(0px)" : "translateY(30px)"}>{description}</Text>
+                        <OutlineButton opacity={isActive ? 1 : 0} icon={Edit} w="100%" fontSize={"md"} h="55px" transition={isActive ? "all .5s ease 0.9s" : "all .5s ease 0s"}>Briefing Guiado</OutlineButton>
                     </Stack>
                 </Stack>
             </Stack>

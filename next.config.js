@@ -9,7 +9,12 @@ const nextConfig = {
     });
 
     return config;
-  }
+  },
+  env: {
+    LOCAL_API_URL: 'http://startril-backend.test/',
+    API_URL: 'https://api.startril.com.br/public/',
+    META_PIXEL: '289858882437346',
+  },
 }
 
 module.exports = nextConfig

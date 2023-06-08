@@ -6,9 +6,9 @@ interface MainButtonProps extends ButtonProps{
     children: string;
 }
 
-export function MainButton({children, ...rest} : MainButtonProps){
+export function MainButton({children, id, display, ...rest} : MainButtonProps){
     return(
-        <Flex flexDir={"column"} pos="relative" w="fit-content" role="group" alignItems={"center"}>
+        <Flex flexDir={"column"} id={id} pos="relative" w="fit-content" role="group" alignItems={"center"} display={display}>
             <SolidButton zIndex={3} _groupHover={{transform: "translate(0px, -12px);"}} _groupFocus={{transform: "translate(0px, -10px);"}} fontWeight={"normal"} size="lg" bg="linear-gradient(225deg, #3BA1F0 0%, #7260DF 100%);" color="white" {...rest} transition="all ease 1s">
                 {children}
             </SolidButton>

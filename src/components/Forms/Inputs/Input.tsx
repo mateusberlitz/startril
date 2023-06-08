@@ -6,7 +6,7 @@ import { mask as applyMask } from "../../../utils/ReMask";
 interface FormInputProps extends InputProps{
     name: string;
     type: string;
-    value?: string | number;
+    value?: string// | number;
     label?: string;
     variant?: string;
     inputLink?: ReactNode;
@@ -19,8 +19,8 @@ interface FormInputProps extends InputProps{
     inputRef?: Ref<any>
 }
 
-export function Input({ name, type, icon, variant = "", inputLink, value = "", label = "", mask = "", register = undefined, onChange, inputRef, control, error, maxW, colorScheme, ...rest }: FormInputProps){
-    const [controlledValue, setControlledValue] = useState<string | number>("");
+export function Input({ name, type, icon, variant = "", inputLink, value = "", label = "", mask = "", register = undefined, onChange, isRequired, inputRef, control, error, maxW, colorScheme, ...rest }: FormInputProps){
+    const [controlledValue, setControlledValue] = useState<string>("");
 
     const handleReturnMaskedInputValue = (value: string = "") => {
         if(mask){
@@ -46,7 +46,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
     }
 
     useEffect(() => {
-        setControlledValue(value);
+        setControlledValue(handleReturnMaskedInputValue(value));
 
         if(onChange){
             onChange(value);
@@ -89,7 +89,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
         <FormControl pos="relative" isInvalid={!!error} maxW={maxW}>
             {
                 label && (
-                    <FormLabel zIndex="1" cursor="text" color="gray.600" transition="ease 0.2s" pos="absolute" fontWeight="normal" fontSize={controlledValue === "" ? "sm" : "10px"} top={controlledValue === "" ? "14px" : "6px"} _focus={{top: "6px", fontSize: "10", color: "white"}} left="55px">{label}</FormLabel>
+                    <FormLabel zIndex="1" cursor="text" color="gray.600" transition="ease 0.2s" pos="absolute" fontWeight="normal" fontSize={controlledValue === "" ? "sm" : "10px"} top={controlledValue === "" ? "14px" : "6px"} _focus={{top: "6px", fontSize: "10", color: "white"}} left="55px">{label}{isRequired && '*'}</FormLabel>
                 )
             }
 
@@ -111,7 +111,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
         <FormControl pos="relative" isInvalid={!!error} maxW={maxW}>
             {
                 label && (
-                    <FormLabel zIndex="1" cursor="text" color="white" transition="ease 0.2s" fontWeight="normal" fontSize={"11px"} textTransform={"uppercase"}>{label}</FormLabel>
+                    <FormLabel zIndex="1" cursor="text" color="white" transition="ease 0.2s" fontWeight="normal" fontSize={"11px"} textTransform={"uppercase"}>{label}{isRequired && '*'}</FormLabel>
                 )
             }
 
