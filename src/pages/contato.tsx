@@ -26,6 +26,7 @@ import { OutlineButton } from "../components/Buttons/OutlineButton";
 import { Check, Plus, X } from "react-feather";
 import { Checkbox as MainCheckbox } from "../components/Forms/Checkbox/";
 import { DraggableFileInput } from "../components/Forms/DraggableFileInput";
+import { Footer } from "../components/Footer";
 
 interface BriefingLeadData{
     name: string;
@@ -533,7 +534,7 @@ export default function Contato(){
                                                         <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"Anúncios"}>Anúncios</Checkbox>
                                                         <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"Aplicativo"}>Aplicativo</Checkbox>
                                                         <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"E-commerce"}>E-commerce</Checkbox>
-                                                        <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"Página de vendas"}>Formal</Checkbox>
+                                                        <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"Página de vendas"}>Página de vendas</Checkbox>
                                                     </Stack>
                                                     <Stack spacing="3">
                                                         <Checkbox form="briefingForm" {...briefingForm.register("demand")} value={"Redesign"}>Redesign</Checkbox>
@@ -739,6 +740,8 @@ export default function Contato(){
                     </Flex>
                 </Box>
             </Flex>
+
+            <Footer/>
         </Flex>
     )
 }

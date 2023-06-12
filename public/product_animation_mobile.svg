@@ -1,4 +1,4 @@
-<svg id="sketch" class="sketch_animation" width="482" height="320" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg id="sketch" class="sketch_animation" width="360" height="240" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1052" height="400"/>
   <path class="sketch_square" opacity="0.1" d="M24 376V21H576V376H24Z" stroke="white" stroke-width="2"/>
   <path d="M311.084 248.582L334.301 274V248.582V162L276.603 210.832L232 248.582H311.084Z" fill="url(#paint0_linear_333_46)" fill-opacity="0.45"/>

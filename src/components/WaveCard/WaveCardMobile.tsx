@@ -17,7 +17,7 @@ interface WaveCardProps extends ChakraProps{
     onMouseEnter: (number: number) => void;
 }
 
-export function WaveCard({active, number, title, description, button, onMouseEnter, ...rest}: WaveCardProps){
+export function WaveCardMobile({active, number, title, description, button, onMouseEnter, ...rest}: WaveCardProps){
     const [isActive, setIsActive] = useState(active ?? false);
     const CardRef = useRef(null);
     const ShowCaseRef = useRef(null);
@@ -33,28 +33,17 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
 
     const expandAnimation = () => {
         gsap.to(CardRef.current, {
-            maxWidth: "calc(100% - 100px)",
+            height: "auto",
         });
 
-        gsap.to(ShowCaseRef.current, {
-            marginLeft: -100,
-        });
-
-        // gsap.to(HallRef.current, {
-        //     x: -100,
-        // });
-
-        // gsap.from(TextRef.current, {
-        //     opacity: 0
-        // });
-        // gsap.to(TextRef.current, {
-        //     opacity: 1
+        // gsap.to(ShowCaseRef.current, {
+        //     marginLeft: -100,
         // });
     }
 
     const retractAnimation = () => {
         gsap.to(CardRef.current, {
-            maxWidth: "100px",
+            height: "100px",
         });
 
         gsap.to(ShowCaseRef.current, {
@@ -82,17 +71,17 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
     // }, [active])
 
     return(
-        <Stack direction={isWideVersion ? "row" : "column"} ref={CardRef} cursor="pointer" maxW={isActive ? "100%" : "100px"} pos="relative" overflow="hidden" spacing="0" {...rest} minW="100px" className={styles.waveCard} h={isWideVersion ? "100%" : "auto"} border={isActive ? "" : "1px solid"} borderColor={isActive ? "gray.800" : "gray.700"} onClick={isActive ? () => {} : () => {handleMouseEnter(); expandAnimation()}}>
-            <Stack ref={ShowCaseRef} h={isWideVersion ? "100%" : "auto"} ml={isActive ? "-100px" : "0"} bg="rgba(0,0,0,0.7)" w="100px" spacing="0" direction={isWideVersion ? "column" : "row"}>
-                <HStack spacing="0" borderBottom="1px solid" borderTop="1px solid" borderColor="gray.800" h="100px">
-                    <Flex alignItems={"center"} justifyContent="center" w="100%" h="100px">
+        <Stack direction={isWideVersion ? "row" : "column"} w="100%" ref={CardRef} cursor="pointer" pos="relative" overflow="hidden" spacing="0" {...rest} className={styles.waveCard} h={isActive ? "auto" : "100px"} border={isActive ? "" : "1px solid"} borderColor={isActive ? "gray.800" : "gray.700"} onClick={isActive ? () => {} : () => {handleMouseEnter(); expandAnimation()}}>
+            {/* <Stack ref={ShowCaseRef} h={isWideVersion ? "100%" : "auto"} bg="rgba(0,0,0,0.7)" w="100%" spacing="0" direction={isWideVersion ? "column" : "row"}>
+                <HStack spacing="0" borderTop="1px solid" borderColor="gray.800" h="100px">
+                    <Flex alignItems={"center"} justifyContent="center" w="100px" h="100px">
                         <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}}>{number}</Text>
                     </Flex>
                 </HStack>
-                <Stack spacing="10" h={isWideVersion ? "100%" : "auto"} w={isWideVersion ? "auto" : "100px"} alignItems={"center"} justifyContent="center">
+                <Stack borderTop="1px solid" borderColor="gray.800" spacing="10" h={isWideVersion ? "100%" : "auto"} w={isWideVersion ? "auto" : "100%"} alignItems={"center"} justifyContent="center">
                     <Text fontWeight={"semibold"} fontSize="3xl" w={"fit-content"} transformOrigin="center" transform={isWideVersion ? "rotate(90deg)" : "rotate(0deg)"}>{title}</Text>
                 </Stack>
-            </Stack>
+            </Stack> */}
 
             <Stack pos="relative" spacing="0" h="100%" ref={HallRef}>
                 {
@@ -125,7 +114,7 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
                 }
                     
                 <Stack bg="rgba(0,0,0,0.7)" zIndex={2} backdropFilter="blur(30px)" spacing="0" h="100%" maxW="fit-content">
-                    <HStack spacing="0" borderBottom="1px solid" h="100px" borderTop="1px solid" borderColor="gray.800">
+                    <HStack spacing="0" borderBottom="1px solid" borderLeft="1px solid" h="100px" borderTop="1px solid" borderColor="gray.800">
                         <Flex w="100px" h="100px" alignItems={"center"} justifyContent="center" borderRight="1px solid" borderColor="gray.800">
                             <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} color="white">{number}</Text>
                         </Flex>
