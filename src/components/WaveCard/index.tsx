@@ -32,12 +32,12 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
     }
 
     const expandAnimation = () => {
-        gsap.to(CardRef.current, {
-            maxWidth: "calc(100% - 100px)",
-        });
+        const expandTimeline = gsap.timeline();
 
-        gsap.to(ShowCaseRef.current, {
+        expandTimeline.to(ShowCaseRef.current, {
             marginLeft: -100,
+        }).to(CardRef.current, {
+            maxWidth: "calc(100% - 100px)",
         });
 
         // gsap.to(HallRef.current, {
@@ -53,11 +53,11 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
     }
 
     const retractAnimation = () => {
-        gsap.to(CardRef.current, {
-            maxWidth: "100px",
-        });
+        const retractTimeline = gsap.timeline();
 
-        gsap.to(ShowCaseRef.current, {
+        retractTimeline.to(CardRef.current, {
+            maxWidth: "100px",
+        }).to(ShowCaseRef.current, {
             marginLeft: 0,
         });
 
@@ -82,15 +82,16 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
     // }, [active])
 
     return(
-        <Stack direction={isWideVersion ? "row" : "column"} ref={CardRef} cursor="pointer" maxW={isActive ? "100%" : "100px"} pos="relative" overflow="hidden" spacing="0" {...rest} minW="100px" className={styles.waveCard} h={isWideVersion ? "100%" : "auto"} border={isActive ? "" : "1px solid"} borderColor={isActive ? "gray.800" : "gray.700"} onClick={isActive ? () => {} : () => {handleMouseEnter(); expandAnimation()}}>
-            <Stack ref={ShowCaseRef} h={isWideVersion ? "100%" : "auto"} ml={isActive ? "-100px" : "0"} bg="rgba(0,0,0,0.7)" w="100px" spacing="0" direction={isWideVersion ? "column" : "row"}>
-                <HStack spacing="0" borderBottom="1px solid" borderTop="1px solid" borderColor="gray.800" h="100px">
-                    <Flex alignItems={"center"} justifyContent="center" w="100%" h="100px">
-                        <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}}>{number}</Text>
+        <Stack role="group" direction={isWideVersion ? "row" : "column"} ref={CardRef} cursor="pointer" maxW={isActive ? "100%" : "100px"} pos="relative" overflow="hidden" spacing="0" {...rest} minW="100px" className={styles.waveCard} h={isWideVersion ? "100%" : "auto"} border={isActive ? "" : "1px solid"} borderColor={isActive ? "gray.800" : "#f5f5f5"} borderTop="none" _hover={{border: "none"}} onClick={isActive ? () => {} : () => {handleMouseEnter(); expandAnimation()}}>
+            <Stack transition={"all .5s ease 0s"} ref={ShowCaseRef} h={isWideVersion ? "100%" : "auto"} ml={isActive ? "-100px" : "0"} bg="white" _groupHover={{bg: "rgba(0,0,0,0.7)"}} w="100px" spacing="0" direction={isWideVersion ? "column" : "row"}>
+            {/* "rgba(0,0,0,0.7)" */}
+                <HStack transition={"all .5s ease 0s"} spacing="0" borderBottom="1px solid" borderTop="1px solid" borderColor="rgba(0,0,0,0.1)" _groupHover={{border: "none", }} h="100px">
+                    <Flex transition={"all .5s ease 0s"} alignItems={"center"} justifyContent="center" w="100%" h="100px" _groupHover={{bg: "gradient"}}>
+                        <Text transition={"all .5s ease 0s"} fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} _groupHover={{bg: "linear-gradient(90deg, #7260DF -1.31%, #FFFFFF 33.11%);", backgroundClip: "text"}}>{number}</Text>
                     </Flex>
                 </HStack>
-                <Stack spacing="10" h={isWideVersion ? "100%" : "auto"} w={isWideVersion ? "auto" : "100px"} alignItems={"center"} justifyContent="center">
-                    <Text fontWeight={"semibold"} fontSize="3xl" w={"fit-content"} transformOrigin="center" transform={isWideVersion ? "rotate(90deg)" : "rotate(0deg)"}>{title}</Text>
+                <Stack transition={"all .5s ease 0s"} spacing="10" h={isWideVersion ? "100%" : "auto"} w={isWideVersion ? "auto" : "100px"} alignItems={"center"} justifyContent="center">
+                    <Text color="black" _groupHover={{color: "rgba(255,255,255,0.7)"}} fontWeight={"semibold"} fontSize="3xl" w={"fit-content"} transformOrigin="center" transform={isWideVersion ? "rotate(90deg)" : "rotate(0deg)"}>{title}</Text>
                 </Stack>
             </Stack>
 
@@ -125,8 +126,8 @@ export function WaveCard({active, number, title, description, button, onMouseEnt
                 }
                     
                 <Stack bg="rgba(0,0,0,0.7)" zIndex={2} backdropFilter="blur(30px)" spacing="0" h="100%" maxW="fit-content">
-                    <HStack spacing="0" borderBottom="1px solid" h="100px" borderTop="1px solid" borderColor="gray.800">
-                        <Flex w="100px" h="100px" alignItems={"center"} justifyContent="center" borderRight="1px solid" borderColor="gray.800">
+                    <HStack spacing="0" borderBottom="1px solid" h="100px" borderTop="1px solid" borderColor="rgba(255,255,255,0.1)">
+                        <Flex w="100px" h="100px" alignItems={"center"} justifyContent="center" borderRight="1px solid" borderColor="rgba(255,255,255,0.1)">
                             <Text fontWeight={"regular"} fontSize="7xl" lineHeight={"100px"} color="white">{number}</Text>
                         </Flex>
                         <Flex h="100px" alignItems={"center"} justifyContent="center" px="5">

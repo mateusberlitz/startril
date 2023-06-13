@@ -19,7 +19,7 @@ export default function Sobre(){
                         <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0" minH="90vh">
                             <Stack alignItems={"flex-start"} direction={["column","column","row","row"]} spacing="16">
                                 <Stack w={["100%", "100%", "55%", "55%"]} spacing="12">
-                                    <Heading color="white" fontSize="5xl" fontWeight={"regular"}>Focados em criar e transformar</Heading>
+                                    <Heading color="white" fontSize="5xl" fontWeight={"regular"}>A sua equipe de especialistas em anúncios, design e programação</Heading>
                                     <Text color="gray.300">E estar na internet e demonstrar como é completo, diferente e se conecta com o cliente.</Text>
 
                                     <Stack spacing="1">
@@ -44,7 +44,7 @@ export default function Sobre(){
                                         <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
                                     </HStack> */}
                                 </Stack>
-                                <Stack w={["100%", "100%", "40%", "40%"]} pos="absolute" right="0">
+                                <Stack w={["100%", "100%", "40%", "40%", "25%"]} pos="absolute" right="0">
                                     <Img src="./soco.webp" />
                                 </Stack>
                             </Stack>
@@ -53,25 +53,34 @@ export default function Sobre(){
                 </Box>
             </Flex>
 
-            <Flex>
-                <Flex>
-                    <HStack>
-                                    
+            <Flex borderTop="3px solid" borderColor="rgba(255,255,255,0.1)" pos="relative" bg="linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);">
+                <Flex pos="absolute" zIndex={-1} top="0" left="0" overflow={"hidden"} h="90vh" maxH="940px">
+                    <HStack id="aboutPhotosTranslate" spacing="0">
+                        <Img src="./rahin.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./mateus.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./ana.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./rahin2.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./mateus2.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./ana2.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
                     </HStack>
                 </Flex>
+                
 
-                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="14">
-                    <Stack maxW="600px" spacing="10">
-                        <ColoredTag>Sobre Nós</ColoredTag>
-                        <Heading color="white" fontSize={"5xl"} fontWeight={"regular"}>Moldamos empresas <br/>de destaque</Heading>
-                    </Stack>
 
-                    <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
-                        <Stack w={["100%", "100%", "50%", "50%"]}>
-                            <Text>
-                                Surgimos com o ideal de melhorar o processo de vendas das empresas pela internet, desde o primeiro contato com o cliente até a maturação para a venda.<br/><br/>
-                                Nossa experiência com público na internet, design, anúncios, e programação nos permite criar uma marca com um processo mais detalhado de venda pela internet. Este que qualquer empresa poderá melhorar e ampliar cada vez mais, através de dados reais e mais tecnologia.
-                            </Text>
+                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h="90vh" maxH="940px" pos="relative">
+                    <Stack spacing="14" pos="absolute" bottom="9%">
+                        <Stack maxW="600px" spacing="10">
+                            <ColoredTag>Sobre Nós</ColoredTag>
+                            <Heading color="white" fontSize={"5xl"} fontWeight={"regular"}>Moldamos empresas <br/>de destaque</Heading>
+                        </Stack>
+
+                        <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                            <Stack w={["100%", "100%", "50%", "50%"]}>
+                                <Text>
+                                    Surgimos com o ideal de melhorar o processo de vendas das empresas pela internet, desde o primeiro contato com o cliente até a maturação para a venda.<br/><br/>
+                                    Nossa experiência com público na internet, design, anúncios, e programação nos permite criar uma marca com um processo mais detalhado de venda pela internet. Este que qualquer empresa poderá melhorar e ampliar cada vez mais, através de dados reais e mais tecnologia.
+                                </Text>
+                            </Stack>
                         </Stack>
                     </Stack>
                 </Stack>

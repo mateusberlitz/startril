@@ -242,7 +242,8 @@ export default function Home() {
                                     isWideVersion ? (
                                         <SiteAnimation/>
                                     ) : (
-                                        <SiteAnimationMobile/>
+                                        // <SiteAnimationMobile/>
+                                        <Box/>
                                     )
                                 }
                             </HStack>

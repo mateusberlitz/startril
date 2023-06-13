@@ -196,3 +196,16 @@ background: #000;
 #moon{
     animation: respiration 3s ease infinite alternate;
  }
+
+ @keyframes moveHorizontalPhotos{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+
+#aboutPhotosTranslate{
+    animation: moveHorizontalPhotos 24s ease infinite alternate;
+}
