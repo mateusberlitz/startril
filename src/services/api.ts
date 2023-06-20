@@ -2,7 +2,7 @@ import axios from 'axios';
 import { parseCookies } from 'nookies';
 
 export const api = axios.create({
-    baseURL: '/api'
+    baseURL: '/api',
 });
 
 export const serverApi = axios.create({
@@ -10,11 +10,13 @@ export const serverApi = axios.create({
 });
 
 serverApi.interceptors.request.use(async config => {
-    const { 'star.token' : token } = parseCookies();
+    //const { 'star.token' : token } = parseCookies();
 
-    if (token && config.headers) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
+    // if (token && config.headers) {
+    //   config.headers.Authorization = `Bearer ${token}`;
+    // }
+
+    config.headers.Accept = "application/json"
 
     return config;
 });

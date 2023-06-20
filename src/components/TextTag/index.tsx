@@ -7,7 +7,7 @@ interface TextTagProps extends ChakraProps{
 
 export function TextTag({children, ...rest} : TextTagProps){
     return (
-        <Text fontWeight="light" fontSize="xl" color="rgba(255,255,255,0.7)" {...rest}>
+        <Text fontWeight="light" fontSize="sm" color="rgba(255,255,255,1)" textTransform={"uppercase"} letterSpacing="0.2em" {...rest}>
             {children}
         </Text>
     )

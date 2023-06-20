@@ -53,7 +53,7 @@ export function Header(){
     return(
         <Stack as="nav" alignItems="center" pos="relative" top="0" w="100%" left="0" h="140px" transition="0.4s" justifyContent={"center"}>
              {/* bg="rgb(8,5,16,0.7)" backdropFilter="blur(40px)" */}
-            <HStack ref={navRef} zIndex={9} w="100%" m="0 auto" maxW="1200px" py="2" px="6" justify="space-between" h="80px">
+            <HStack ref={navRef} zIndex={9} w="100%" m="0 auto" maxW="1200px" py="2" px="6" justify="space-between" h="80px" borderRadius="3">
             {/* pos="fixed" top="12px" bg="rgba(0,0,0,0.4)" backdropFilter={"blur(40px)"} */}
                 <Link href="/"><Img src="startril.svg" maxW="150px"/></Link>
 
@@ -62,14 +62,13 @@ export function Header(){
                         <HStack spacing="7">
                             <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                             <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
-                            <Text fontWeight={"regular"} color="gray.600">|</Text>
-                            
+
+                            {/* <Text fontWeight={"regular"} color="gray.600">|</Text>
                             <HStack>
                                 <Text onClick={() => setIsPortugueseLanguage(true)} cursor="pointer" color={isPortugueseLanguage ? "white" : ""}>PT</Text>
                                 <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
                                 <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
-                            </HStack>
-                            {/* <Button rightIcon={<Icon as={ChevronDown} />} fontWeight="regular" variant="ghost" color="gray.600" _hover={{bg: "transparent", color:"white"}}>Idioma: PT</Button> */}
+                            </HStack> */}
                             
                             <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
                         </HStack>
@@ -89,11 +88,11 @@ export function Header(){
                                 <DrawerContent px="7" pr="16" bg="rgba(8, 5, 16, 0.7)" backdropFilter="blur(15px)" color="white">
                                     <DrawerCloseButton fontSize="16px" top="3" right="4"/>
                                     <Stack spacing="10" pt="12">
-                                        <HStack>
+                                        {/* <HStack>
                                             <Text onClick={() => setIsPortugueseLanguage(true)} cursor="pointer" color={isPortugueseLanguage ? "white" : ""}>PT</Text>
                                             <Switch isChecked={!isPortugueseLanguage} onChange={(event: ChangeEvent<HTMLInputElement>) => setIsPortugueseLanguage(!event.target?.checked)}/>
                                             <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
-                                        </HStack>
+                                        </HStack> */}
                                         <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                                         <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
                                         <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>

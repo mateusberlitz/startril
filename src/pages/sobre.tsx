@@ -1,57 +1,55 @@
-import { Box, Flex, HStack, Heading, Img, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Icon, Img, Stack, Text } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import ContactAnimation from '../../public/contact_animation.svg';
 import { MainButton } from "../components/Buttons/MainButton";
 import { ColoredTag } from "../components/ColoredTag";
+import { Footer } from "../components/Footer";
+import { Phone } from "react-feather";
 
 export default function Sobre(){
     return(
         <Flex flexDir="column" w="100%">
-            <Flex flexDir="column">
+            <Header/>
+            {/* <Flex flexDir="column">
                 <Flex pos="absolute" zIndex={-1} w='100%' top="-215px" h="calc(100% + 215px)" overflow="hidden">
                     <ContactAnimation/>
                 </Flex>
 
                 <Box w="100%" bg="rgba(0,0,0,0.6)">
-                    <Header/>
+                    <Header/> */}
 
-                    <Flex w="100%">
+                    {/* <Flex w="100%">
                         <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0" minH="90vh">
                             <Stack alignItems={"flex-start"} direction={["column","column","row","row"]} spacing="16">
                                 <Stack w={["100%", "100%", "55%", "55%"]} spacing="12">
-                                    <Heading color="white" fontSize="5xl" fontWeight={"regular"}>A sua equipe de especialistas em anúncios, design e programação</Heading>
+                                    <Heading color="white" fontSize="5xl" fontWeight={"regular"}>A sua equipe de especialistas a disposição!</Heading>
                                     <Text color="gray.300">E estar na internet e demonstrar como é completo, diferente e se conecta com o cliente.</Text>
 
                                     <Stack spacing="1">
                                         <HStack spacing="4">
-                                            <Text lineHeight={"1em"} fontSize={"5xl"} fontWeight={"semibold"} color="purple.500">+6</Text>
+                                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+6</Text>
                                             <Text fontSize={"lg"} color="white">Anos de experiência</Text>
                                         </HStack>
 
                                         <HStack spacing="4">
-                                            <Text lineHeight={"1em"} fontSize={"5xl"} fontWeight={"semibold"} color="purple.500">+R$ 200mil</Text>
+                                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+R$ 200mil</Text>
                                             <Text fontSize={"lg"} color="white">em investimento gerenciado</Text>
                                         </HStack>
 
                                         <HStack spacing="4">
-                                            <Text lineHeight={"1em"} fontSize={"5xl"} fontWeight={"semibold"} color="purple.500">+95</Text>
+                                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+95</Text>
                                             <Text fontSize={"lg"} color="white">Campanhas e estratégias lançadas</Text>
                                         </HStack>
                                     </Stack>
-
-                                    {/* <HStack spacing="8">
-                                        <MainButton>Contratar</MainButton>
-                                        <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
-                                    </HStack> */}
                                 </Stack>
                                 <Stack w={["100%", "100%", "40%", "40%", "25%"]} pos="absolute" right="0">
                                     <Img src="./soco.webp" />
                                 </Stack>
                             </Stack>
                         </Stack>
-                    </Flex> 
-                </Box>
-            </Flex>
+                    </Flex>  */}
+                {/* </Box>
+            </Flex> */}
 
             <Flex borderTop="3px solid" borderColor="rgba(255,255,255,0.1)" pos="relative" bg="linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);">
                 <Flex pos="absolute" zIndex={-1} top="0" left="0" overflow={"hidden"} h="90vh" maxH="940px">
@@ -71,7 +69,7 @@ export default function Sobre(){
                     <Stack spacing="14" pos="absolute" bottom="9%">
                         <Stack maxW="600px" spacing="10">
                             <ColoredTag>Sobre Nós</ColoredTag>
-                            <Heading color="white" fontSize={"5xl"} fontWeight={"regular"}>Moldamos empresas <br/>de destaque</Heading>
+                            <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Moldamos empresas <br/>de destaque</Heading>
                         </Stack>
 
                         <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
@@ -85,6 +83,52 @@ export default function Sobre(){
                     </Stack>
                 </Stack>
             </Flex>
+
+            <Flex bg="#000" flexDir="column">
+                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="40" spacing="14" pos="relative" alignItems={"center"} direction={["column", "column", "row", "row"]}>
+                    <Stack spacing="10"  w={["100%", "100%", "50%", "50%"]}>
+                        <Stack spacing="0">
+                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+6</Text>
+                            <Text fontSize={"lg"} color="white">Anos de experiência</Text>
+                        </Stack>
+
+                        <Stack spacing="0">
+                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+R$ 200mil</Text>
+                            <Text fontSize={"lg"} color="white">em investimento gerenciado</Text>
+                        </Stack>
+
+                        <Stack spacing="0">
+                            <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+95</Text>
+                            <Text fontSize={"lg"} color="white">Campanhas e estratégias lançadas</Text>
+                        </Stack>
+                    </Stack>
+                    <Stack spacing="14" w={["100%", "100%", "50%", "50%"]}>
+                        <Stack maxW="600px" spacing="10">
+                            <ColoredTag>Sua Equipe</ColoredTag>
+                            <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Estamos prontos para te auxiliar com...</Heading>
+                        </Stack>
+
+                        <Stack spacing="20" pos="relative">
+                            <Stack>
+                                <Text>Mais criatividade.</Text>
+                                <Text>Mais ideias.</Text>
+                                <Text>Mais olhar crítico.</Text>
+                                <Text>Mais soluções.</Text>
+                            </Stack>
+                        </Stack>
+                    </Stack>
+                </Stack>
+
+                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="40" pb="56" spacing="14" h="90vh" pos="relative" textAlign={"center"} justifyContent={"center"} alignItems={"center"}>
+                    <Stack spacing="6">
+                        <ColoredTag>Para começar</ColoredTag>
+                        <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Vamos falar sobre o seu projeto?</Heading>
+                    </Stack>
+                    <MainButton leftIcon={<Icon as={Phone}/>}>Whatsapp</MainButton>
+                </Stack>
+            </Flex>
+
+            <Footer/>
         </Flex>
     )
 }

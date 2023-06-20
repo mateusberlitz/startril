@@ -55,7 +55,7 @@ export const theme = extendTheme({
 
     },
     fonts: {
-        heading: 'Prompt',
+        heading: 'Epilogue',
         body: 'Prompt'
     },
     styles: {
