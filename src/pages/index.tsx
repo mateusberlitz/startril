@@ -27,7 +27,6 @@ import DevIcon from '../../public/dev.svg';
 import BgCones from '../../public/bg_star_cones.svg';
 import AdsIcon from '../../public/ads.svg';
 import Funil from '../../public/funil.svg';
-import { DnaAnimation } from '../components/DnaAnimation';
 import { ProductAnimation } from '../components/ProductAnimation';
 import { SiteAnimation } from '../components/SiteAnimation';
 import { AdsAnimation } from '../components/AdsAnimation';
@@ -41,6 +40,7 @@ import { AdsAnimationMobile } from '../components/AdsAnimation/AdsAnimationMobil
 import { WaveCardMobile } from '../components/WaveCard/WaveCardMobile';
 import { Customers } from '../sections/customers';
 import { FunilAnimation } from '../components/FunilAnimation';
+import { Purpose } from '../sections/purpose';
 
 export default function Home() {
     const router = useRouter();
@@ -97,6 +97,8 @@ export default function Home() {
                     </Stack>
                 </Flex>
 
+                <Purpose/>
+
                 <Services/>
 
                 <Flex w="100%" bg="#080510" overflow="hidden">
@@ -133,24 +135,6 @@ export default function Home() {
                         </Stack>
 
                         <Customers/>
-
-                        <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
-
-                            <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"}>
-                                <Box id="moon" w="60" h="60" pos="absolute" bg="gradient" borderRadius={"full"} filter="blur(100px)"/>
-                                <DnaAnimation/>
-                            </Stack>
-
-                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
-                                <Stack spacing="6">
-                                    <TextTag>O propósito é</TextTag>
-                                    <StarDivider maxW="120px"/>
-                                </Stack>
-                                <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>Fazer a renovação digital da sua empresa</Heading>
-                                <Text color="gray.500">Não deixe os seus resultados serem prejudicados por não estar atualizado! Transferimos a sua empresa para o digital!</Text>
-
-                            </Stack>
-                        </Stack>
 
                         <Stack pt="48" pb="32" spacing="32">
                             <Stack w="100%" maxW="600px" spacing="12">

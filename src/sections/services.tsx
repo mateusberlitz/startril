@@ -95,10 +95,10 @@ export function Services(){
                                 <Box pos="absolute" bg="gradient" left="0" right="0" top="0" bottom="0" opacity={activeItem === 2 ? "1" : "0"} _groupHover={{opacity: "0.5"}} transition="all ease .5s"/>
                                 <HStack spacing="8" zIndex={1}>
                                     <Flex filter={activeItem === 2 ? "brightness(15)" : "brightness(1)"}>
-                                        <Icon as={Ui} fontSize={"40px"}/>
+                                        <Icon as={AdsIcon} fontSize={"40px"}/>
                                     </Flex>
                                     {/* <Ui/> */}
-                                    <Text>UI/UX Design</Text>
+                                    <Text>Tráfego pago</Text>
                                 </HStack>
                                 <Flex zIndex={1}>
                                     <ArrowRight/>
@@ -109,10 +109,10 @@ export function Services(){
                                 <Box pos="absolute" bg="gradient" left="0" right="0" top="0" bottom="0" opacity={activeItem === 3 ? "1" : "0"} _groupHover={{opacity: "0.5"}} transition="all ease .5s"/>
                                 <HStack spacing="8" zIndex={1}>
                                     <Flex filter={activeItem === 3 ? "brightness(15)" : "brightness(1)"}>
-                                        <Icon as={Ui} fontSize={"40px"}/>
+                                        <Icon as={DevIcon} fontSize={"40px"}/>
                                     </Flex>
                                     {/* <Ui/> */}
-                                    <Text>UI/UX Design</Text>
+                                    <Text>Desenvolvimento</Text>
                                 </HStack>
                                 <Flex zIndex={1}>
                                     <ArrowRight/>
