@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Img, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, Heading, HStack, Icon, Img, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
@@ -16,7 +16,7 @@ import React from '../../public/react.svg';
 import UiEUx from '../../public/uieux.svg';
 import Ui from '../../public/ui.svg';
 import LogoWhite from '../../public/logo_tin_white.svg';
-import { Edit, PlayCircle } from 'react-feather';
+import { CheckSquare, Edit, Edit2, Edit3, FileText, MessageSquare, PenTool, Phone, PlayCircle } from 'react-feather';
 import { WaveEffect } from '../components/WaveEffect';
 import Wave from 'react-wavify';
 import { WaveCard } from '../components/WaveCard';
@@ -44,15 +44,10 @@ import { FunilAnimation } from '../components/FunilAnimation';
 
 export default function Home() {
     const router = useRouter();
-    const [activeBox, setActiveBox] = useState(1);
     const isWideVersion = useBreakpointValue({
         base: false,
         lg: true,
     })
-
-    const handleActiveBox = (number: number) => {
-        setActiveBox(number);
-    }
 
   return (
     <Box pos="relative" className='main'>
@@ -89,7 +84,7 @@ export default function Home() {
                                     <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
                                 </HStack>
                             </Stack>
-                            <Stack w={["100%", "100%", "45%", "45%"]}>
+                            <Stack w={["100%", "100%", "50%", "50%"]}>
                                 <PeopleIcon />
                             </Stack>
                         </Stack>
@@ -102,9 +97,11 @@ export default function Home() {
                     </Stack>
                 </Flex>
 
+                <Services/>
+
                 <Flex w="100%" bg="#080510" overflow="hidden">
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                        <Services/>
+                        {/* <ServicesBox/> */}
 
                         <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
 
@@ -155,7 +152,7 @@ export default function Home() {
                             </Stack>
                         </Stack>
 
-                        <Stack pt="48" pb="32" spacing="20">
+                        <Stack pt="48" pb="32" spacing="32">
                             <Stack w="100%" maxW="600px" spacing="12">
                                 <Stack spacing="6">
                                     <HStack>
@@ -169,72 +166,68 @@ export default function Home() {
 
                             </Stack>
 
-                            <Stack w="100%%" spacing="0" alignItems={"baseline"} height="100%" direction={["column", "column", "row", "row"]}>
-                                {/* <Stack maxW="70%" pos="relative" overflow="hidden" spacing="0">
-                                    <Box pos="absolute" top="-7px" left="0" right="0" zIndex={1}>
-                                        <BackgroundStarLight/>
-                                    </Box>
+                            <Stack spacing="10">
+                                <HStack spacing="8" alignItems={"flex-start"} maxW="800px">
+                                    <Flex w="70px" h="70px" bg="gradient" alignItems={"center"} justifyContent={"center"}>
+                                        <Icon as={Edit3} fontSize={"34px"} strokeWidth={"1.4px"} color="white"/>
+                                    </Flex>
 
-                                    <Box pos="absolute" bottom="-7px" left="0" right="0" zIndex={1}>
-                                        <Wave fill='url(#startril_gradient)'
-                                                paused={false}
-                                                options={{
-                                                    height: 10,
-                                                    amplitude: 50,
-                                                    speed: 0.2,
-                                                    points: 2
-                                                }}
-                                        >
-                                            <defs>
-                                                <linearGradient id="startril_gradient" x1="-19.0615" y1="90.8762" x2="481.893" y2="255.981" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#3BA1F0"/>
-                                                    <stop offset="1" stop-color="#7260DF"/>
-                                                </linearGradient>
-                                            </defs>
-                                        </Wave>
-                                    </Box>
-                                    <Stack bg="rgba(0,0,0,0.7)" zIndex={2} backdropFilter="blur(30px)">
-                                        <HStack spacing="0" borderBottom="1px solid" borderColor="gray.800">
-                                            <Flex w="100px" h="100px" alignItems={"center"} justifyContent="center" borderRight="1px solid" borderColor="gray.800">
-                                                <Text fontWeight={"regular"} fontSize="7xl">1</Text>
-                                            </Flex>
-                                            <Flex h="100px" alignItems={"center"} justifyContent="center" px="5">
-                                                <Text fontWeight={"semibold"} fontSize="2xl">Preenchimento de Briefing</Text>
-                                            </Flex>
-                                        </HStack>
-                                        <Stack p="12" spacing="10">
-                                            <Text>O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora.</Text>
-                                            <OutlineButton icon={Edit} w="100%" fontSize={"md"} h="55px">Briefing Guiado</OutlineButton>
-                                        </Stack>
+                                    <Stack w="calc(100% - 70px)">
+                                        <Heading fontSize={"2xl"} color="white">Preenchimento do Briefing</Heading>
+                                        <Text>O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora.</Text>
                                     </Stack>
+                                </HStack>
+                                <Divider borderColor="rgba(255,255,255,0.2)"/>
+                                <HStack spacing="8" alignItems={"flex-start"} maxW="800px">
+                                    <Flex w="70px" h="70px" bg="gradient" alignItems={"center"} justifyContent={"center"}>
+                                        <Icon as={MessageSquare} fontSize={"34px"} strokeWidth={"1.4px"} color="white"/>
+                                    </Flex>
 
-                                </Stack> */}
-                                {
-                                    isWideVersion ? (
-                                        <>
-                                            <WaveCard active={activeBox == 1} number={1} onMouseEnter={handleActiveBox} title="Briefing" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCard active={activeBox == 2} number={2} onMouseEnter={handleActiveBox} title="Conversa" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCard active={activeBox == 3} number={3} onMouseEnter={handleActiveBox} title="Proposta" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCard active={activeBox == 4} number={4} onMouseEnter={handleActiveBox} title="Produção" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCard active={activeBox == 5} number={5} onMouseEnter={handleActiveBox} title="Aprovação" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <WaveCardMobile active={activeBox == 1} number={1} onMouseEnter={handleActiveBox} title="Briefing" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCardMobile active={activeBox == 2} number={2} onMouseEnter={handleActiveBox} title="Conversa" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCardMobile active={activeBox == 3} number={3} onMouseEnter={handleActiveBox} title="Proposta" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCardMobile active={activeBox == 4} number={4} onMouseEnter={handleActiveBox} title="Produção" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                            <WaveCardMobile active={activeBox == 5} number={5} onMouseEnter={handleActiveBox} title="Aprovação" description="O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."/>
-                                        </>
-                                    )
-                                }
+                                    <Stack w="calc(100% - 70px)" spacing="4">
+                                        <Heading fontSize={"2xl"} color="white">Conversa</Heading>
+                                        <Text>Agendamos uma reunião de acordo com a sua disponibilidade, para que você possa nos explicar a sua ideia com calma. Além disso, este é o momento para que entenda como nós podemos tornar o seu projeto realidade, com todos os detalhes.</Text>
+                                    </Stack>
+                                </HStack>
+                                <Divider borderColor="rgba(255,255,255,0.2)"/>
+                                <HStack spacing="8" alignItems={"flex-start"} maxW="800px">
+                                    <Flex w="70px" h="70px" bg="gradient" alignItems={"center"} justifyContent={"center"}>
+                                        <Icon as={FileText} fontSize={"34px"} strokeWidth={"1.4px"} color="white"/>
+                                    </Flex>
+
+                                    <Stack w="calc(100% - 70px)" spacing="4">
+                                        <Heading fontSize={"2xl"} color="white">Proposta</Heading>
+                                        <Text>Após a conclusão da nossa reunião, dentro de um prazo de 48 horas úteis, entraremos em contato para marcar uma apresentação da proposta, com os valores de cada serviço necessário para o seu projeto.</Text>
+                                    </Stack>
+                                </HStack>
+                                <Divider borderColor="rgba(255,255,255,0.2)"/>
+                                <HStack spacing="8" alignItems={"flex-start"} maxW="800px">
+                                    <Flex w="70px" h="70px" bg="gradient" alignItems={"center"} justifyContent={"center"}>
+                                        <Icon as={PenTool} fontSize={"34px"} strokeWidth={"1.4px"} color="white"/>
+                                    </Flex>
+
+                                    <Stack w="calc(100% - 70px)" spacing="4">
+                                        <Heading fontSize={"2xl"} color="white">Produção</Heading>
+                                        <Text>Com o contrato assinado, iremos nos dedicar na produção do seu projeto para entregá-lo dentro do prazo solicitado. Sinta-se a vontade para nos contatar neste período para tirar dúvidas ou acrescentar ideias e informações.</Text>
+                                    </Stack>
+                                </HStack>
+                                <Divider borderColor="rgba(255,255,255,0.2)"/>
+                                <HStack spacing="8" alignItems={"flex-start"} maxW="800px">
+                                    <Flex w="70px" h="70px" bg="gradient" alignItems={"center"} justifyContent={"center"}>
+                                        <Icon as={CheckSquare} fontSize={"34px"} strokeWidth={"1.4px"} color="white"/>
+                                    </Flex>
+
+                                    <Stack w="calc(100% - 70px)" spacing="4">
+                                        <Heading fontSize={"3xl"} color="white">Aprovação</Heading>
+                                        <Text>Com o projeto concluído, agendaremos uma nova reunião para apresentar a você o resultado final. Nesse momento, você terá a oportunidade de analisar minuciosamente o projeto e solicitar os ajustes finais necessários, garantindo que seja entregue totalmente aprovado, atendendo a todas as suas expectativas.</Text>
+                                    </Stack>
+                                </HStack>
                             </Stack>
                         </Stack>
 
                     </Stack>
                 </Flex>
 
-                <Flex borderTop="0px solid" pos="relative" borderColor="rgba(255,255,255,0.1)" bgImage={"./mateus_video.jpg"} bgSize={"cover"} bgPos={"center right"}>
+                <Flex _hover={{cursor:"url(./play_cursor.png), auto"}} borderTop="0px solid" pos="relative" borderColor="rgba(255,255,255,0.1)" bgImage={"./mateus_video.jpg"} bgSize={"cover"} bgPos={"center right"}>
                     <Flex pos="absolute" top="0" left="0" bottom="0" right="0" bg="linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.68%);">
                         {/* <Img src="./mateus_video.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/> */}
                     </Flex>
