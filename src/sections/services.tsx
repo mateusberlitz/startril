@@ -128,7 +128,7 @@ export function Services(){
                                 <Heading color="white" fontSize={"2xl"}>Design de</Heading>
                                 <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading>
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Desenvolvemos telas coerentes para proporcionar a melhor experiência aos seus usuários, com o objetivo de transmitir de forma correta as ideias e sensações da sua marca.</Text>     
                         
                             <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
                         </Stack> 
@@ -137,7 +137,7 @@ export function Services(){
                                 <Heading color="white" fontSize={"2xl"}>Tráfego pago</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Produzimos artes, publicações e anúncios que criam conectividade com o seu público alvo, assim acelerando os seus resultados e crescimento.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo. Impulsionando a sua visibilidade assim como o retorno sobre o investimento.</Text>     
                         
                             <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
                         </Stack>
@@ -146,7 +146,7 @@ export function Services(){
                                 <Heading color="white" fontSize={"2xl"}>Desenvolvimento</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Programamos a sua plataforma digital com todas as interações e transações necessárias para interligar a sua equipe ao seu consumidor final, sempre com alta performance e segurança.</Text>     
                         
                             <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
                         </Stack>

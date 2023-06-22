@@ -1,50 +1,33 @@
-import { Box, Button, Divider, Flex, Heading, HStack, Icon, Img, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
 
 import { TextTag } from '../components/TextTag';
-import { OutlineButton } from '../components/Buttons/OutlineButton';
 import { ColoredTag } from '../components/ColoredTag';
 import { StarDivider } from '../components/StarDivider';
 
-import StartrilIcon from '../../public/icone_startril.svg';
-import BackgroundStarLight from '../../public/bg_star_light.svg';
 import PeopleIcon from '../../public/people_logo.svg';
 import HomeBackground from '../../public/home.svg';
 import React from '../../public/react.svg';
-import UiEUx from '../../public/uieux.svg';
-import Ui from '../../public/ui.svg';
-import LogoWhite from '../../public/logo_tin_white.svg';
-import { CheckSquare, Edit, Edit2, Edit3, FileText, MessageSquare, PenTool, Phone, PlayCircle } from 'react-feather';
-import { WaveEffect } from '../components/WaveEffect';
-import Wave from 'react-wavify';
-import { WaveCard } from '../components/WaveCard';
-import { useState } from 'react';
+import { PlayCircle } from 'react-feather';
 
 
-import DevIcon from '../../public/dev.svg';
-import BgCones from '../../public/bg_star_cones.svg';
-import AdsIcon from '../../public/ads.svg';
-import Funil from '../../public/funil.svg';
 import { ProductAnimation } from '../components/ProductAnimation';
 import { SiteAnimation } from '../components/SiteAnimation';
 import { AdsAnimation } from '../components/AdsAnimation';
-import { Select } from '../components/Forms/Selects/Select';
 import { Footer } from '../components/Footer';
 import { useRouter } from 'next/router';
 import { Services } from '../sections/services';
 import { ProductAnimationMobile } from '../components/ProductAnimation/ProductAnimationMobile';
-import { SiteAnimationMobile } from '../components/SiteAnimation/SiteAnimationMobile';
 import { AdsAnimationMobile } from '../components/AdsAnimation/AdsAnimationMobile';
-import { WaveCardMobile } from '../components/WaveCard/WaveCardMobile';
 import { Customers } from '../sections/customers';
-import { FunilAnimation } from '../components/FunilAnimation';
 import { Purpose } from '../sections/purpose';
 import { OurWork } from '../sections/ourWork';
-import { ListMethods } from '../sections/listMethods';
 import { ListMethodsHorizontal } from '../sections/listMethodsHorizontal';
 import { Faq } from '../sections/faq';
+import { StartNow } from '../sections/startNow';
+import { ServicesBox } from '../sections/servicesBox';
 
 export default function Home() {
     const router = useRouter();
@@ -80,8 +63,8 @@ export default function Home() {
 
                         <Stack alignItems={"flex-start"} direction={["column","column","row","row"]} spacing="16">
                             <Stack w={["100%", "100%", "55%", "55%"]} spacing="12">
-                                <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Criamos o necessário para quem quer se destacar!</Heading>
-                                <Text color="gray.300">E estar na internet e demonstrar como é completo, diferente e se conecta com o cliente.</Text>
+                                <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Desenvolvemos o fundamental para aqueles que almejam destaque!</Heading>
+                                <Text color="gray.300">Destaque-se na internet, demonstre a sua autoridade e crie conexão com os seus clientes.</Text>
 
                                 <HStack spacing="8">
                                     <MainButton>Contratar</MainButton>
@@ -103,7 +86,13 @@ export default function Home() {
 
                 <Purpose/>
 
-                <Services/>
+                {
+                    isWideVersion ? (
+                        <Services/>
+                    ):(
+                        <ServicesBox/>
+                    )
+                }
 
                 <OurWork/>
 
@@ -208,34 +197,7 @@ export default function Home() {
 
                 <Faq/>
 
-                <Flex w="100%" bg="#080510">
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                        <Flex pos="relative" bg="#3F3F3F">
-                            <Box pos="absolute" zIndex="1" w="100%" height="100%">
-                                <BgCones/>
-                            </Box>
-
-                            <Stack justifyContent={"space-between"} spacing="16" w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h="275px" p="14" direction={["column", "column", "row", "row"]}>
-                                <Stack maxW="430px" spacing="6" justifyContent={"center"}>
-                                    <Heading color="white">É fácil começar agora</Heading>
-                                    <Text>Que tal solicitar nossos serviços através de um briefing prático que pode nos contar exatamente o que você precisa?</Text>
-                                </Stack>
-                                <Stack justifyContent={"center"}>
-                                    <Select name="demand" label="Selecione sua demanda">
-                                        <option value="" style={{ background: '#0E1119' }}>Selecionar</option>
-                                        <option value="Anúncios" style={{ background: '#0E1119' }}>Anúncios</option>
-                                        <option value="Website" style={{ background: '#0E1119' }}>Website</option>
-                                        <option value="Design de projeto" style={{ background: '#0E1119' }}>Design de projeto</option>
-                                        <option value="E-commerce" style={{ background: '#0E1119' }}>E-commerce</option>
-                                        <option value="Landing Page" style={{ background: '#0E1119' }}>Landing Page</option>
-                                        <option value="Redesign" style={{ background: '#0E1119' }}>Redesign</option>
-                                        <option value="Sistema" style={{ background: '#0E1119' }}>Sistema</option>
-                                    </Select>
-                                </Stack>
-                            </Stack>
-                        </Flex>
-                    </Stack>
-                </Flex>
+                <StartNow/>
             </Flex>
         </Flex>
 

@@ -3,6 +3,7 @@ import { switchTheme } from './switch';
 import { checkboxTheme } from './checkbox';
 import { radioTheme } from './checkbox copy';
 import { accordionTheme } from './accordion';
+import { tabsTheme } from './tabs';
 
 export const theme = extendTheme({
     shadows: {
@@ -75,5 +76,6 @@ export const theme = extendTheme({
         Checkbox: checkboxTheme,
         Radio: radioTheme,
         Accordion: accordionTheme,
+        Tabs: tabsTheme,
     },
 })

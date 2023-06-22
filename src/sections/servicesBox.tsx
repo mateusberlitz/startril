@@ -75,7 +75,7 @@ export function ServicesBox(){
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                         {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                             <HStack spacing="6">
-                                <Ui/>
+                                <Flex maxW="50px"><Ui/></Flex>
                                 <Text color="gray.600">UI & UX</Text>
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
@@ -86,7 +86,7 @@ export function ServicesBox(){
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                         {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                             <HStack spacing="6">
-                                <DevIcon/>
+                                <Flex maxW="50px"><DevIcon/></Flex>
                                 <Text color="gray.600">Sites e Sistemas</Text>
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Desenvolvimento</Text>
@@ -97,7 +97,7 @@ export function ServicesBox(){
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
                         {/* __css={{borderImage:"linear-gradient(90deg, rgba(59, 161, 240, 1) -1.31%, rgba(114, 96, 223, 1) 91.65%)"}} */}
                             <HStack spacing="6">
-                                <AdsIcon/>
+                                <Flex maxW="50px"><AdsIcon/></Flex>
                                 <Text color="gray.600">Tráfego Pago</Text>
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Anúncios e Impulsão</Text>

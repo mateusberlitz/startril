@@ -5,7 +5,7 @@ import { FunilAnimation } from '../components/FunilAnimation';
 
 export function OurWork(){
     return(
-        <Flex w="100%" bg="#080510" overflow="hidden">
+        <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">

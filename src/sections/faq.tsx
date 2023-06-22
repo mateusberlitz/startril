@@ -1,4 +1,4 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Heading, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
 import { ColoredTag } from "../components/ColoredTag";
 import { TextTag } from "../components/TextTag";
 import { StarDivider } from "../components/StarDivider";
@@ -17,37 +17,118 @@ export function Faq(){
                         <Text color="gray.500">Confira nossas perguntas frequentes abaixo.</Text>
                     </Stack>
 
-                    <Accordion>
-                        <AccordionItem>
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                    Section 1 title
-                                </Box>
-                                <AccordionIcon />
-                            </AccordionButton>
-                            <AccordionPanel pb={4}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.
-                            </AccordionPanel>
-                        </AccordionItem>
+                    <Tabs variant="startril" maxW="700px">
+                        <TabList>
+                            <Tab>Desenvolvimento</Tab>
+                            <Tab>Anúncios</Tab>
+                            <Tab>Design</Tab>
+                        </TabList>
 
-                        <AccordionItem>
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                    Section 1 title
-                                </Box>
-                                <AccordionIcon />
-                            </AccordionButton>
-                            <AccordionPanel pb={4}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.
-                            </AccordionPanel>
-                        </AccordionItem>
-                    </Accordion>
+                        <TabPanels>
+
+                            <TabPanel>
+                                <Accordion>
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                </Accordion>
+                            </TabPanel>
+
+                            <TabPanel>
+                                <Accordion>
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                </Accordion>
+                            </TabPanel>
+
+                            <TabPanel>
+                                <Accordion>
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Section 1 title
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+                                </Accordion>
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>
 
                     {/* <Stack spacing="10">
                         <Stack border="1px solid" borderColor="rgba(255,255,255,0.1)" p="5" borderRadius="3" spacing="">

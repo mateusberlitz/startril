@@ -1,8 +1,8 @@
 <svg width="auto" height="auto" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1.7345" y="1.56055" width="48.9668" height="34.8789" stroke="url(#paint0_linear_1163_12)" stroke-width="2"/>
-<path d="M20.5803 12.165L14.0588 19.1286L20.5803 25.8342" stroke="url(#paint1_linear_1163_12)" stroke-width="2"/>
-<path d="M32.0186 25.835L38.54 18.8714L32.0186 12.1658" stroke="url(#paint2_linear_1163_12)" stroke-width="2"/>
-<line x1="7.22791" y1="42.625" x2="45.2079" y2="42.625" stroke="url(#paint3_linear_1163_12)" stroke-width="2"/>
+<rect class="serviceIcon" x="1.7345" y="1.56055" width="48.9668" height="34.8789" stroke="url(#paint0_linear_1163_12)" stroke-width="2"/>
+<path class="serviceIcon" d="M20.5803 12.165L14.0588 19.1286L20.5803 25.8342" stroke="url(#paint1_linear_1163_12)" stroke-width="2"/>
+<path class="serviceIcon" d="M32.0186 25.835L38.54 18.8714L32.0186 12.1658" stroke="url(#paint2_linear_1163_12)" stroke-width="2"/>
+<line class="serviceIcon" x1="7.22791" y1="42.625" x2="45.2079" y2="42.625" stroke="url(#paint3_linear_1163_12)" stroke-width="2"/>
 <defs>
 <linearGradient id="paint0_linear_1163_12" x1="0.0669383" y1="20.9466" x2="47.4433" y2="20.9466" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3BA1F0"/>

@@ -87,7 +87,7 @@ export default function Sobre(){
             <Flex bg="#000" flexDir="column">
                 <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="40" spacing="14" pos="relative" alignItems={"center"} direction={["column", "column", "row", "row"]}>
                     <Stack spacing="10"  w={["100%", "100%", "50%", "50%"]}>
-                        <Stack spacing="0">
+                        {/* <Stack spacing="0">
                             <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+6</Text>
                             <Text fontSize={"lg"} color="white">Anos de experiência</Text>
                         </Stack>
@@ -100,7 +100,9 @@ export default function Sobre(){
                         <Stack spacing="0">
                             <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+95</Text>
                             <Text fontSize={"lg"} color="white">Campanhas e estratégias lançadas</Text>
-                        </Stack>
+                        </Stack> */}
+
+                        
                     </Stack>
                     <Stack spacing="14" w={["100%", "100%", "50%", "50%"]}>
                         <Stack maxW="600px" spacing="10">

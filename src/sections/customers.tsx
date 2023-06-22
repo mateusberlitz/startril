@@ -23,8 +23,7 @@ export function Customers(){
                             <StarDivider maxW="120px"/>
                         </Stack>
                         <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>São parceiros incríveis</Heading>
-                        <Text color="gray.500">Diferentes ramos, e resultados incríveis, trabalhos impressionantes. Engaje no seu objetivo como estas empresas.</Text>
-
+                        <Text color="gray.500">Diferentes ramos, resultados exponenciais e trabalhos impressionantes. Engaje no seu objetivo como estas empresas.</Text>
                     </Stack>
 
                     <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"}>

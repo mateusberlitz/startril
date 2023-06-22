@@ -244,13 +244,13 @@ cursor: pointer
     /* ../../public/funil.svg */
 }
 
-.ui_svg__serviceIcon{
+.ui_svg__serviceIcon, .ads_svg__serviceIcon, .dev_svg__serviceIcon{
     transition: all ease 0.5s;
     filter: brightness(1);
     /* fill: url(#ui_svg__a); */
 }
 
-.serviceItem:hover .ui_svg__serviceIcon{
+.serviceItem:hover .ui_svg__serviceIcon, .serviceItem:hover .ads_svg__serviceIcon, .serviceItem:hover .dev_svg__serviceIcon{
     transition: all ease 0.5s;
     filter: brightness(15);
     /* fill: #fff */
