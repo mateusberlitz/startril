@@ -7,8 +7,60 @@ import { Footer } from "../components/Footer";
 import { Phone, Tool, Zap } from "react-feather";
 
 import Lamp from '../../public/lightbulb-line.svg';
+import Whatsapp from '../../public/whatsapp.svg';
+import BgAngles from '../../public/bg_angles.svg';
+import { useEffect, useRef } from "react";
+
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Sobre(){
+    const letsTalkSection = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const arrows = gsap.utils.toArray<HTMLElement>('.bg_angles_svg__backgroundArrow');
+            const sections = gsap.utils.toArray<HTMLElement>('.section');
+
+            arrows.forEach((arrow, i) => {
+                gsap.to(arrow, {
+                    scrollTrigger: {
+                        start: 'top bottom',
+                    //   end: 'bottom top',
+                        trigger: ".letsTalk",
+                        toggleClass: 'active',
+                        //markers: true,
+                        once: true
+                    }
+                });
+            })
+
+            sections.forEach((section, i) => {
+                const fadeShow = gsap.fromTo(section, { 
+                    autoAlpha: 0,
+                    y: 50
+                }, { 
+                    autoAlpha: 1,
+                    y: 0
+                });
+
+                console.log(i);
+
+                ScrollTrigger.create({
+                    trigger: section,
+                    animation: fadeShow,
+                    once: true,
+                    start: "top center",
+                    //markers: true,
+                    toggleActions: 'play none none none',
+                });
+            })
+        });
+
+        return () => ctx.revert();
+    }, [])
+
     return(
         <Flex flexDir="column" w="100%">
             <Header/>
@@ -67,7 +119,7 @@ export default function Sobre(){
                 
 
 
-                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h="90vh" maxH="940px" pos="relative">
+                <Stack className="section" px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h="90vh" maxH="940px" pos="relative">
                     <Stack spacing="14" pos="absolute" bottom="9%">
                         <Stack maxW="600px" spacing="10">
                             <ColoredTag>Sobre Nós</ColoredTag>
@@ -87,7 +139,7 @@ export default function Sobre(){
             </Flex>
 
             <Flex bg="#000" flexDir="column">
-                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="40" spacing="14" pos="relative" alignItems={"center"} direction={["column", "column", "row", "row"]}>
+                <Stack className="section" px="6" w="100%" maxW="1200px" m="0 auto" py="40" spacing="14" pos="relative" alignItems={"center"} direction={["column", "column", "row", "row"]}>
                     <Stack spacing="10"  w={["100%", "100%", "50%", "50%"]}>
                         {/* <Stack spacing="0">
                             <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+6</Text>
@@ -110,7 +162,7 @@ export default function Sobre(){
                     <Stack spacing="14" w={["100%", "100%", "50%", "50%"]}>
                         <Stack maxW="600px" spacing="10">
                             <ColoredTag>Sua Equipe</ColoredTag>
-                            <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Estamos prontos para te auxiliar com...</Heading>
+                            <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Estamos prontos para te auxiliar com mais</Heading>
                         </Stack>
 
                         <Stack spacing="20" pos="relative">
@@ -144,13 +196,19 @@ export default function Sobre(){
                         </Stack>
                     </Stack>
                 </Stack>
+            </Flex>
 
-                <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="40" pb="56" spacing="14" h="90vh" pos="relative" textAlign={"center"} justifyContent={"center"} alignItems={"center"}>
+            <Flex className="letsTalk" bg="#000" flexDir="column" pos="relative">
+                <Flex pos="absolute" top="100px" bottom="0" left="0" right="0">
+                    <BgAngles/>
+                </Flex>
+                <Stack className="section" zIndex={1} px="6" w="100%" maxW="1200px" m="0 auto" py="40" pb="56" spacing="14" h="90vh" pos="relative" textAlign={"center"} justifyContent={"center"} alignItems={"center"}>
+                    
                     <Stack spacing="6">
                         <ColoredTag>Para começar</ColoredTag>
                         <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Vamos falar sobre o seu projeto?</Heading>
                     </Stack>
-                    <MainButton leftIcon={<Icon as={Phone}/>}>Whatsapp</MainButton>
+                    <MainButton leftIcon={<Icon as={Whatsapp}/>}>Whatsapp</MainButton>
                 </Stack>
             </Flex>
 

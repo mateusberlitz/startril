@@ -348,3 +348,24 @@ cursor: pointer
 .customerLine{
     animation: 2s customerLineEffect 0s linear infinite;
 }
+
+@keyframes arrowsBackgroundEffect{
+    0%{
+        transform: translate(0, 200px);
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, -900px);
+        opacity: 0;
+    }
+}
+
+.active .bg_angles_svg__backgroundArrow{
+    animation: 4s arrowsBackgroundEffect 0s ease forwards;
+}

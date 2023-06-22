@@ -1,6 +1,7 @@
 import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { Select } from "../components/Forms/Selects/Select";
 import BgCones from '../../public/bg_star_cones.svg';
+import { MainButton } from "../components/Buttons/MainButton";
 
 export function StartNow(){
     return(
@@ -17,7 +18,7 @@ export function StartNow(){
                             <Text>Que tal solicitar nossos serviços através de um briefing prático que pode nos contar exatamente o que você precisa?</Text>
                         </Stack>
                         <Stack justifyContent={"center"}>
-                            <Select name="demand" label="Selecione sua demanda">
+                            {/* <Select name="demand" label="Selecione sua demanda">
                                 <option value="" style={{ background: '#0E1119' }}>Selecionar</option>
                                 <option value="Anúncios" style={{ background: '#0E1119' }}>Anúncios</option>
                                 <option value="Website" style={{ background: '#0E1119' }}>Website</option>
@@ -26,7 +27,8 @@ export function StartNow(){
                                 <option value="Landing Page" style={{ background: '#0E1119' }}>Landing Page</option>
                                 <option value="Redesign" style={{ background: '#0E1119' }}>Redesign</option>
                                 <option value="Sistema" style={{ background: '#0E1119' }}>Sistema</option>
-                            </Select>
+                            </Select> */}
+                            <MainButton>Começar</MainButton>
                         </Stack>
                     </Stack>
                 </Flex>
