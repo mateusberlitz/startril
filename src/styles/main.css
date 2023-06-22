@@ -43,7 +43,8 @@ select option {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: #000;
+background: #1B1F2C;
+cursor: pointer
 }
 
 @keyframes logoBordas{

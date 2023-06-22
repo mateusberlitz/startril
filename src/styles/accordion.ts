@@ -11,7 +11,7 @@ const baseStyle = definePartsStyle({
   },
   container: {
     transition: "all ease .5s",
-    border: "1px solid rgba(255,255,255,0.1)",
+    border: "1px solid rgba(255,255,255,0.05)",
     //borderColor: "rgba(255,255,255,0.01)",
     py: "3",
     px: ["6", "6", "8", "8"],

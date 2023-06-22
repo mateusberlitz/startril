@@ -1,16 +1,28 @@
-<svg class="icon_people" width="auto" height="auto" viewBox="0 0 600 601" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="M345.322 454.133L439.828 558.667V454.133V98.0636L204.967 298.887L23.4072 454.133H345.322Z" fill="url(#paint0_linear_485_11)" fill-opacity="0.45"/>
-<path d="M479.179 383.865L577.003 454.133H23.4072L439.828 98.0636V558.667L23.4072 98.0636L213.642 218.382" stroke="url(#paint1_linear_485_11)" stroke-width="3.49"/>
-<rect x="0.381836" y="0.785645" width="599.327" height="599.327" fill="url(#pattern0)"/>
+<svg class="icon_people" width="auto" height="auto" viewBox="0 0 665 618" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_d_485_11)">
+<path d="M377.322 454.133L471.828 558.667V454.133V98.0636L236.967 298.887L55.4072 454.133H377.322Z" fill="url(#paint0_linear_485_11)" fill-opacity="0.45" shape-rendering="crispEdges"/>
+<path d="M511.179 383.865L609.003 454.133H55.4072L471.828 98.0636V558.667L55.4072 98.0636L245.642 218.382" stroke="url(#paint1_linear_485_11)" stroke-width="3.49" shape-rendering="crispEdges"/>
+</g>
+<rect x="32.3818" y="0.785645" width="599.327" height="599.327" fill="url(#pattern0)"/>
 <defs>
+<filter id="filter0_d_485_11" x="0.681152" y="48.2756" width="663.742" height="568.923" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="25"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.445448 0 0 0 0 0.375521 0 0 0 0 0.875 0 0 0 0.63 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_485_11"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_485_11" result="shape"/>
+</filter>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_485_11" transform="scale(0.001)"/>
 </pattern>
-<linearGradient id="paint0_linear_485_11" x1="16.1563" y1="304.052" x2="530.752" y2="304.052" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_485_11" x1="48.1563" y1="304.052" x2="562.752" y2="304.052" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3BA1F0"/>
 <stop offset="1" stop-color="#7260DF"/>
 </linearGradient>
-<linearGradient id="paint1_linear_485_11" x1="16.1563" y1="304.052" x2="530.752" y2="304.052" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_485_11" x1="48.1563" y1="304.052" x2="562.752" y2="304.052" gradientUnits="userSpaceOnUse">
 <stop stop-color="#3BA1F0"/>
 <stop offset="1" stop-color="#7260DF"/>
 </linearGradient>
