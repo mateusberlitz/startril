@@ -66,7 +66,7 @@ export function Services(){
     // }, []);
 
     return(
-        <Flex w="100%" bg="#080510" overflow="hidden" pos="relative">
+        <Flex w="100%" bg="#080510" overflow="hidden" pos="relative" pt="20">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="0" spacing="20" direction={["column", "column", "row", "row"]} alignItems={""}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" justifyContent={"center"}>
@@ -121,7 +121,7 @@ export function Services(){
                         </Stack>
                     </Stack>
 
-                    <Stack w={["100%", "100%", "45%", "45%"]} pos="absolute" pr={["6", "6", "6" , "6" , "6" , "20"]} top={360-(activeItem*360)} zIndex={2} right="0" textAlign={"right"} justifyContent={"right"} alignItems={"flex-end"} transition="all ease .5s">
+                    <Stack w={["100%", "100%", "45%", "45%"]} pos="absolute" pr={["6", "6", "6" , "6" , "6" , "20"]} top={430-(activeItem*360)} zIndex={2} right="0" textAlign={"right"} justifyContent={"right"} alignItems={"flex-end"} transition="all ease .5s">
                         
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">

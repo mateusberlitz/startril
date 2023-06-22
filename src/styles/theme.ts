@@ -2,6 +2,7 @@ import { extendTheme } from '@chakra-ui/react';
 import { switchTheme } from './switch';
 import { checkboxTheme } from './checkbox';
 import { radioTheme } from './checkbox copy';
+import { accordionTheme } from './accordion';
 
 export const theme = extendTheme({
     shadows: {
@@ -73,5 +74,6 @@ export const theme = extendTheme({
         Switch: switchTheme,
         Checkbox: checkboxTheme,
         Radio: radioTheme,
+        Accordion: accordionTheme,
     },
 })

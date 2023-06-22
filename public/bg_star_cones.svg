@@ -1,14 +1,14 @@
 <svg width="auto" height="auto" viewBox="0 0 1168 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_1062_8)">
+<g class="cone1" filter="url(#filter0_f_1062_8)">
 <path d="M332.828 161.313L250.952 338.03L158.905 248.968L332.828 161.313Z" fill="#3BA1F0"/>
 </g>
-<g filter="url(#filter1_f_1062_8)">
+<g class="cone2" filter="url(#filter1_f_1062_8)">
 <path d="M1234.55 236.534L1006.76 368.931L973.79 198.833L1234.55 236.534Z" fill="#7260DF"/>
 </g>
-<g filter="url(#filter2_f_1062_8)">
+<g class="cone3" filter="url(#filter2_f_1062_8)">
 <path d="M193.266 121.248L-64.8866 68.5852L23.6417 -80.3551L193.266 121.248Z" fill="#7260DF"/>
 </g>
-<g filter="url(#filter3_f_1062_8)">
+<g class="cone4" filter="url(#filter3_f_1062_8)">
 <path d="M536.008 234.773L544.747 -28.5508L706.397 33.8169L536.008 234.773Z" fill="#3BA1F0"/>
 </g>
 <defs>

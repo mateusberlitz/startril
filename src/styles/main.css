@@ -254,3 +254,83 @@ background: #000;
     filter: brightness(15);
     /* fill: #fff */
 }
+
+@keyframes moveCone1{
+    0%{
+        /* opacity: 0.4; */
+        transform: translate(20px, 20px);
+    }
+    33%{
+        transform: translate(-200px, 20px);
+    }
+    66%{
+        transform: translate(200px, -200px);
+    }
+    100%{
+        transform: translate(200px, 200px);
+    }
+}
+
+.bg_star_cones_svg__cone1{
+    animation: moveCone1 8s linear infinite alternate;
+}
+
+@keyframes moveCone2{
+    0%{
+        /* opacity: 0.4; */
+        transform: translate(20px, 20px);
+    }
+    33%{
+        transform: translate(140px, 0px);
+    }
+    66%{
+        transform: translate(0px, 120px);
+    }
+    100%{
+        transform: translate(-100px, -100px);
+    }
+}
+
+.bg_star_cones_svg__cone2{
+    animation: moveCone2 8s linear infinite alternate;
+}
+
+@keyframes moveCone3{
+    0%{
+        /* opacity: 0.4; */
+        transform: translate(-100px, -100px);
+    }
+    33%{
+        transform: translate(-200px, 20px);
+    }
+    66%{
+        transform: translate(0px, 120px);
+    }
+    100%{
+        transform: translate(140px, 0px);
+    }
+}
+
+.bg_star_cones_svg__cone3{
+    animation: moveCone3 8s linear infinite alternate;
+}
+
+@keyframes moveCone4{
+    0%{
+        /* opacity: 0.4; */
+        transform: translate(-200px, 0);
+    }
+    33%{
+        transform: translate(-100px, 170px);
+    }
+    66%{
+        transform: translate(200px, -200px);
+    }
+    100%{
+        transform: translate(180px, 9px);
+    }
+}
+
+.bg_star_cones_svg__cone4{
+    animation: moveCone4 8s linear infinite alternate;
+}
