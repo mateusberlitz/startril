@@ -4,7 +4,9 @@ import ContactAnimation from '../../public/contact_animation.svg';
 import { MainButton } from "../components/Buttons/MainButton";
 import { ColoredTag } from "../components/ColoredTag";
 import { Footer } from "../components/Footer";
-import { Phone } from "react-feather";
+import { Phone, Tool, Zap } from "react-feather";
+
+import Lamp from '../../public/lightbulb-line.svg';
 
 export default function Sobre(){
     return(
@@ -101,8 +103,9 @@ export default function Sobre(){
                             <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+95</Text>
                             <Text fontSize={"lg"} color="white">Campanhas e estratégias lançadas</Text>
                         </Stack> */}
+                        <Img src="./equipe.png" />
 
-                        
+
                     </Stack>
                     <Stack spacing="14" w={["100%", "100%", "50%", "50%"]}>
                         <Stack maxW="600px" spacing="10">
@@ -111,12 +114,33 @@ export default function Sobre(){
                         </Stack>
 
                         <Stack spacing="20" pos="relative">
-                            <Stack>
-                                <Text>Mais criatividade.</Text>
+                            <HStack>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                                    <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
+                                    <Stack spacing="3" zIndex={1}>
+                                        <Icon as={Zap} color="white" fontSize={"20px"}/>
+                                        <Text fontSize={"xl"} color="white">Criatividade</Text>
+                                    </Stack>
+                                </Stack>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                                    <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
+                                    <Stack spacing="3" zIndex={1}>
+                                        <Icon as={Lamp} fill="white" fontSize={"20px"}/>
+                                        <Text fontSize={"xl"} color="white">Ideias</Text>
+                                    </Stack>
+                                </Stack>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                                    <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
+                                    <Stack spacing="3" zIndex={1}>
+                                        <Icon as={Tool} color="white" fontSize={"20px"}/>
+                                        <Text fontSize={"xl"} color="white">Soluções</Text>
+                                    </Stack>
+                                </Stack>
+                                {/* <Text>Mais criatividade.</Text>
                                 <Text>Mais ideias.</Text>
                                 <Text>Mais olhar crítico.</Text>
-                                <Text>Mais soluções.</Text>
-                            </Stack>
+                                <Text>Mais soluções.</Text> */}
+                            </HStack>
                         </Stack>
                     </Stack>
                 </Stack>

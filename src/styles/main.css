@@ -335,3 +335,16 @@ cursor: pointer
 .bg_star_cones_svg__cone4{
     animation: moveCone4 8s linear infinite alternate;
 }
+
+@keyframes customerLineEffect{
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.customerLine{
+    animation: 2s customerLineEffect 0s linear infinite;
+}

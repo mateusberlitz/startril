@@ -1,4 +1,4 @@
-import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { TextTag } from "../components/TextTag";
 import { StarDivider } from "../components/StarDivider";
 
@@ -12,6 +12,11 @@ import LineAnimation from '../../public/line.svg';
 import { ColoredTag } from "../components/ColoredTag";
 
 export function Customers(){
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return(
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
@@ -26,10 +31,18 @@ export function Customers(){
                         <Text color="gray.500">Diferentes ramos, resultados exponenciais e trabalhos impressionantes. Engaje no seu objetivo como estas empresas.</Text>
                     </Stack>
 
-                    <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"}>
-                        <Flex pos="absolute" zIndex={-1}>
-                            <LineAnimation/>
-                        </Flex>
+                    <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"} pos={isWideVersion ? "relative" : "relative"}>
+                        {
+                            isWideVersion ? (
+                                <Flex pos="absolute" zIndex={-1}>
+                                    <LineAnimation/>
+                                </Flex>
+                            ) : (
+                                <Flex pos="absolute" zIndex={-1} top="20px" left="0" bottom="0" right="0" justifyContent={"center"}>
+                                    <Box className="customerLine" h="100%" bg="gradient" w="2px"/>
+                                </Flex>
+                            )
+                        }
                         <Stack direction={["column", "column", "row", "row"]} spacing="5" zIndex={2}>
                             <Stack spacing="5">
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>

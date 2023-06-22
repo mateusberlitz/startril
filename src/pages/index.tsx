@@ -105,7 +105,7 @@ export default function Home() {
                         {/* <Img src="./mateus_video.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/> */}
                     </Flex>
 
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h="80vh" maxH="940px" pos="relative" justifyContent={"center"}>
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["80vh", "80vh", "80vh", "80vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
                         <Stack spacing="14">
                             <PlayCircle/>
                             <Stack maxW="500px" spacing="10">
