@@ -2,12 +2,15 @@ import { Box, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import { Select } from "../components/Forms/Selects/Select";
 import BgCones from '../../public/bg_star_cones.svg';
 import { MainButton } from "../components/Buttons/MainButton";
+import { useRouter } from "next/router";
 
 export function StartNow(){
+    const router = useRouter();
+
     return(
         <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="32" spacing="0">
-                <Flex pos="relative" bg="#3F3F3F">
+                <Flex pos="relative" bg="#3F3F3F" className="sectionFade">
                     <Box pos="absolute" zIndex="1" w="100%" height="100%">
                         <BgCones/>
                     </Box>
@@ -28,7 +31,7 @@ export function StartNow(){
                                 <option value="Redesign" style={{ background: '#0E1119' }}>Redesign</option>
                                 <option value="Sistema" style={{ background: '#0E1119' }}>Sistema</option>
                             </Select> */}
-                            <MainButton>Começar</MainButton>
+                            <MainButton onClick={() => router.push('/contato')}>Começar</MainButton>
                         </Stack>
                     </Stack>
                 </Flex>

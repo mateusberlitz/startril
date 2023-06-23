@@ -8,7 +8,7 @@ export function Faq(){
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="22" spacing="20" direction={["column", "column", "column", "column"]}>
-                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
                             <TextTag>Faq</TextTag>
                             <StarDivider maxW="120px"/>
@@ -17,7 +17,7 @@ export function Faq(){
                         <Text color="gray.500">Confira nossas perguntas frequentes abaixo.</Text>
                     </Stack>
 
-                    <Tabs variant="startril" maxW="700px">
+                    <Tabs variant="startril" maxW="700px" className="sectionFade">
                         <TabList>
                             <Tab>Desenvolvimento</Tab>
                             <Tab>Anúncios</Tab>
@@ -31,7 +31,7 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Vocês desenvolvem sites e sistemas personalizados ou utilizam templates predefinidos?
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -46,7 +46,67 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Quanto tempo leva para completar um projeto?
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Vocês oferecem suporte contínuo após a entrega do projeto
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Quais linguagens de programação vocês utilizam
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Vocês oferecem serviços de programação frontend e backend
+                                            </Box>
+                                            <AccordionIcon />
+                                        </AccordionButton>
+                                        <AccordionPanel pb={4}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </AccordionPanel>
+                                    </AccordionItem>
+
+                                    <AccordionItem>
+                                        <AccordionButton>
+                                            <Box as="span" flex='1' textAlign='left'>
+                                                Posso colocar meu funcionário de design ou programação para ajudar no projeto
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -65,7 +125,7 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Vocês oferecem suporte contínuo após a entrega do projeto
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -80,7 +140,7 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Quais linguagens de programação vocês utilizam
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -99,7 +159,7 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Vocês oferecem serviços de programação frontend e backend
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>
@@ -114,7 +174,7 @@ export function Faq(){
                                     <AccordionItem>
                                         <AccordionButton>
                                             <Box as="span" flex='1' textAlign='left'>
-                                                Section 1 title
+                                                Posso colocar meu funcionário de design ou programação para ajudar no projeto
                                             </Box>
                                             <AccordionIcon />
                                         </AccordionButton>

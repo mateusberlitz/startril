@@ -89,12 +89,12 @@ cursor: pointer
 }
 
 .icone_startril_svg__introLogo{
-    animation: logoGetIn 1s, 1s logoGetOut 7s forwards;
+    animation: logoGetIn 1.5s, 1.5s logoGetOut 4s forwards;
 }
 
 .icone_startril_svg__introLogo path{
     fill-opacity:0;
-    animation: logoBordas 5s ease infinite alternate, 1s logoFill 5s forwards;
+    animation: logoBordas 3s ease infinite alternate, 1s logoFill 3s forwards;
 }
 
 @keyframes hall{
@@ -108,7 +108,7 @@ cursor: pointer
 }
 
 .intro{
-    animation: 2s hall 7s ease forwards;
+    animation: 2s hall 5s ease forwards;
 }
 
 @keyframes starLight{
@@ -368,4 +368,15 @@ cursor: pointer
 
 .active .bg_angles_svg__backgroundArrow{
     animation: 4s arrowsBackgroundEffect 0s ease forwards;
+}
+
+.sectionFade {
+    transition: all ease .5s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.sectionFade.active{
+    transform: translateY(0px);
+    opacity: 1;
 }

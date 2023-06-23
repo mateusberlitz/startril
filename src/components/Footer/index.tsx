@@ -4,14 +4,17 @@ import LogoWhite from '../../../public/full_logo_white.svg';
 import StartrilIcon from '../../../public/icone_startril.svg';
 import Link from "next/link";
 import PeopleIcon from '../../../public/people_logo.svg';
+import { useRouter } from "next/router";
 
 
 export function Footer(){
+    const router = useRouter();
+
     return(
         <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" pt="36" spacing="10">
                 <Stack direction={["column","column","row","row"]} spacing="16" justifyContent={"space-between"}>
-                    <Stack spacing="12">
+                    <Stack spacing="12" className="sectionFade">
                         <Heading color="white">Eleve o seu nível conosco!</Heading>
 
                         <Text>Se você quer dar os primeiros <br/>passos para transformar sua empresa, <br/>agora é a hora!</Text>
@@ -37,7 +40,7 @@ export function Footer(){
                         </HStack>
                     </Stack>
 
-                    <Stack spacing="4">
+                    <Stack spacing="4" className="sectionFade">
                         <Flex maxW="150px" h="fit-content">
                             <LogoWhite/>
                         </Flex>
@@ -48,7 +51,7 @@ export function Footer(){
                     </Flex> */}
 
                 </Stack>
-                <HStack borderTop="1px solid" borderColor="gray.900" pt="10" justifyContent={"space-between"}>
+                <HStack borderTop="1px solid" borderColor="gray.900" pt="10" justifyContent={"space-between"} className="sectionFade">
                     <HStack>
                         <Text fontSize={"12px"}>Startril © Made with expertise!</Text>
                     </HStack>

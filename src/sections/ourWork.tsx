@@ -8,7 +8,7 @@ export function OurWork(){
         <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
-                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
                             <TextTag>Aonde Atuamos</TextTag>
                             <StarDivider maxW="120px"/>
@@ -18,7 +18,7 @@ export function OurWork(){
 
                     </Stack>
 
-                    <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"}>
+                    <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"}>
                         <Box id="moon" zIndex={-1} w="60" h="60" pos="absolute" bg="gradient" borderRadius={"full"} filter="blur(100px)"/>
                         <HStack spacing="0" w="100%">
                             <Flex w="100%">

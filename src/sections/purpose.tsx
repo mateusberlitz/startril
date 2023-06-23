@@ -14,7 +14,7 @@ export function Purpose(){
                         <DnaAnimation/>
                     </Stack>
 
-                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                    <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} spacing="12">
                         <Stack spacing="6">
                             <TextTag>O propósito é</TextTag>
                             <StarDivider maxW="120px"/>

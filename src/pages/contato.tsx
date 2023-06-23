@@ -140,23 +140,18 @@ export default function Contato(){
     const [design, setDesign] = useState(false);
     const [dev, setDev] = useState(false);
     const [ads, setAds] = useState(false);
+    const [nothing, setNothing] = useState(false);
 
     const handleSaveFirstPart = async (lead: BriefingLeadData) => {
+        console.log(lead);
         setIsSubmitting(true);
 
         gsap.context(() => {
             AnimationSendFirstPart();
         });
 
-        // setTimeout(() => {
-        //     setIsSubmitting(false);
-        //     //AnimationReturnToFirstPart();
-        //     setStep(2);
-        //     AnimationStartSecondPart();
-        // }, 8000)
-
         try{
-            const demandText = `${design ? 'Design, ' : ''} ${ads ? 'Anúncios, ' : ''} ${dev ? 'Desenvolvimento' : ''}`;
+            const demandText = lead.demand ? lead.demand  : `${design ? 'Design, ' : ''} ${ads ? 'Anúncios, ' : ''} ${dev ? 'Desenvolvimento' : ''}`;
 
             const result = await serverApi.post('public/leads', {...lead, demand: demandText, send_mail: "true"}).then(response => response.data);
 
@@ -382,7 +377,21 @@ export default function Contato(){
         setCompetitors(competitors.filter((concurrent, index) => index !== concurrentIndex));
     }
 
-    console.log(briefingForm.formState.errors);
+    useEffect(() => {
+        const sections = document.querySelectorAll(".sectionFade");
+
+        console.log(sections);
+
+        function scrollAnimate() {
+            sections.forEach(e => {
+                let t = e.getBoundingClientRect().top;
+                t <= (window.innerHeight || document.documentElement.clientHeight) / 1.1 && e.classList.add("active")
+            })
+        }
+
+        scrollAnimate()
+        window.addEventListener("scroll", scrollAnimate);
+    }, []);
 
     return(
         <Flex flexDir="column" w="100%">
@@ -396,7 +405,7 @@ export default function Contato(){
 
                     <Flex w="100%">
                         <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0" minH="90vh">
-                            <HStack spacing="12" justifyContent={"space-between"}>
+                            <HStack spacing="12" justifyContent={"space-between"} className="sectionFade">
                                 {
                                     isWideVersion && (
                                         <>
@@ -529,7 +538,7 @@ export default function Contato(){
                                                         </Flex>
 
                                                         <FormControl pos="relative" isInvalid={(!ads && !design && !dev)}>
-                                                            { ((!ads && !design && !dev) && firstEdit) && (
+                                                            { ((!ads && !design && !dev && !nothing) && firstEdit) && (
                                                                 <FormErrorMessage fontSize="11px">
                                                                     Selecione uma opção
                                                                 </FormErrorMessage>   
@@ -543,6 +552,8 @@ export default function Contato(){
                                                                 </FormErrorMessage>   
                                                             )}
                                                         </FormControl> */}
+
+                                                        <Checkbox {...briefingLeadForm.register("demand")} value={"Não tenho certeza, quero descobrir"} onChange={() => {setNothing(!nothing); setFirstEdit(true)}}>Não tenho certeza, quero descobrir</Checkbox>
                                                     </Stack>
                                                 </Stack>
                                             </Stack>
@@ -571,15 +582,18 @@ export default function Contato(){
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.goals}>
                                                         <Stack spacing="32" direction={["column", "column", "row", "row"]}>
                                                             <Stack spacing="3">
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Anúncios"}>Anúncios</Checkbox>
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Aplicativo"}>Aplicativo</Checkbox>
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"E-commerce"}>E-commerce</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Anúncios"}>Vender Mais</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Aplicativo"}>Aumentar visibilidade</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"E-commerce"}>Criar uma loja virtual</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Página de vendas"}>Página de vendas</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Impactar meus clientes"}>Impactar meus clientes</Checkbox>
                                                             </Stack>
                                                             <Stack spacing="3">
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Redesign"}>Redesign</Checkbox>
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Sistema"}>Sistema</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Encantar público alvo"}>Gerar autoridade</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Sistema"}>Criar um Sistema</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Website"}>Website</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Redesign"}>Redesign</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Consultoria"}>Consultoria</Checkbox>
                                                             </Stack>
                                                         </Stack>
 

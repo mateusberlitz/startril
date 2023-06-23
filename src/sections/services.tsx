@@ -7,7 +7,9 @@ import DevIcon from '../../public/dev.svg';
 import AdsIcon from '../../public/ads.svg';
 import Ui from '../../public/ui.svg';
 import { useEffect, useState } from "react";
-import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 import { TextTag } from "../components/TextTag";
 import { StarDivider } from "../components/StarDivider";
 import { ArrowRight, ArrowUpRight } from "react-feather";
@@ -17,59 +19,27 @@ export function Services(){
 
     const [activeItem, setActiveItem] = useState(1);
 
-    // useEffect(() => {
-    //     const ctx = gsap.context(() => {
-    //         const timeline = gsap.timeline({
-    //             repeat: -1,
-    //             repeatDelay: 2,
-    //             yoyo:true
-    //         });
+    useEffect(() => {
+        const sections = document.querySelectorAll(".sectionFade");
 
-    //         timeline
-    //         .to("#light1", {
-    //             delay: 0.5,
-    //             duration: 2,
-    //             xPercent: 200,
-    //             yPercent: 800,
-    //         })
-    //         .to("#light1", {
-    //             delay: 0.5,
-    //             duration: 2,
-    //             xPercent: 750,
-    //             yPercent: 500,
-    //         })
-    //         .to("#light1", {
-    //             duration: 2,
-    //             delay: 0.5,
-    //             xPercent: 1250,
-    //             yPercent: 350,
-    //         })
-    //         .to("#light1", {
-    //             duration: 2,
-    //             delay: 0.5,
-    //             xPercent: 1750,
-    //             yPercent: 900,
-    //         })
-    //         .to("#light1", {
-    //             duration: 2,
-    //             delay: 0.4,
-    //             xPercent: 2750,
-    //             yPercent: 300,
-    //         })
-    //         .to("#light1", {
-    //             duration: 2,
-    //             delay: 0.4,
-    //             xPercent: 2750,
-    //             yPercent: 700,
-    //         })
-    //     });
-    // }, []);
+        console.log(sections);
+
+        function scrollAnimate() {
+            sections.forEach(e => {
+                let t = e.getBoundingClientRect().top;
+                t <= (window.innerHeight || document.documentElement.clientHeight) / 1.1 && e.classList.add("active")
+            })
+        }
+
+        scrollAnimate()
+        window.addEventListener("scroll", scrollAnimate);
+    }, []);
 
     return(
         <Flex w="100%" bg="#080510" overflow="hidden" pos="relative" pt="20">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="0" spacing="20" direction={["column", "column", "row", "row"]} alignItems={""}>
-                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" justifyContent={"center"}>
+                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" justifyContent={"center"} className="sectionFade">
                         <Stack spacing="6">
                             <TextTag>O Trabalho</TextTag>
                             <StarDivider maxW="120px"/>

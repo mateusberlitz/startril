@@ -21,7 +21,7 @@ export function Customers(){
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
-                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                    <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
                             {/* <ColoredTag>Quem já se transformou</ColoredTag> */}
                             <TextTag>Quem já se transformou</TextTag>
@@ -31,7 +31,7 @@ export function Customers(){
                         <Text color="gray.500">Diferentes ramos, resultados exponenciais e trabalhos impressionantes. Engaje no seu objetivo como estas empresas.</Text>
                     </Stack>
 
-                    <Stack w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"} pos={isWideVersion ? "relative" : "relative"}>
+                    <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} zIndex={2} alignItems={"center"} justifyContent={"center"} pos={isWideVersion ? "relative" : "relative"}>
                         {
                             isWideVersion ? (
                                 <Flex pos="absolute" zIndex={-1}>

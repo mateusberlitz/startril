@@ -10,6 +10,7 @@ import { StarDivider } from '../components/StarDivider';
 import PeopleIcon from '../../public/people_logo.svg';
 import HomeBackground from '../../public/home.svg';
 import React from '../../public/react.svg';
+import StartrilIcon from '../../public/icone_startril.svg';
 import { PlayCircle } from 'react-feather';
 
 
@@ -28,6 +29,11 @@ import { ListMethodsHorizontal } from '../sections/listMethodsHorizontal';
 import { Faq } from '../sections/faq';
 import { StartNow } from '../sections/startNow';
 import { ServicesBox } from '../sections/servicesBox';
+import { useEffect } from 'react';
+
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
     const router = useRouter();
@@ -35,6 +41,55 @@ export default function Home() {
         base: false,
         lg: true,
     })
+
+    // useEffect(() => {
+
+    //     const ctx = gsap.context(() => {
+    //         const sections = gsap.utils.toArray<HTMLElement>('.sectionFade');
+
+    //         console.log(sections);
+
+    //         sections.forEach((section, i) => {
+    //             const fadeShow = gsap.fromTo(section, { 
+    //                 autoAlpha: 0,
+    //                 y: 50
+    //             }, { 
+    //                 autoAlpha: 1,
+    //                 y: 0
+    //             });
+
+    //             console.log(i);
+
+    //             ScrollTrigger.create({
+    //                 trigger: section,
+    //                 animation: fadeShow,
+    //                 once: true,
+    //                 start: "top center",
+    //                 //markers: true,
+    //                 toggleActions: 'play none none none',
+    //                 //toggleClass: 'active'
+    //             });
+    //         })
+    //     });
+
+    //     return () => ctx.revert();
+    // }, []);
+
+    useEffect(() => {
+        const sections = document.querySelectorAll(".sectionFade");
+
+        console.log(sections);
+
+        function scrollAnimate() {
+            sections.forEach(e => {
+                let t = e.getBoundingClientRect().top;
+                t <= (window.innerHeight || document.documentElement.clientHeight) / 1.1 && e.classList.add("active")
+            })
+        }
+
+        scrollAnimate()
+        window.addEventListener("scroll", scrollAnimate);
+    }, []);
 
   return (
     <Box pos="relative" className='main'>
@@ -44,9 +99,9 @@ export default function Home() {
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 
-        {/* <Flex className="intro" zIndex={99} w="100vw" h="100vh" position={"fixed"} bg="black" justifyContent={"center"} alignItems="center">
+        <Flex className="intro" zIndex={99} w="100vw" h="100vh" position={"fixed"} bg="black" justifyContent={"center"} alignItems="center">
             <StartrilIcon/>
-        </Flex> */}
+        </Flex>
 
         <Flex flexDir="column" w="100%">
             <Flex flexDir="column">
@@ -67,7 +122,7 @@ export default function Home() {
                                 <Text color="gray.300">Destaque-se na internet, demonstre a sua autoridade e crie conexão com os seus clientes.</Text>
 
                                 <HStack spacing="8">
-                                    <MainButton>Contratar</MainButton>
+                                    <MainButton onClick={() => router.push('/contato')}>Contratar</MainButton>
                                     <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
                                 </HStack>
                             </Stack>
@@ -106,7 +161,7 @@ export default function Home() {
                     </Flex>
 
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["80vh", "80vh", "80vh", "80vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
-                        <Stack spacing="14">
+                        <Stack spacing="14" className="sectionFade">
                             <PlayCircle/>
                             <Stack maxW="500px" spacing="10">
                                 <ColoredTag>Cenário atual</ColoredTag>
@@ -126,7 +181,7 @@ export default function Home() {
 
                 <Flex w="100%" bg="#080510" overflow="hidden">
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]}>
+                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
                                 <Stack spacing="6">
                                     <TextTag>Product Design</TextTag>
@@ -148,7 +203,7 @@ export default function Home() {
                             </HStack>
                         </Stack>
 
-                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]}>
+                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <HStack>
                                 {
                                     isWideVersion ? (
@@ -171,7 +226,7 @@ export default function Home() {
                             </Stack>
                         </Stack>
 
-                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]}>
+                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
                                 <Stack spacing="6">
                                     <TextTag>Tráfego Pago</TextTag>

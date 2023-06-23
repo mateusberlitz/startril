@@ -16,7 +16,7 @@ export function ListMethodsHorizontal(){
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="48" pb="32" spacing="32" direction={["column", "column", "row", "row"]}>
-                    <Stack w={["100%","100%","50%","50%"]} maxW="600px">
+                    <Stack w={["100%","100%","50%","50%"]} maxW="600px" className="sectionFade">
                         <Stack spacing="12" pos="sticky" top="0px">
                             <Stack spacing="6">
                                 <HStack>
@@ -31,7 +31,7 @@ export function ListMethodsHorizontal(){
 
                     </Stack>
 
-                    <Stack spacing="10" w={["100%","100%","50%","50%"]}>
+                    <Stack spacing="10" w={["100%","100%","50%","50%"]} className="sectionFade">
                         <IconItemList index={1} active={activeItem === 1} onHover={handleChangeActiveItem} icon={Edit3} title={"Preenchimento do Briefing"} description={"O nosso briefing foi criado para que você possa nos fornecer as informações necessárias para o entendimento da sua necessidade e criação da solução mais adequada. É essencial para mapear todos os detalhes do projeto e não deixar nada de fora."}/>
 
                         <Divider borderColor="rgba(255,255,255,0.2)"/>
