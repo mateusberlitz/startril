@@ -580,7 +580,7 @@ export default function Contato(){
                                                     <Text color="white">Seu objetivo</Text>
 
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.goals}>
-                                                        <Stack spacing="32" direction={["column", "column", "row", "row"]}>
+                                                        <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                             <Stack spacing="3">
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Anúncios"}>Vender Mais</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Aplicativo"}>Aumentar visibilidade</Checkbox>
@@ -655,7 +655,7 @@ export default function Contato(){
                                                     <Text color="white">Selecione as personalidades do seu negócio.</Text>
 
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.personalities}>
-                                                        <Stack spacing="32" direction={["column", "column", "row", "row"]}>
+                                                        <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                             <Stack spacing="3">
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("personalities")} value={"Formal"}>Formal</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("personalities")} value={"Informal"}>Informal</Checkbox>
@@ -689,7 +689,7 @@ export default function Contato(){
                                                     
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.expected_time}>
                                                         <RadioGroup defaultValue=''>
-                                                            <Stack spacing="32" direction={["column", "column", "row", "row"]}>
+                                                            <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                                 <Stack spacing="3">
                                                                     <Radio form="briefingForm" value={"15 dias"} {...briefingForm.register("expected_time")}>15 dias</Radio>
                                                                     <Radio form="briefingForm" value={"30 dias"} {...briefingForm.register("expected_time")}>30 dias</Radio>
@@ -716,7 +716,7 @@ export default function Contato(){
 
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.has_brand}>
                                                         <RadioGroup defaultValue=''>
-                                                            <Stack spacing="32" direction={["column", "column", "row", "row"]}>
+                                                            <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                                 <Stack spacing="3">
                                                                     <Radio form="briefingForm" value={"5 mil"} {...briefingForm.register("budget")}>5 mil</Radio>
                                                                     <Radio form="briefingForm" value={"5 a 10 mil"} {...briefingForm.register("budget")}>5 a 10 mil</Radio>
@@ -745,7 +745,7 @@ export default function Contato(){
                                                             <Stack spacing="4">
                                                                 <Text color="white">A empresa possui uma marca e MIV (Manual de Identidade Visual)?</Text>
 
-                                                                <Stack spacing="32" direction={["column", "column", "row", "row"]}>
+                                                                <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                                     <Stack spacing="3">
                                                                         <Radio form="briefingForm" value={"Sim"} {...briefingForm.register("has_brand")}>Sim</Radio>
                                                                     </Stack>

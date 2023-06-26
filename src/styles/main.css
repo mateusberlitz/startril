@@ -212,6 +212,22 @@ cursor: pointer
     animation: moveHorizontalPhotos 24s ease infinite alternate;
 }
 
+@media (max-width: 600px)
+{
+    @keyframes moveHorizontalPhotos{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-400%);
+        }
+    }
+
+    #aboutPhotosTranslate{
+        animation: moveHorizontalPhotos 34s ease infinite alternate;
+    }
+}
+
 @keyframes lineEffect{
     0%{
         stroke-dasharray: 2000;

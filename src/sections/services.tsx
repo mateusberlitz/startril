@@ -123,13 +123,13 @@ export function Services(){
                     </Stack>
 
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
-                        <Img transition="all ease .5s" src={"./ana_job.jpg"} w="100%"/>
+                        <Img transition="all ease .5s" src={"./ana_job.webp"} w="100%"/>
                     </Stack>
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
-                        <Img transition="all ease .5s" src={"./rahin_job.jpg"} w="100%"/>
+                        <Img transition="all ease .5s" src={"./rahin_job.webp"} w="100%"/>
                     </Stack>
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
-                        <Img transition="all ease .5s" src={"./guris_job.jpg"} w="100%"/>
+                        <Img transition="all ease .5s" src={"./guris_job.webp"} w="100%"/>
                     </Stack>
                 </Stack>
             </Stack>

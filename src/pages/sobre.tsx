@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, Icon, Img, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Icon, Img, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import ContactAnimation from '../../public/contact_animation.svg';
 import { MainButton } from "../components/Buttons/MainButton";
@@ -17,6 +17,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Sobre(){
     const letsTalkSection = useRef(null);
+
+    const isMobileVersion = useBreakpointValue({
+        base: true,
+        md: false,
+    })
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -57,6 +62,18 @@ export default function Sobre(){
                 });
             })
         });
+
+        const sections = document.querySelectorAll(".sectionFade");
+
+        function scrollAnimate() {
+            sections.forEach(e => {
+                let t = e.getBoundingClientRect().top;
+                t <= (window.innerHeight || document.documentElement.clientHeight) / 1.1 && e.classList.add("active")
+            })
+        }
+
+        scrollAnimate();
+        window.addEventListener("scroll", scrollAnimate);
 
         return () => ctx.revert();
     }, [])
@@ -105,10 +122,10 @@ export default function Sobre(){
                 {/* </Box>
             </Flex> */}
 
-            <Flex borderTop="3px solid" borderColor="rgba(255,255,255,0.1)" pos="relative" bg="linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);">
-                <Flex pos="absolute" zIndex={-1} top="0" left="0" overflow={"hidden"} h="90vh" maxH="940px">
+            <Flex borderTop="3px solid" borderColor="rgba(255,255,255,0.1)" w="100%" pos="relative" bg="linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);">
+                <Flex pos="absolute" zIndex={-1} top="0" left="0" overflow={"hidden"} h="90vh" maxH="940px" w="100%">
                     <HStack id="aboutPhotosTranslate" spacing="0">
-                        <Img src="./rahin.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
+                        <Img src="./rahin.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "100%"}/>    
                         <Img src="./mateus.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
                         <Img src="./ana.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
                         <Img src="./rahin2.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
@@ -116,11 +133,10 @@ export default function Sobre(){
                         <Img src="./ana2.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/>    
                     </HStack>
                 </Flex>
-                
 
-
-                <Stack className="section" px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h="90vh" maxH="940px" pos="relative">
-                    <Stack spacing="14" pos="absolute" bottom="9%">
+                <Stack className="section" px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["100vh","90vh","90vh","90vh"]} maxH="940px" pos="relative">
+                    <Stack spacing="14" pos="absolute" bottom="9%" >
+                        {/* pt={isMobileVersion ? "48" : "0"} */}
                         <Stack maxW="600px" spacing="10">
                             <ColoredTag>Sobre Nós</ColoredTag>
                             <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Moldamos empresas <br/>de destaque</Heading>
@@ -155,7 +171,7 @@ export default function Sobre(){
                             <Text lineHeight={"1em"} fontSize={"4xl"} fontWeight={"regular"} color="purple.500" bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}} >+95</Text>
                             <Text fontSize={"lg"} color="white">Campanhas e estratégias lançadas</Text>
                         </Stack> */}
-                        <Img src="./equipe.png" />
+                        <Img src="./equipe.webp" />
 
 
                     </Stack>
@@ -166,22 +182,22 @@ export default function Sobre(){
                         </Stack>
 
                         <Stack spacing="20" pos="relative">
-                            <HStack>
-                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                            <Stack direction={["column", "column", "row", "row"]}>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW={isMobileVersion ? "100%" : "190px"} h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
                                     <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
                                     <Stack spacing="3" zIndex={1}>
                                         <Icon as={Zap} color="white" fontSize={"20px"}/>
                                         <Text fontSize={"xl"} color="white">Criatividade</Text>
                                     </Stack>
                                 </Stack>
-                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW={isMobileVersion ? "100%" : "190px"} h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
                                     <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
                                     <Stack spacing="3" zIndex={1}>
                                         <Icon as={Lamp} fill="white" fontSize={"20px"}/>
                                         <Text fontSize={"xl"} color="white">Ideias</Text>
                                     </Stack>
                                 </Stack>
-                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW="190px" h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
+                                <Stack role="group" bg="rgba(255,255,255,0.1)" p="6" w="100%" maxW={isMobileVersion ? "100%" : "190px"} h="170px" spacing="0" borderRadius={"3"} pos="relative" overflow={"hidden"}>
                                     <Box pos="absolute" bg="gradient" opacity="0" transition="all ease .5s" _groupHover={{opacity: 1}} top="0" bottom="0" left="0" right="0"/>
                                     <Stack spacing="3" zIndex={1}>
                                         <Icon as={Tool} color="white" fontSize={"20px"}/>
@@ -192,7 +208,7 @@ export default function Sobre(){
                                 <Text>Mais ideias.</Text>
                                 <Text>Mais olhar crítico.</Text>
                                 <Text>Mais soluções.</Text> */}
-                            </HStack>
+                            </Stack>
                         </Stack>
                     </Stack>
                 </Stack>
@@ -208,7 +224,7 @@ export default function Sobre(){
                         <ColoredTag>Para começar</ColoredTag>
                         <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Vamos falar sobre o seu projeto?</Heading>
                     </Stack>
-                    <MainButton leftIcon={<Icon as={Whatsapp}/>}>Whatsapp</MainButton>
+                    <MainButton leftIcon={<Icon as={Whatsapp}/>} onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de conversar sobre o meu projeto.`, '_blank')}>Whatsapp</MainButton>
                 </Stack>
             </Flex>
 

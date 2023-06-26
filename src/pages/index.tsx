@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Icon, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
@@ -11,7 +11,7 @@ import PeopleIcon from '../../public/people_logo.svg';
 import HomeBackground from '../../public/home.svg';
 import React from '../../public/react.svg';
 import StartrilIcon from '../../public/icone_startril.svg';
-import { PlayCircle } from 'react-feather';
+import { ArrowUpRight, PlayCircle } from 'react-feather';
 
 
 import { ProductAnimation } from '../components/ProductAnimation';
@@ -30,6 +30,7 @@ import { Faq } from '../sections/faq';
 import { StartNow } from '../sections/startNow';
 import { ServicesBox } from '../sections/servicesBox';
 import { useEffect } from 'react';
+import Whatsapp from '../../public/whatsapp.svg';
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
@@ -78,8 +79,6 @@ export default function Home() {
     useEffect(() => {
         const sections = document.querySelectorAll(".sectionFade");
 
-        console.log(sections);
-
         function scrollAnimate() {
             sections.forEach(e => {
                 let t = e.getBoundingClientRect().top;
@@ -107,23 +106,23 @@ export default function Home() {
             <Flex flexDir="column">
                 <Header/>
 
-                <Flex pos="absolute" zIndex={-1} w='100%' top="-215px">
+                <Flex pos="absolute" zIndex={-1} w='100%' top={isWideVersion ? "-215px" : "0px"}>
                     <HomeBackground/>
                 </Flex>
 
                 <Flex w="100%" pos="relative">
                     <Box w="100%" h="120px" pos="absolute" bg="linear-gradient(180deg, rgba(14, 17, 25, 0) 0%, #080510 100%);" bottom="0"/>
 
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb="40" spacing="0">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb={["0","20","20","32","40"]} spacing="0">
 
                         <Stack alignItems={"flex-start"} direction={["column","column","row","row"]} spacing="16">
                             <Stack w={["100%", "100%", "55%", "55%"]} spacing="12">
-                                <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Desenvolvemos o fundamental para aqueles que almejam destaque!</Heading>
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos o fundamental para aqueles que almejam destaque!</Heading>
                                 <Text color="gray.300">Destaque-se na internet, demonstre a sua autoridade e crie conexão com os seus clientes.</Text>
 
                                 <HStack spacing="8">
-                                    <MainButton onClick={() => router.push('/contato')}>Contratar</MainButton>
-                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s">Ver serviços</Button>
+                                    <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
+                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button>
                                 </HStack>
                             </Stack>
                             <Stack w={["100%", "100%", "50%", "50%"]}>
@@ -189,7 +188,10 @@ export default function Home() {
                                 </Stack>
                                 <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Desenvolvemos o seu produto digital</Heading>
                                 <Text color="gray.500">Construímos junto com você o seu negócio dentro do digital, como um e-commerce, SaaS, aplicativo, e entre outros.</Text>
-                                <MainButton>Ver Mais</MainButton>
+                                <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu sistema.`, '_blank')}>
+                                    Crie o seu
+                                </MainButton>
                             </Stack>
 
                             <HStack w={["100%", "100%", "50%", "50%"]}>
@@ -222,7 +224,10 @@ export default function Home() {
                                 </Stack>
                                 <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Criamos sites como ninguém</Heading>
                                 <Text color="gray.500">Podemos criar tudo aquilo que for necessário para engajar o usuário dentro do seu site, entendemos ele como ninguém e entregamos as melhores funcionalidades. Sites desenvolvidos por nós só conhecem alta velocidade e performance.</Text>
-                                <MainButton>Ver Mais</MainButton>
+                                <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.`, '_blank')}>
+                                    Crie o seu
+                                </MainButton>
                             </Stack>
                         </Stack>
 
@@ -234,7 +239,10 @@ export default function Home() {
                                 </Stack>
                                 <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Aumente suas vendas e engajamento fazendo anúncios</Heading>
                                 <Text color="gray.500">Posicionamos estrategicamente o seu negócio no digital para ter o maior alcance ao público alvo, aumentando suas vendas e engajamento para sua marca. Com maior visibilidade, atraia novos clientes e fortaleça o relacionamento com os seus clientes.</Text>
-                                <MainButton>Ver Mais</MainButton>
+                                <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>} 
+                                    onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de investir em anúncios pela internet.`, '_blank')}>
+                                        Investir Agora
+                                </MainButton>
                             </Stack>
 
                             <HStack>
