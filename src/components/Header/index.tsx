@@ -74,7 +74,7 @@ export function Header(){
                         </HStack>
                     ) : (
                         <>
-                            <Button bg="transparent" onClick={onOpen} px="2">
+                            <Button bg="transparent" onClick={onOpen} px="2" _focus={{bg:"transparent"}}>
                                 <Text mr="3" color={"#fff"}>Menu</Text>
                                 <Icon as={Menu} w="26px" h="26px" stroke={"#fff"} fill="none"/>
                             </Button>

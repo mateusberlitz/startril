@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { ColoredTag } from "../components/ColoredTag";
 import { OutlineButton } from "../components/Buttons/OutlineButton";
 import { useRouter } from "next/router";
@@ -72,13 +72,18 @@ export function ServicesBox(){
         window.addEventListener("scroll", scrollAnimate);
     }, []);
 
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return(
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="22" spacing="20">
                     <Stack spacing="6" className="sectionFade">
                         <ColoredTag textAlign="center">O que fazemos?</ColoredTag>
-                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"} textAlign="center">Os três pilares do <br/>negócio digital</Heading>
+                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"} textAlign="center">Os três pilares do <br/>negócio digital</Heading>
                     </Stack>
 
                     <Stack spacing="7" direction={["column", "column", "row", "row"]} pos="relative" className="sectionFade">

@@ -1,19 +1,24 @@
-import { Box, Flex, HStack, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import { TextTag } from "../components/TextTag";
 import { StarDivider } from "../components/StarDivider";
 import { FunilAnimation } from '../components/FunilAnimation';
 
 export function OurWork(){
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return(
         <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                <Stack pt="48" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                <Stack pt="24" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
                             <TextTag>Aonde Atuamos</TextTag>
                             <StarDivider maxW="120px"/>
                         </Stack>
-                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>A etapa inicial das suas vendas pela internet</Heading>
+                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>A etapa inicial das suas vendas pela internet</Heading>
                         <Text color="gray.500">Construa ou aprimore seu processo de captação e vendas pela internet através de tráfego e aplicações.</Text>
 
                     </Stack>

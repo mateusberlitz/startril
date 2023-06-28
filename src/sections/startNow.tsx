@@ -16,7 +16,7 @@ export function StartNow(){
                         <BgCones/>
                     </Box>
 
-                    <Stack justifyContent={"space-between"} spacing="16" w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h={["515px", "375px", "275px"]} p="14" direction={["column", "column", "row", "row"]}>
+                    <Stack justifyContent={"space-between"} spacing="16" w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h={["515px", "375px", "275px"]} py={["14","14","14","14","14"]} px={["10","10","10","12","14"]} direction={["column", "column", "row", "row"]}>
                         <Stack maxW="430px" spacing="6" justifyContent={"center"}>
                             <Heading color="white">É fácil começar agora</Heading>
                             <Text>Que tal solicitar nossos serviços através de um briefing prático que pode nos contar exatamente o que você precisa?</Text>

@@ -28,7 +28,7 @@ export function Customers(){
                             <TextTag>Quem já se transformou</TextTag>
                             <StarDivider maxW="120px"/>
                         </Stack>
-                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>São parceiros incríveis</Heading>
+                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>São parceiros incríveis</Heading>
                         <Text color="gray.500">Diferentes ramos, resultados exponenciais e trabalhos impressionantes. Engaje no seu objetivo como estas empresas.</Text>
                     </Stack>
 

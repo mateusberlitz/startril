@@ -218,7 +218,7 @@ export default function Sobre(){
                 <Flex pos="absolute" top="100px" bottom="0" left="0" right="0">
                     <BgAngles/>
                 </Flex>
-                <Stack className="section" zIndex={1} px="6" w="100%" maxW="1200px" m="0 auto" py="40" pb="56" spacing="14" h="90vh" pos="relative" textAlign={"center"} justifyContent={"center"} alignItems={"center"}>
+                <Stack className="section" zIndex={1} px="6" w="100%" maxW="1200px" m="0 auto" py="40" pb="56" spacing="14" h="80vh" pos="relative" textAlign={"center"} justifyContent={"center"} alignItems={"center"}>
                     
                     <Stack spacing="6">
                         <ColoredTag>Para começar</ColoredTag>

@@ -1,9 +1,14 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Heading, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex, Heading, Stack, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useBreakpointValue } from "@chakra-ui/react";
 import { ColoredTag } from "../components/ColoredTag";
 import { TextTag } from "../components/TextTag";
 import { StarDivider } from "../components/StarDivider";
 
 export function FaqCenter(){
+    const isWideVersion = useBreakpointValue({
+        base: false,
+        lg: true,
+    })
+
     return(
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" pb="56" spacing="0">
@@ -11,7 +16,7 @@ export function FaqCenter(){
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6" className="sectionFade">
                             <ColoredTag textAlign="center">FAQ</ColoredTag>
-                            <Heading color="white" fontSize="6xl" fontWeight={"semibold"} textAlign="center">Ficou com alguma dúvida?</Heading>
+                            <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"} textAlign="center">Ficou com alguma dúvida?</Heading>
                         </Stack>
                     </Stack>
 

@@ -28,9 +28,8 @@ export function Purpose(){
                             <TextTag>O propósito é</TextTag>
                             <StarDivider maxW="120px"/>
                         </Stack>
-                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>Fazer a renovação digital da sua empresa</Heading>
+                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Fazer a renovação digital da sua empresa</Heading>
                         <Text color="gray.500">Não deixe os seus resultados serem prejudicados por não estar atualizado! Transferimos a sua empresa para o digital!</Text>
-
                     </Stack>
                 </Stack>
             </Stack>
