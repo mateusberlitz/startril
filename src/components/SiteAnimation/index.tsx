@@ -7,34 +7,39 @@ import { ArrowUp, BarChart, Heart } from 'react-feather';
 export function SiteAnimation(){
     useEffect(() => {
         const ctx = gsap.context(() => {
+            gsap.config({
+                nullTargetWarn: false,
+                //trialWarn: false,
+            });
+
             gsap.registerEffect({
                 name:"counter",
                 extendTimeline:true,
                 defaults:{
-                  end:0,
-                  duration:0.5,
-                  ease:"power1",
-                  increment:1,
+                    end:0,
+                    duration:0.5,
+                    ease:"power1",
+                    increment:1,
                 },
                 effect: (targets: any, config: any) => {
-                let tl = gsap.timeline()
-                let num = targets[0].innerText.replace(/\,/g,'')
-                targets[0].innerText = num
+                    let tl = gsap.timeline()
+                    let num = targets[0].innerText.replace(/\,/g,'')
+                    targets[0].innerText = num
+                    
+                    tl.to(targets, {duration:config.duration, 
+                            innerText:config.end, 
+                            //snap:{innerText:config.increment},
+                            modifiers:{
+                                innerText:function(innerText){
+                                return  gsap.utils.snap(config.increment, innerText).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                 
-                tl.to(targets, {duration:config.duration, 
-                           innerText:config.end, 
-                           //snap:{innerText:config.increment},
-                           modifiers:{
-                             innerText:function(innerText){
-                               return  gsap.utils.snap(config.increment, innerText).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-              
-                             }
-                           },
-                           ease:config.ease}, 0)
-                
-                return tl
-              }
-              })
+                                }
+                            },
+                            ease:config.ease}, 0)
+                    
+                    return tl
+                }
+            })
 
             gsap.to(".site_animation_svg__loader", { 
                 repeat: -1,
@@ -49,9 +54,13 @@ export function SiteAnimation(){
                 repeatDelay: 1,
                 onUpdate: updateProgressBar
               });
+
+              const loadBar = document.querySelector('.site_animation_svg__load_bar');
                 
               function updateProgressBar(){
-                gsap.set(".site_animation_svg__load_bar", {scaleX:timeline.progress(), transformOrigin:"0px 0px"});
+                if(loadBar){
+                    gsap.set(".site_animation_svg__load_bar", {scaleX:timeline.progress(), transformOrigin:"0px 0px"});
+                }
               }
               
               timeline

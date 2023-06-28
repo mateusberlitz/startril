@@ -10,7 +10,7 @@ export function StartNow(){
 
     return(
         <Flex w="100%" bg="#080510">
-            <Stack px={["6"]} w="100%" maxW="1200px" m="0 auto" py="32" spacing="0">
+            <Stack px={["6"]} w="100%" maxW="1200px" m="0 auto" py="32" pt="10" spacing="0">
                 <Flex pos="relative" bg="#3F3F3F" className="sectionFade">
                     <Box pos="absolute" zIndex="1" w="100%" height="100%">
                         <BgCones/>

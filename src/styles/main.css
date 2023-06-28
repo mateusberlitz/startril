@@ -171,7 +171,23 @@ cursor: pointer
     animation: 4s comet3 4s ease infinite alternate;
  }
 
- @keyframes peopleIconBordas{
+ @keyframes fullLogoBordas{
+    0%{
+        stroke-dasharray: 500 1000;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 500 1000;
+        stroke-dashoffset: 3000;
+        opacity: 0.3;
+    }
+}
+
+ .full_logo_white_svg__logo_white path{
+    animation: fullLogoBordas 6s ease-in infinite alternate;
+}
+
+@keyframes peopleIconBordas{
     0%{
         stroke-dasharray: 1000 1600;
         stroke-dashoffset: 0;

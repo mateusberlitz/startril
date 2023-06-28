@@ -46,21 +46,21 @@ export function Customers(){
                         <Stack direction={["column", "column", "row", "row"]} spacing="5" zIndex={2}>
                             <Stack spacing="5">
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="140px"><Queroluz/></Flex>
+                                    <Flex maxW="140px" w='100%'><Queroluz/></Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="120px"><Lance/></Flex>
+                                    <Flex maxW="120px" w='100%'><Lance/></Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="140px"><Ane/></Flex>
+                                    <Flex maxW="140px" w='100%'><Ane/></Flex>
                                 </Flex>
                             </Stack>
                             <Stack spacing="5">
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="140px"><SS/></Flex>
+                                    <Flex maxW="140px" w='100%'><SS/></Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="140px"><Gatech/></Flex>
+                                    <Flex maxW="140px" w='100%'><Gatech/></Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" cursor={"pointer"} p="6" h="100px" alignItems={"center"} justifyContent={"center"} backdropFilter={"blur(10px)"} border="1px dashed" borderColor="rgba(255,255,255,0.1)" transition="all ease .5s" _hover={{bg: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)", transform: "translateY(-10px)"}}>
                                     <Stack textAlign={"center"} spacing="1">

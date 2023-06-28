@@ -34,6 +34,7 @@ import Whatsapp from '../../public/whatsapp.svg';
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import { FaqCenter } from '../sections/faqCenter';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -190,7 +191,7 @@ export default function Home() {
                                 <Text color="gray.500">Construímos junto com você o seu negócio dentro do digital, como um e-commerce, SaaS, aplicativo, e entre outros.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
                                 onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu sistema.`, '_blank')}>
-                                    Crie o seu
+                                    Desenvolva o seu
                                 </MainButton>
                             </Stack>
 
@@ -258,7 +259,7 @@ export default function Home() {
                     </Stack>
                 </Flex>
 
-                <Faq/>
+                <FaqCenter/>
 
                 <StartNow/>
             </Flex>
