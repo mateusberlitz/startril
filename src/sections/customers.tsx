@@ -47,14 +47,14 @@ export function Customers(){
                             <Stack spacing="5">
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
                                     <Flex maxW="140px" w='100%'>
-                                        {/* <Queroluz/> */}
-                                        <object data="/queroluz.svg" type="image/svg+xml"></object>
+                                        <Queroluz/>
+                                        {/* <object data="/queroluz.svg" type="image/svg+xml"></object> */}
                                     </Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
                                     <Flex maxW="120px" w='100%'>
-                                        {/* <Lance/> */}
-                                        <object data="/lance.svg" type="image/svg+xml"></object>
+                                        <Lance/>
+                                        {/* <object data="/lance.svg" type="image/svg+xml"></object> */}
                                     </Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
