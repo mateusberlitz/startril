@@ -10,6 +10,7 @@ import SS from '../../public/ss.svg';
 
 import LineAnimation from '../../public/line.svg';
 import { ColoredTag } from "../components/ColoredTag";
+import Image from "next/image";
 
 export function Customers(){
     const isWideVersion = useBreakpointValue({
@@ -58,7 +59,10 @@ export function Customers(){
                                     </Flex>
                                 </Flex>
                                 <Flex bg="rgba(255,255,255,0.05)" p="6" h="100px" justifyContent={"center"} backdropFilter={"blur(10px)"}>
-                                    <Flex maxW="140px" w='100%'><Ane/></Flex>
+                                    <Flex maxW="140px" w='100%'>
+                                        <Image width={138} height={52} src="/ane.png" alt="Ane - Clínica Digital"/>
+                                        {/* <Ane/> */}
+                                    </Flex>
                                 </Flex>
                             </Stack>
                             <Stack spacing="5">

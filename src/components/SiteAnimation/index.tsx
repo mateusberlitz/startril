@@ -117,8 +117,8 @@ export function SiteAnimation(){
     }
 
     return(
-        <Stack pos="relative">
-            <SiteSketch/>
+        <Stack pos="relative" w="100%">
+            <SiteSketch />
             <Stack pos="absolute" top="36%" left="80px">
                 <HStack id="access">
                     <ArrowUp width="16px"/>

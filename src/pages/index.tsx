@@ -171,7 +171,7 @@ export default function Home() {
                             <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                                 <Stack w={["100%", "100%", "50%", "50%"]}>
                                     <Text>
-                                    No mercado cada vez mais competitivo, destaque-se ao entregar serviços e produtos de qualidade aos consumidores finais. O diferencial das grandes empresas admiradas e confiáveis reside na utilização estratégica da tecnologia e internet para automatizar e agilizar suas operações.
+                                        Destaque-se da concorrência em um mercado cada vez mais competitivo, atraindo um número crescente de clientes. Sobressaia-se ao evidenciar seus diferenciais exclusivos, conquiste a admiração e a confiança por meio da implementação de estratégias digitais eficazes e automação inteligente em suas operações.
                                     </Text>
                                 </Stack>
                             </Stack>
@@ -207,13 +207,14 @@ export default function Home() {
                         </Stack>
 
                         <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
-                            <HStack>
+                            <HStack w={["100%", "100%", "50%", "50%"]}>
                                 {
                                     isWideVersion ? (
                                         <SiteAnimation/>
                                     ) : (
-                                        // <SiteAnimationMobile/>
-                                        <Box/>
+                                        //<SiteAnimationMobile/>
+                                        //<Box/>
+                                        <SiteAnimation/>
                                     )
                                 }
                             </HStack>
