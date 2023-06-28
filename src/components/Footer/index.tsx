@@ -19,7 +19,7 @@ export function Footer(){
 
                         <Text>Se você quer dar os primeiros <br/>passos para transformar sua empresa, <br/>agora é a hora!</Text>
 
-                        <HStack spacing="20">
+                        <Stack spacing={["10", "12", "16", "20"]} direction={["column","column","row","row"]}>
                             <Stack>
                                 <Text fontSize={"14px"} color="gray.700">Email</Text>
                                 <Link href={"https://www.instagram.com/startril.web/"}>
@@ -37,7 +37,7 @@ export function Footer(){
                                     </Text>
                                 </Link>
                             </Stack>
-                        </HStack>
+                        </Stack>
                     </Stack>
 
                     <Stack spacing="4" className="sectionFade">
