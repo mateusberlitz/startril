@@ -13,7 +13,7 @@ export function StartNow(){
             <Stack px={["6"]} w="100%" maxW="1200px" m="0 auto" py="32" pt="10" spacing="0">
                 <Flex pos="relative" bg="#3F3F3F" className="sectionFade">
                     <Box pos="absolute" zIndex="1" w="100%" height="100%">
-                        <BgCones/>
+                        <BgCones width="100%" height="100%"/>
                     </Box>
 
                     <Stack justifyContent={"space-between"} spacing="16" w="100%" zIndex={2} bg="rgba(8,5,16,0.7)" h={["515px", "375px", "275px"]} py={["14","14","14","14","14"]} px={["10","10","10","12","14"]} direction={["column", "column", "row", "row"]}>

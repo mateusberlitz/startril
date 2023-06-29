@@ -20,7 +20,7 @@ export function ListMethodsHorizontal(){
     return(
         <Flex w="100%" bg="#080510" overflow="hidden">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                <Stack pt="48" pb="32" spacing="32" direction={["column", "column", "row", "row"]}>
+                <Stack pt="24" pb="32" spacing="32" direction={["column", "column", "row", "row"]}>
                     <Stack w={["100%","100%","50%","50%"]} maxW="600px" className="sectionFade">
                         <Stack spacing="12" pos="sticky" top="0px">
                             <Stack spacing="6">
@@ -30,7 +30,7 @@ export function ListMethodsHorizontal(){
                                 </HStack>
                                 <StarDivider maxW="120px"/>
                             </Stack>
-                            <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>Ágil e confiável pra criar seus projetos.</Heading>
+                            <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>Ágil e confiável para criar seus projetos.</Heading>
                             <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação dos projetos mais incríveis que atinjam seus objetivos e sejam a base para alcançar grandes resultados.</Text>
                         </Stack>
 

@@ -29,12 +29,13 @@ import { ListMethodsHorizontal } from '../sections/listMethodsHorizontal';
 import { Faq } from '../sections/faq';
 import { StartNow } from '../sections/startNow';
 import { ServicesBox } from '../sections/servicesBox';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Whatsapp from '../../public/whatsapp.svg';
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import { FaqCenter } from '../sections/faqCenter';
+import { Loader } from '../components/Loader';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -77,6 +78,8 @@ export default function Home() {
     //     return () => ctx.revert();
     // }, []);
 
+    const [firstLoad, setFirstLoad] = useState(true);
+
     useEffect(() => {
         const sections = document.querySelectorAll(".sectionFade");
 
@@ -89,6 +92,15 @@ export default function Home() {
 
         scrollAnimate()
         window.addEventListener("scroll", scrollAnimate);
+
+        //setFirstLoad(false);
+        
+        const storedBriefingLead = localStorage.getItem('@startril/load');
+        console.log(storedBriefingLead);
+
+        if(storedBriefingLead && storedBriefingLead != undefined){
+            setFirstLoad(false);
+        }
     }, []);
 
   return (
@@ -99,9 +111,11 @@ export default function Home() {
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 
-        <Flex className="intro" zIndex={99} w="100vw" h="100vh" position={"fixed"} bg="black" justifyContent={"center"} alignItems="center">
-            <StartrilIcon/>
-        </Flex>
+        {
+            firstLoad && (
+                <Loader />
+            )
+        }
 
         <Flex flexDir="column" w="100%">
             <Flex flexDir="column">
@@ -160,12 +174,12 @@ export default function Home() {
                         {/* <Img src="./mateus_video.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/> */}
                     </Flex>
 
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["80vh", "80vh", "80vh", "80vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["90vh", "90vh", "90vh", "100vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
                         <Stack spacing="14" className="sectionFade">
                             <PlayCircle/>
                             <Stack maxW="500px" spacing="10">
                                 <ColoredTag>Cenário atual</ColoredTag>
-                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Desfrute o máximo da tecnologia ao seu favor</Heading>
+                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>É Necessário se destacar</Heading>
                             </Stack>
 
                             <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>

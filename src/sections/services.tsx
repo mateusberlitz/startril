@@ -22,8 +22,6 @@ export function Services(){
     useEffect(() => {
         const sections = document.querySelectorAll(".sectionFade");
 
-        console.log(sections);
-
         function scrollAnimate() {
             sections.forEach(e => {
                 let t = e.getBoundingClientRect().top;
@@ -100,7 +98,7 @@ export function Services(){
                             </HStack>
                             <Text color="white" fontWeight={"regular"} maxW="280px">Desenvolvemos telas coerentes para proporcionar a melhor experiência aos seus usuários, com o objetivo de transmitir de forma correta as ideias e sensações da sua marca.</Text>     
                         
-                            <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
+                            {/* <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button> */}
                         </Stack> 
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
@@ -109,7 +107,7 @@ export function Services(){
                             </HStack>
                             <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo. Impulsionando a sua visibilidade assim como o retorno sobre o investimento.</Text>     
                         
-                            <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
+                            {/* <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button> */}
                         </Stack>
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
@@ -118,7 +116,7 @@ export function Services(){
                             </HStack>
                             <Text color="white" fontWeight={"regular"} maxW="280px">Programamos a sua plataforma digital com todas as interações e transações necessárias para interligar a sua equipe ao seu consumidor final, sempre com alta performance e segurança.</Text>     
                         
-                            <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
+                            {/* <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button> */}
                         </Stack>
                     </Stack>
 

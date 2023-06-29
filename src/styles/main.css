@@ -187,6 +187,10 @@ cursor: pointer
     animation: fullLogoBordas 6s ease-in infinite alternate;
 }
 
+.site_animation_svg__site_sketch *{
+    will-change: transform;
+}
+
 @keyframes peopleIconBordas{
     0%{
         stroke-dasharray: 1000 1600;
@@ -220,7 +224,7 @@ cursor: pointer
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-50%);
+        transform: translateX(-47%);
     }
 }
 
