@@ -7,9 +7,9 @@ import { ArrowUp, BarChart, Heart } from 'react-feather';
 export function SiteAnimation(){
     useEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.config({
-                nullTargetWarn: false,
-            });
+            // gsap.config({
+            //     nullTargetWarn: false,
+            // });
 
             gsap.registerEffect({
                 name:"counter",
@@ -58,7 +58,7 @@ export function SiteAnimation(){
                 
               function updateProgressBar(){
                 if(loadBar){
-                    gsap.set(".site_animation_svg__load_bar", {scaleX:timeline.progress(), transformOrigin:"0px 0px"});
+                    gsap.set(".site_animation_svg__load_bar", {scaleX:timeline.progress()});
                 }
               }
               

@@ -210,19 +210,19 @@ export default function Home() {
                             </Stack>
 
                             <HStack w={["100%", "100%", "50%", "50%"]}>
-                                {/* {
+                                {
                                     isWideVersion ? (
                                         <ProductAnimation/>
                                     ) : (
                                         <ProductAnimationMobile/>
                                     )
-                                } */}
+                                }
                             </HStack>
                         </Stack>
 
                         <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <HStack w={["100%", "100%", "50%", "50%"]}>
-                                {/* {
+                                {
                                     isWideVersion ? (
                                         <SiteAnimation/>
                                     ) : (
@@ -230,7 +230,7 @@ export default function Home() {
                                         //<Box/>
                                         <SiteAnimation/>
                                     )
-                                } */}
+                                }
                             </HStack>
 
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
