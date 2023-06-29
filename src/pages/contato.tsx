@@ -404,7 +404,7 @@ export default function Contato(){
                     <Header/>
 
                     <Flex w="100%">
-                        <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0" minH="90vh">
+                        <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" pb="32" spacing="0" minH="90vh">
                             <HStack spacing="12" justifyContent={"space-between"} className="sectionFade">
                                 {
                                     isWideVersion && (

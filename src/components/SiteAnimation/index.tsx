@@ -9,7 +9,6 @@ export function SiteAnimation(){
         const ctx = gsap.context(() => {
             gsap.config({
                 nullTargetWarn: false,
-                //trialWarn: false,
             });
 
             gsap.registerEffect({
