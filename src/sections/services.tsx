@@ -123,7 +123,7 @@ export function Services(){
 
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./ana_job.webp"} w="100%"/>
-                        <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Ana Maria</Text>
+                        <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Ana Maria Almeida</Text>
                     </Stack>
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./rahin_job.webp"} w="100%"/>
