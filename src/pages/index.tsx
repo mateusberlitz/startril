@@ -169,14 +169,15 @@ export default function Home() {
 
                 <ListMethodsHorizontal/>
 
-                <Flex _hover={{cursor:"url(./play_cursor.png), auto"}} borderTop="0px solid" pos="relative" borderColor="rgba(255,255,255,0.1)" bgImage={"./mateus_video.jpg"} bgSize={"cover"} bgPos={"center right"}>
+                <Flex  borderTop="0px solid" pos="relative" borderColor="rgba(255,255,255,0.1)" bgImage={"./mateus_video.jpg"} bgSize={"cover"} bgPos={isWideVersion ? "center right" : "-540px"}>
+                {/* _hover={{cursor:"url(./play_cursor.png), auto"}} */}
                     <Flex pos="absolute" top="0" left="0" bottom="0" right="0" bg="linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.68%);">
                         {/* <Img src="./mateus_video.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/> */}
                     </Flex>
 
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["90vh", "90vh", "90vh", "100vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
                         <Stack spacing="14" className="sectionFade">
-                            <PlayCircle/>
+                            {/* <PlayCircle/> */}
                             <Stack maxW="500px" spacing="10">
                                 <ColoredTag>Cenário atual</ColoredTag>
                                 <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>É Necessário se destacar</Heading>
@@ -202,6 +203,15 @@ export default function Home() {
                                     <StarDivider maxW="120px"/>
                                 </Stack>
                                 <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Desenvolvemos o seu produto digital</Heading>
+                                
+                                {
+                                    !isWideVersion && (
+                                        <Stack w="100%">
+                                            <ProductAnimationMobile/>
+                                        </Stack>
+                                    )
+                                }
+                                
                                 <Text color="gray.500">Construímos junto com você o seu negócio dentro do digital, como um e-commerce, SaaS, aplicativo, e entre outros.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
                                 onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu sistema.`, '_blank')}>
@@ -211,25 +221,19 @@ export default function Home() {
 
                             <HStack w={["100%", "100%", "50%", "50%"]}>
                                 {
-                                    isWideVersion ? (
+                                    isWideVersion && (
                                         <ProductAnimation/>
-                                    ) : (
-                                        <ProductAnimationMobile/>
-                                    )
+                                    ) 
                                 }
                             </HStack>
                         </Stack>
 
-                        <Stack pt="48" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
+                        <Stack pt="32" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <HStack w={["100%", "100%", "50%", "50%"]}>
                                 {
-                                    isWideVersion ? (
+                                    isWideVersion && (
                                         <SiteAnimation/>
-                                    ) : (
-                                        //<SiteAnimationMobile/>
-                                        //<Box/>
-                                        <SiteAnimation/>
-                                    )
+                                    ) 
                                 }
                             </HStack>
 
@@ -239,6 +243,16 @@ export default function Home() {
                                     <StarDivider maxW="120px"/>
                                 </Stack>
                                 <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Criamos sites como ninguém</Heading>
+                                
+                                
+                                {
+                                    !isWideVersion && (
+                                        <Stack w="100%">
+                                            <SiteAnimation/>
+                                        </Stack>
+                                    )
+                                }
+                                
                                 <Text color="gray.500">Podemos criar tudo aquilo que for necessário para engajar o usuário dentro do seu site, entendemos ele como ninguém e entregamos as melhores funcionalidades. Sites desenvolvidos por nós só conhecem alta velocidade e performance.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
                                 onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.`, '_blank')}>
@@ -254,6 +268,15 @@ export default function Home() {
                                     <StarDivider maxW="120px"/>
                                 </Stack>
                                 <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Aumente suas vendas e engajamento fazendo anúncios</Heading>
+                                
+                                {
+                                    !isWideVersion && (
+                                        <Stack>
+                                            <AdsAnimationMobile/>
+                                        </Stack>
+                                    ) 
+                                }
+
                                 <Text color="gray.500">Posicionamos estrategicamente o seu negócio no digital para ter o maior alcance ao público alvo, aumentando suas vendas e engajamento para sua marca. Com maior visibilidade, atraia novos clientes e fortaleça o relacionamento com os seus clientes.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>} 
                                     onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de investir em anúncios pela internet.`, '_blank')}>
@@ -263,10 +286,8 @@ export default function Home() {
 
                             <HStack>
                                 {
-                                    isWideVersion ? (
+                                    isWideVersion && (
                                         <AdsAnimation/>
-                                    ) : (
-                                        <AdsAnimationMobile/>
                                     )
                                 }
                             </HStack>
