@@ -614,12 +614,13 @@ export default function Contato(){
                                                     <ControlledInput form="briefingForm" control={briefingForm.control} name="metier" type="text" placeholder="Exemplo: Imobiliária com o foco em casas de alto padrão." label="Ramo de atuação (seja específico)." isRequired error={briefingForm.formState.errors.metier}/>
                                                     <ControlledInput form="briefingForm" control={briefingForm.control} name="public" type="text" placeholder="Homens e mulheres de classe média e alta" label="Já tem o seu público alvo definido?" isRequired error={briefingForm.formState.errors.public}/>
                                                     
-                                                    <Text color="white">Quem são seus concorrentes?</Text>
+                                                    <Stack spacing="10">
+                                                        <Text color="white">Quem são seus concorrentes?</Text>
 
-                                                    {
-                                                        competitors.length > 0 && (
-                                                            <Stack spacing="3" border="1px solid" borderColor="rgba(255,255,255,0.2)" px="6" py="6">
-                                                                {
+                                                        <Stack spacing="8" border="0px solid" borderColor="rgba(255,255,255,0.2)" px="0" py="0">
+
+                                                            {
+                                                                competitors.length > 0 ? (
                                                                     competitors.map((competitor, index) => {
                                                                         return(
                                                                             <HStack borderBottom="1px solid" borderColor="rgba(255,255,255,0.1)" py="2" justifyContent={"space-between"}>
@@ -631,25 +632,29 @@ export default function Contato(){
                                                                             </HStack>
                                                                         )
                                                                     })
-                                                                }
+                                                                ) : (
+                                                                    <Text>Nenhum concorrente informado</Text>
+                                                                )
+                                                            }
+
+                                                            <Stack spacing="4" id="concurrentForm" as="form" onSubmit={concurrentForm.handleSubmit(handleAddConcurrent)}>
+                                                                <HStack>
+                                                                    <ControlledInput form="concurrentForm" control={concurrentForm.control} name="company_name" type="text" placeholder="Concorrente X" label="Empresa" isRequired error={concurrentForm.formState.errors.company_name}/>
+                                                                    <ControlledInput form="concurrentForm" control={concurrentForm.control} name="link" type="text" placeholder="www.concorrente.com.br" label="Link do site" isRequired error={concurrentForm.formState.errors.link}/>
+                                                                    {/* <IconButton alignSelf={"end"} form="concurrentForm" type="submit" h="50px"
+                                                                    icon={<Icon as={Plus}/>} aria-label="Adicionar um concorrente" bg="Transparent" borderRadius={"0"} border="1px solid" borderColor="rgba(255,255,255,0.2)" _hover={{bg: "rgba(255,255,255,0.2)", borderColor: "rgba(255,255,255,1)"} }/> */}
+                                                                </HStack>
+                                                                <OutlineButton form="concurrentForm" type="submit" leftIcon={<Icon as={Plus}/>}>Salvar</OutlineButton>
+
+                                                                <FormControl pos="relative" isInvalid={competitors.length < 1}>
+                                                                    { (competitors.length < 1 && firstBriefingEdit) && (
+                                                                        <FormErrorMessage fontSize="11px">
+                                                                            Informe pelo menos um concorrente
+                                                                        </FormErrorMessage>   
+                                                                    )}
+                                                                </FormControl>
                                                             </Stack>
-                                                        )
-                                                    }
-
-                                                    <Stack spacing="4" id="concurrentForm" as="form" onSubmit={concurrentForm.handleSubmit(handleAddConcurrent)}>
-                                                        <HStack>
-                                                            <ControlledInput form="concurrentForm" control={concurrentForm.control} name="company_name" type="text" placeholder="Concorrente X" label="Empresa" isRequired error={concurrentForm.formState.errors.company_name}/>
-                                                            <ControlledInput form="concurrentForm" control={concurrentForm.control} name="link" type="text" placeholder="www.concorrente.com.br" label="Link do site" isRequired error={concurrentForm.formState.errors.link}/>
-                                                        </HStack>
-                                                        <OutlineButton form="concurrentForm" type="submit" leftIcon={<Icon as={Plus}/>}>Adicionar concorrente</OutlineButton>
-
-                                                        <FormControl pos="relative" isInvalid={competitors.length < 1}>
-                                                            { (competitors.length < 1 && firstBriefingEdit) && (
-                                                                <FormErrorMessage fontSize="11px">
-                                                                    Informe pelo menos um concorrente
-                                                                </FormErrorMessage>   
-                                                            )}
-                                                        </FormControl>
+                                                        </Stack>
                                                     </Stack>
 
                                                     <Text color="white">Selecione as personalidades do seu negócio.</Text>
