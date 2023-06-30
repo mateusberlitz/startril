@@ -97,7 +97,8 @@ export function ServicesBox(){
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                             <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
-                            {/* <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton> */}
+                            <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton>
+                            
                         </Stack>
 
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">

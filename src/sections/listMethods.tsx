@@ -17,7 +17,7 @@ export function ListMethods(){
                             <StarDivider maxW="120px"/>
                         </Stack>
                         <Heading color="white" fontSize="5xl" fontWeight={"semibold"}>Ágil e confiável pra criar seus projetos.</Heading>
-                        <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação dos projetos mais incríveis que atinjam seus objetivos e sejam a base para alcançar grandes resultados.</Text>
+                        <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação de projetos incríveis, para atingir seus objetivos e ser base para alcançar grandes resultados.</Text>
 
                     </Stack>
 

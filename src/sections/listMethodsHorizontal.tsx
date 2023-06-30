@@ -31,7 +31,7 @@ export function ListMethodsHorizontal(){
                                 <StarDivider maxW="120px"/>
                             </Stack>
                             <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>Ágil e confiável para criar seus projetos.</Heading>
-                            <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação dos projetos mais incríveis que atinjam seus objetivos e sejam a base para alcançar grandes resultados.</Text>
+                            <Text color="gray.500">Nossa metodologia permite uma conexão assertiva das ideias e a criação de projetos incríveis, para atingir seus objetivos e ser base para alcançar grandes resultados.</Text>
                         </Stack>
 
                     </Stack>
