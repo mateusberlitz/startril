@@ -26,6 +26,8 @@ export function DraggableFileInput({fileList, setFiles}: DraggableFileInputProps
                 newFiles.push(event.target.files[i]);
             }
 
+            console.log(newFiles);
+
             setFiles({
                 files: newFiles,
                 count: newFiles.length

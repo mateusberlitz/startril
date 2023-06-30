@@ -265,7 +265,9 @@ export default function Contato(){
 
             console.log(concurrent);
 
-            const result = await serverApi.post('public/briefings', {...briefing, goals, personalities, concurrent, demand: briefingLeadData.demand, lead_id: briefingLeadData.id, send_mail: "true"}).then(response => response.data);
+            const result = await serverApi.post('public/briefings', 
+            {...briefing, goals, personalities, concurrent, demand: briefingLeadData.demand, lead_id: briefingLeadData.id, files: fileList.files, send_mail: "true"}, 
+            {headers: {'Content-Type': "multipart/form-data; charset=utf-8"}}).then(response => response.data);
 
             setStep(3);
             setIsSubmitting(false);
@@ -392,6 +394,8 @@ export default function Contato(){
         scrollAnimate()
         window.addEventListener("scroll", scrollAnimate);
     }, []);
+
+    console.log(fileList.files);
 
     return(
         <Flex flexDir="column" w="100%">
