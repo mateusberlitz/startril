@@ -224,7 +224,7 @@ cursor: pointer
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-47%);
+        transform: translateX(-45%);
     }
 }
 
@@ -239,7 +239,7 @@ cursor: pointer
             transform: translateX(0);
         }
         100%{
-            transform: translateX(-400%);
+            transform: translateX(-83%);
         }
     }
 

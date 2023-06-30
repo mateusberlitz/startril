@@ -35,7 +35,7 @@ export function Services(){
 
     return(
         <Flex w="100%" bg="#080510" overflow="hidden" pos="relative" pt="20">
-            <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+            <Stack id="services" px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="0" spacing="20" direction={["column", "column", "row", "row"]} alignItems={""}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" justifyContent={"center"} className="sectionFade">
                         <Stack spacing="6">
@@ -102,7 +102,7 @@ export function Services(){
                         </Stack> 
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
-                                <Heading color="blue.500" fontSize={"2xl"}>Tráfego</Heading>
+                                <Heading color="blue.400" fontSize={"2xl"}>Tráfego</Heading>
                                 <Heading color="white" fontSize={"2xl"}>pago</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
@@ -123,12 +123,15 @@ export function Services(){
 
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./ana_job.webp"} w="100%"/>
+                        <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Ana Maria</Text>
                     </Stack>
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./rahin_job.webp"} w="100%"/>
+                        <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Rahin Molter</Text>
                     </Stack>
                     <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./guris_job.webp"} w="100%"/>
+                        <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Mateus Berlitz e Rahin Molter</Text>
                     </Stack>
                 </Stack>
             </Stack>

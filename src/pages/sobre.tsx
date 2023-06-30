@@ -126,11 +126,11 @@ export default function Sobre(){
                 <Flex pos="absolute" zIndex={-1} top="0" left="0" overflow={"hidden"} h="90vh" maxH="940px" w="100%">
                     <HStack id="aboutPhotosTranslate" spacing="0">
                         <Img src="./rahin.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "600px"}/>    
-                        <Img src="./mateus.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./ana.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./rahin2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./mateus2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./ana2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./mateus.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./ana.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./rahin2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./mateus2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./ana2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
                     </HStack>
                 </Flex>
 

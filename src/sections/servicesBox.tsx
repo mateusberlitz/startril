@@ -79,7 +79,7 @@ export function ServicesBox(){
 
     return(
         <Flex w="100%" bg="#080510" overflow="hidden">
-            <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+            <Stack id="services" px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                 <Stack pt="22" spacing="20">
                     <Stack spacing="6" className="sectionFade">
                         <ColoredTag textAlign="center">O que fazemos?</ColoredTag>
