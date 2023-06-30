@@ -22,7 +22,7 @@ export function IconItemList({icon, title, description, onHover, active, index, 
                 </Flex>
             </HStack>
 
-            <Stack w="calc(100% - 70px)" pl="100px">
+            <Stack w="calc(100% - 70px)">
                 <Text>{description}</Text>
             </Stack>
         </Stack>

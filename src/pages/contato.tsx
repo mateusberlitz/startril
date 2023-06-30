@@ -77,7 +77,7 @@ const BriefingFormSchema = yup.object().shape({
 
 const ConcurrentFormSchema = yup.object().shape({
     company_name: yup.string().required('Qual o nome do concorrente?'),
-    link: yup.string().required('Informe a sua cidade'),
+    link: yup.string().required('Informe o site'),
 });
 
 export default function Contato(){

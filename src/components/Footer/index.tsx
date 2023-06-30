@@ -22,7 +22,7 @@ export function Footer(){
                         <Stack spacing={["10", "12", "16", "20"]} direction={["column","column","row","row"]}>
                             <Stack>
                                 <Text fontSize={"14px"} color="gray.700">Email</Text>
-                                <Link href={"https://www.instagram.com/startril.web/"}>
+                                <Link href={"mailto:contato@startril.com.br"} target="_blank">
                                     <Text w="fit-content" color="white" _hover={{color:"white", _before: { bg: "white", transition:"all ease 0.3s"}}} transition={"all ease 0.3s"} pos="relative" _before={{content: '""', pos:"absolute", width: "100%", bottom: "-1", h: "1px", bg: "gray.800", transition:"all ease 0.3s"}}>
                                         contato@startril.com.br
                                     </Text>
@@ -31,7 +31,7 @@ export function Footer(){
 
                             <Stack>
                                 <Text fontSize={"14px"} color="gray.700">Whatsapp</Text>
-                                <Link href={"https://www.instagram.com/startril.web/"}>
+                                <Link href={"https://api.whatsapp.com/send?phone=5551991090700"} target="_blank">
                                     <Text w="fit-content" color="white" _hover={{color:"white", _before: { bg: "white", transition:"all ease 0.3s"}}} transition={"all ease 0.3s"} pos="relative" _before={{content: '""', pos:"absolute", width: "100%", bottom: "-1", h: "1px", bg: "gray.800", transition:"all ease 0.3s"}}>
                                         (51) 99109-0700
                                     </Text>
@@ -57,10 +57,10 @@ export function Footer(){
                     </HStack>
 
                     <HStack fontSize={"sm"} spacing="5">
-                        <Link href={"https://www.instagram.com/startril.web/"}>
+                        <Link href={"https://www.instagram.com/startril.web/"} target="_blank">
                             <Text textTransform={"uppercase"} letterSpacing={"0.1em"} _hover={{color:"white"}} transition={"all ease 0.3s"}>Instagram</Text>
                         </Link>
-                        <Link href={"https://www.linkedin.com/company/startril/"}>
+                        <Link href={"https://www.linkedin.com/company/startril/"} target="_blank">
                             <Text textTransform={"uppercase"} letterSpacing={"0.1em"} _hover={{color:"white"}} transition={"all ease 0.3s"}>Linkedin</Text>
                         </Link>
                     </HStack>

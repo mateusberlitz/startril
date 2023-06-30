@@ -102,7 +102,8 @@ export function Services(){
                         </Stack> 
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
-                                <Heading color="white" fontSize={"2xl"}>Tráfego pago</Heading>
+                                <Heading color="blue.500" fontSize={"2xl"}>Tráfego</Heading>
+                                <Heading color="white" fontSize={"2xl"}>pago</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
                             <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo. Impulsionando a sua visibilidade assim como o retorno sobre o investimento.</Text>     
@@ -112,7 +113,7 @@ export function Services(){
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
                                 <Heading color="white" fontSize={"2xl"}>Desenvolvimento</Heading>
-                                {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
+                                
                             </HStack>
                             <Text color="white" fontWeight={"regular"} maxW="280px">Programamos a sua plataforma digital com todas as interações e transações necessárias para interligar a sua equipe ao seu consumidor final, sempre com alta performance e segurança.</Text>     
                         

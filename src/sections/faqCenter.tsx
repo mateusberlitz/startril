@@ -25,8 +25,8 @@ export function FaqCenter(){
                         
                         <TabList>
                             <Tab>Desenvolvimento</Tab>
-                            <Tab>Anúncios</Tab>
                             <Tab>Design</Tab>
+                            <Tab>Anúncios</Tab>
                         </TabList>
 
                         <TabPanels>
@@ -291,7 +291,7 @@ Em alguns casos não é necessária nenhuma alteração, em outros certos ajuste
                                             <AccordionIcon />
                                         </AccordionButton>
                                         <AccordionPanel pb={4}>
-                                        Inicialmente será feito uma análise para determinar o seu funil de venda, analisar páginas existentes ou cria-las para receber os seus clientes, será criado material publicitário para compor as campanhas junto com seleção de palavras chaves e textos para atrair usuários ao seu site ou página de venda. Após definir as métricas de conversão e o orçamento mensal, será delimitado a localização e o público alvo das campanhas...
+                                        De forma resumida, inicialmente será feito uma análise para determinar o seu funil de venda, analisar páginas existentes ou cria-las para receber os seus clientes, será criado material publicitário para compor as campanhas junto com seleção de palavras chaves e textos para atrair usuários ao seu site ou página de venda. Após definir as métricas de conversão e o orçamento mensal, será delimitado a localização e o público alvo das campanhas antes de começarem a rodar.
                                         </AccordionPanel>
                                     </AccordionItem>
 
