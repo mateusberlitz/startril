@@ -59,14 +59,14 @@ const BriefingLeadFormSchema = yup.object().shape({
     name: yup.string().required('Qual o seu nome?'),
     email: yup.string().email("Informe um e-mail válido").required('Preencha o e-mail'),
     phone: yup.string().required('Informe seu telefone'),
-    company: yup.string().required('Informe a sua cidade'),
+    company: yup.string().required('Informe a sua empresa'),
     //demand: yup.array().min(1).of(yup.string().required()).required('Selecione uma opção'),
 });
 
 const BriefingFormSchema = yup.object().shape({
     business_description: yup.string().min(20, "Descreva sua empresa em mais de 20 caracteres").required('Explique o seu negócio'),
     goals: yup.array().min(1, "Selecione pelo menos uma demanda").of(yup.string().required()).required(),
-    metier: yup.string().min(3).required('Qual o ramo da empresa?'),
+    metier: yup.string().min(3, "O ramo precisa ter pelo menos 3 caracteres").required('Qual o ramo da empresa?'),
     personalities: yup.array(yup.string()).min(1, "Selecione pelo menos uma personalidade").of(yup.string().required()).required(),
     //concurrent: yup.array().of(yup.object().shape({company_name: yup.string().required(),link: yup.string().required()})),
     expected_time: yup.string().required('Qual o prazo de entrega esperado?'),
@@ -582,14 +582,14 @@ export default function Contato(){
                                                     <FormControl pos="relative" isInvalid={!!briefingForm.formState.errors.goals}>
                                                         <Stack spacing={["8", "8", "32", "32"]} direction={["column", "column", "row", "row"]}>
                                                             <Stack spacing="3">
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Anúncios"}>Vender Mais</Checkbox>
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Aplicativo"}>Aumentar visibilidade</Checkbox>
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"E-commerce"}>Criar uma loja virtual</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Vender Mais"}>Vender Mais</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Aumentar visibilidade"}>Aumentar visibilidade</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Criar uma loja virtual"}>Criar uma loja virtual</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Página de vendas"}>Página de vendas</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Impactar meus clientes"}>Impactar meus clientes</Checkbox>
                                                             </Stack>
                                                             <Stack spacing="3">
-                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Encantar público alvo"}>Gerar autoridade</Checkbox>
+                                                                <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Gerar autoridade"}>Gerar autoridade</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Sistema"}>Criar um Sistema</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Website"}>Website</Checkbox>
                                                                 <Checkbox form="briefingForm" {...briefingForm.register("goals")} value={"Redesign"}>Redesign</Checkbox>
