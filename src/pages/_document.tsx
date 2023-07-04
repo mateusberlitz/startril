@@ -65,7 +65,7 @@ class MyDocument extends Document {
                     <meta property="og:title" content="Startril Web Creation - Gerenciamos Anúncios, Criamos Sites, Sistemas e Design para o seu objetivo."></meta>
                     <meta property="og:description" content="Gerenciamos anúncios, criamos Sites, aplicações e design para os seus objetivos."></meta>
 
-                    <meta property="og:image" content="./images/card.jpg"></meta>
+                    <meta property="og:image" content="./card.jpg"></meta>
                     <meta property="og:image:alt" content="Startril Web Creation - Gerenciamos Anúncios, Criamos Sites, Sistemas e Design para o seu objetivo."></meta>
                     <meta property="og:app_id" content="ns67765jnmz8"></meta>
                     <meta property="og:type" content="website"></meta>
