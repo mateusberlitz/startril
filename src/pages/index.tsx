@@ -107,7 +107,7 @@ export default function Home() {
     <Box pos="relative" className='main'>
         <Head>
             <title>Startril</title>
-            <meta name="description" content="Transformamos seu negócio com sites, anúncios e design" />
+            <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 

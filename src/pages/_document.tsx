@@ -46,27 +46,27 @@ class MyDocument extends Document {
 
                     <meta name="robots" content="index, follow"></meta>
 
-                    <meta name="description" content="Criamos Sites, Aplicações e Design para o seu objetivo."/>
+                    <meta name="description" content="Gerenciamos Anúncios, Criamos Sites, Sistemas e Design para o seu objetivo."/>
                     <link rel="icon" type="image/x-icon" href="./icone_startril.svg"/>
 
                     <meta name="facebook-domain-verification" content="g8yp6iz97nsgjl1dxn46e34gxaot0s"></meta>
                     <meta name="google-site-verification" content="Q5dGY-imD4ur2aZOKlLTgMCEIefxpB2AgWR36Ne2H2A"></meta>
 
                     <meta name="category" content="Webdesign" />
-                    <link rel="index" title="Startril Webdesign" href="https://startril.com.br/"/>
+                    <link rel="index" title="Startril Web Creation" href="https://startril.com.br/"/>
                     <link rel="logo" type="image/svg" href="./icone_startril.svg"></link>
                     <link rel="sitemap" type="application/xml" href="https://startril.com.br/sitemap.xml"></link>
 
                     {/* <meta name="url" content="https://lanceconsorcio.com.br/"></meta> */}
                     {/* <meta property="og:url" content="https://old.lanceconsorcio.com.br/blog"></meta> */}
 
-                    <meta property="og:site_name" content="Startril Webdesign"></meta>
+                    <meta property="og:site_name" content="Startril Web Creation"></meta>
                     <meta property="og:locale" content="pt_BR"></meta>
-                    <meta property="og:title" content="Startril Webdesign - Criação de sites, telas e sistemas"></meta>
+                    <meta property="og:title" content="Startril Web Creation - Gerenciamos Anúncios, Criamos Sites, Sistemas e Design para o seu objetivo."></meta>
                     <meta property="og:description" content="Criamos Sites, Aplicações e Design para o seu objetivo."></meta>
 
                     <meta property="og:image" content="./images/card.jpg"></meta>
-                    <meta property="og:image:alt" content="Startril Webdesign - Criação de sites, telas e sistemas"></meta>
+                    <meta property="og:image:alt" content="Startril Web Creation - Gerenciamos Anúncios, Criamos Sites, Sistemas e Design para o seu objetivo."></meta>
                     <meta property="og:app_id" content="ns67765jnmz8"></meta>
                     <meta property="og:type" content="website"></meta>
                 </Head>

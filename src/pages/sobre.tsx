@@ -13,6 +13,7 @@ import { useEffect, useRef } from "react";
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import Head from "next/head";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Sobre(){
@@ -80,6 +81,12 @@ export default function Sobre(){
 
     return(
         <Flex flexDir="column" w="100%">
+            <Head>
+                <title>Startril - Sobre</title>
+                <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
+                <link rel="icon" href="/icone_startril.svg" />
+            </Head>
+
             <Header/>
             {/* <Flex flexDir="column">
                 <Flex pos="absolute" zIndex={-1} w='100%' top="-215px" h="calc(100% + 215px)" overflow="hidden">

@@ -29,6 +29,7 @@ import { DraggableFileInput } from "../components/Forms/DraggableFileInput";
 import { Footer } from "../components/Footer";
 import axios, { AxiosError } from "axios";
 import { ColoredTag } from "../components/ColoredTag";
+import Head from "next/head";
 
 interface BriefingLeadData{
     id: number;
@@ -399,6 +400,12 @@ export default function Contato(){
 
     return(
         <Flex flexDir="column" w="100%">
+            <Head>
+                <title>Startril - Briefing</title>
+                <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
+                <link rel="icon" href="/icone_startril.svg" />
+            </Head>
+
             <Flex flexDir="column">
                 <Flex pos="absolute" zIndex={-1} w='100%' top="-215px" h="calc(100% + 215px)" overflow="hidden">
                     <ContactAnimation/>
