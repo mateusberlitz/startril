@@ -97,7 +97,7 @@ export function ServicesBox(){
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                             <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
-                            <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton>
+                            {/* <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton> */}
                             
                         </Stack>
 
