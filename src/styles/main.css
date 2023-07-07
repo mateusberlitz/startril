@@ -416,3 +416,16 @@ cursor: pointer
     transform: translateY(0px);
     opacity: 1;
 }
+
+@keyframes loadingServiceBarAnimation{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.loadingServiceBar{
+    animation: loadingServiceBarAnimation 9s ease forwards;
+}

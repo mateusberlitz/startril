@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import DevIcon from '../../public/dev.svg';
 import AdsIcon from '../../public/ads.svg';
 import Ui from '../../public/ui.svg';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +16,11 @@ import { ArrowRight, ArrowUpRight } from "react-feather";
 
 export function Services(){
     const router = useRouter();
+    let timer: ReturnType<typeof setTimeout>;
+
+    const firstLoadingBar = useRef(null);
+    const secondLoadingBar = useRef(null);
+    const thirdLoadingBar = useRef(null);
 
     const [activeItem, setActiveItem] = useState(1);
 
@@ -31,7 +36,41 @@ export function Services(){
 
         scrollAnimate()
         window.addEventListener("scroll", scrollAnimate);
+        
+        timer = setTimeout(() => {
+            switchService()
+        }, 9000)
     }, []);
+
+    const handleSwitchService = (item?: number) => {
+
+        if(item){
+            window.clearTimeout(timer);
+            setActiveItem(item);
+        }
+    }
+
+    const switchService = () => {
+        if(activeItem == 1){
+            setActiveItem(activeItem + 1);
+            //document.getElementsByClassName("loadingServiceBar")[0].classList.remove("loadingServiceBar");
+            //document.getElementsByClassName("loadBar2")[0].classList.add("loadingServiceBar");
+        }else if(activeItem == 2){
+            setActiveItem(activeItem + 1);
+            //document.getElementsByClassName("loadingServiceBar")[0].classList.remove("loadingServiceBar");
+            //document.getElementsByClassName("loadBar3")[0].classList.add("loadingServiceBar");
+        }else{
+            setActiveItem(1);
+            //document.getElementsByClassName("loadingServiceBar")[0].classList.remove("loadingServiceBar");
+            //document.getElementsByClassName("loadBar1")[0].classList.add("loadingServiceBar");
+        }
+    }
+
+    useEffect(() => {
+        timer = setTimeout(() => {
+            switchService()
+        }, 9000)
+    }, [activeItem, switchService])
 
     return(
         <Flex w="100%" bg="#080510" overflow="hidden" pos="relative" pt="20">
@@ -45,7 +84,7 @@ export function Services(){
                         <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>Soluções digitais para:</Heading>
 
                         <Stack spacing={["6","6","4","4","4","10"]}>
-                            <HStack onClick={() => setActiveItem(1)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 1 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 1 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
+                            <HStack onClick={() => handleSwitchService(1)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 1 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 1 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
                                 <Box pos="absolute" bg="gradient" left="0" right="0" top="0" bottom="0" opacity={activeItem === 1 ? "1" : "0"} _groupHover={{opacity: "0.5"}} transition="all ease .5s"/>
                                 <HStack spacing="8" zIndex={1}>
                                     <Flex filter={activeItem === 1 ? "brightness(15)" : "brightness(1)"}>
@@ -59,7 +98,7 @@ export function Services(){
                                 </Flex>
                             </HStack>
 
-                            <HStack onClick={() => setActiveItem(2)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 2 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 2 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
+                            <HStack onClick={() => handleSwitchService(2)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 2 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 2 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
                                 <Box pos="absolute" bg="gradient" left="0" right="0" top="0" bottom="0" opacity={activeItem === 2 ? "1" : "0"} _groupHover={{opacity: "0.5"}} transition="all ease .5s"/>
                                 <HStack spacing="8" zIndex={1}>
                                     <Flex filter={activeItem === 2 ? "brightness(15)" : "brightness(1)"}>
@@ -73,7 +112,7 @@ export function Services(){
                                 </Flex>
                             </HStack>
 
-                            <HStack onClick={() => setActiveItem(3)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 3 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 3 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
+                            <HStack onClick={() => handleSwitchService(3)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 3 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 3 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
                                 <Box pos="absolute" bg="gradient" left="0" right="0" top="0" bottom="0" opacity={activeItem === 3 ? "1" : "0"} _groupHover={{opacity: "0.5"}} transition="all ease .5s"/>
                                 <HStack spacing="8" zIndex={1}>
                                     <Flex filter={activeItem === 3 ? "brightness(15)" : "brightness(1)"}>
@@ -121,17 +160,31 @@ export function Services(){
                         </Stack>
                     </Stack>
 
-                    <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
+                    <Stack w={["100%", "100%", "45%", "45%"]} maxW="700px" zIndex={1} pos="absolute" right="0" visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./ana_job.webp"} w="100%"/>
                         <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Ana Maria Almeida</Text>
+                        <Box w="92%" px="7" pos="absolute" bottom="20px">
+                            <Box pos="absolute" w="100%" h="2px" bg="rgba(255,255,255,0.2)"/>
+                            <Box ref={firstLoadingBar} className={activeItem === 1 ? "loadingServiceBar" : ""} pos="absolute" w={"0%"} transition="width linear 9s" h="2px" bg="rgba(255,255,255,0.8)"/>
+                        </Box>
                     </Stack>
-                    <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
+                    <Stack w={["100%", "100%", "45%", "45%"]} maxW="700px" zIndex={1} pos="absolute" right="0" visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./rahin_job.webp"} w="100%"/>
                         <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Rahin Molter</Text>
+
+                        <Box w="92%" px="7" pos="absolute" bottom="20px">
+                            <Box pos="absolute" w="100%" h="2px" bg="rgba(255,255,255,0.2)"/>
+                            <Box ref={secondLoadingBar} className={activeItem === 2 ? "loadingServiceBar" : ""} pos="absolute" w="0%" h="2px" bg="rgba(255,255,255,0.8)"/>
+                        </Box>
                     </Stack>
-                    <Stack w={["100%", "100%", "45%", "45%"]} zIndex={1} pos="absolute" right="0" visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
+                    <Stack w={["100%", "100%", "45%", "45%"]} maxW="700px" zIndex={1} pos="absolute" right="0" visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
                         <Img transition="all ease .5s" src={"./guris_job.webp"} w="100%"/>
                         <Text fontSize={"11px"} pt="8" pos="absolute" bottom="50px" right="6">Mateus Berlitz e Rahin Molter</Text>
+
+                        <Box w="92%" px="7" pos="absolute" bottom="20px">
+                            <Box pos="absolute" w="100%" h="2px" bg="rgba(255,255,255,0.2)"/>
+                            <Box ref={thirdLoadingBar} className={activeItem === 3 ? "loadingServiceBar" : ""} pos="absolute" w="0%" h="2px" bg="rgba(255,255,255,0.8)"/>
+                        </Box>
                     </Stack>
                 </Stack>
             </Stack>
