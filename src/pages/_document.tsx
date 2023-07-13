@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-//import { GA_TRACKING_ID, GOOGLE_ANALYTICS_TRACKING_ID } from '../services/gtag';
+import { GA_TRACKING_ID, GOOGLE_ANALYTICS_TRACKING_ID } from '../services/gtag';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -29,8 +29,8 @@ class MyDocument extends Document {
                         }}
                     /> */}
 
-                    {/* Global Site Tag (gtag.js) - Google Ads */}
-                    {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+                    {/*Global Site Tag (gtag.js) - Google Ads */}
+                    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `
@@ -41,7 +41,7 @@ class MyDocument extends Document {
                                 gtag('config', '${GA_TRACKING_ID}');
                             `,
                         }}
-                    /> */}
+                    />
 
                     <script
                         dangerouslySetInnerHTML={{

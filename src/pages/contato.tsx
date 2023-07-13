@@ -31,6 +31,8 @@ import axios, { AxiosError } from "axios";
 import { ColoredTag } from "../components/ColoredTag";
 import Head from "next/head";
 
+import * as gtag from '../services/gtag';
+
 interface BriefingLeadData{
     id: number;
     name: string;
@@ -273,6 +275,7 @@ export default function Contato(){
             setStep(3);
             setIsSubmitting(false);
             localStorage.setItem('@startril/briefing', JSON.stringify(result.data));
+            gtag.track('conversion', { sendTo: 'AW-11246386468/n7OVCLnflbsYEKT62PIp', value: 0, currency: 'BRL'});
             AnimationFinish();
         }catch(error: unknown){ //AxiosError
             if(!axios.isAxiosError(error)){
