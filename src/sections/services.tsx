@@ -145,7 +145,7 @@ export function Services(){
                                 <Heading color="white" fontSize={"2xl"}>pago</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo. Impulsionando a sua visibilidade assim como o retorno sobre o investimento.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo, para impulsionar as suas vendas e visibilidade pelos meios digitais.</Text>     
                         
                             {/* <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button> */}
                         </Stack>

@@ -119,7 +119,7 @@ export function ServicesBox(){
                                 <Text color="gray.600">Tráfego Pago</Text>
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Anúncios e Impulsão</Text>
-                            <Text color="gray.500">Posicionamos e direcionamos a sua empresa ao público certo, impulsionando a sua visibilidade e ampliando o retorno sobre o investimento.</Text>
+                            <Text color="gray.500">Posicionamos e direcionamos a sua empresa ao público certo, para impulsionar as suas vendas e visibilidade pelos meios digitais.</Text>
                             {/* <OutlineButton onClick={() => router.push('/ads')}>Acessar página</OutlineButton> */}
                         </Stack>
                     </Stack>

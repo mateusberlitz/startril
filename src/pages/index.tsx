@@ -137,7 +137,7 @@ export default function Home() {
 
                                 <HStack spacing="8">
                                     <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
-                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button>
+                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver soluções</Button>
                                 </HStack>
                             </Stack>
                             <Stack w={["100%", "100%", "50%", "50%"]}>
