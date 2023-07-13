@@ -53,7 +53,7 @@ export function Header(){
     return(
         <Stack as="nav" alignItems="center" pos="relative" top="0" w="100%" left="0" h="140px" transition="0.4s" justifyContent={"center"}>
              {/* bg="rgb(8,5,16,0.7)" backdropFilter="blur(40px)" */}
-            <HStack ref={navRef} zIndex={9} w="100%" m="0 auto" maxW="1200px" py="2" px="6" justify="space-between" h="80px" borderRadius="3">
+            <HStack ref={navRef} zIndex={99999} w="100%" m="0 auto" maxW="1200px" py="2" px="6" justify="space-between" h="80px" borderRadius="3">
             {/* pos="fixed" top="12px" bg="rgba(0,0,0,0.4)" backdropFilter={"blur(40px)"} */}
                 <Link href="/"><Img src="startril.svg" maxW="150px"/></Link>
 
