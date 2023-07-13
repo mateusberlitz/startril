@@ -16,8 +16,8 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
                 
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
-                    {/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TRACKING_ID}`} /> */}
-                    {/* <script
+                    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TRACKING_ID}`} />
+                    <script
                         dangerouslySetInnerHTML={{
                             __html: `
                                 window.dataLayer = window.dataLayer || [];
@@ -27,7 +27,7 @@ class MyDocument extends Document {
                                 gtag('config', '${GOOGLE_ANALYTICS_TRACKING_ID}');
                             `,
                         }}
-                    /> */}
+                    />
 
                     {/*Global Site Tag (gtag.js) - Google Ads */}
                     <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
