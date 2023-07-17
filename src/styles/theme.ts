@@ -53,8 +53,8 @@ export const theme = extendTheme({
             "500": "#28C76F"
         },
 
-        gradient: "linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%)"
-
+        gradient: "linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%)",
+        gradientBorder: "linear-gradient(90deg, rgba(59, 161, 240, 0.3) -1.31%, rgba(114, 96, 223, 0.3) 91.65%)",
     },
     fonts: {
         heading: 'Epilogue',
@@ -63,7 +63,7 @@ export const theme = extendTheme({
     styles: {
         global: {
             body: {
-                bg: 'black',
+                bg: '#080510',
                 color: 'gray.text',
             },
         }
