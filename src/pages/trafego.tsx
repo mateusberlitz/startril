@@ -121,7 +121,6 @@ export default function Home() {
                 trigger: "#adsIntro",
                 scrub: true,
                 start: "top top",
-                markers: true,
                 animation: progress
             });
 
@@ -137,7 +136,6 @@ export default function Home() {
                 trigger: "#adsDash",
                 //scrub: true,
                 start: "top-=400px top",
-                markers: true,
                 animation: fadeUp
             });
 
@@ -153,7 +151,6 @@ export default function Home() {
                 trigger: "#faceDash",
                 //scrub: true,
                 start: "top-=300px top",
-                markers: true,
                 animation: fadeUpFace
             });
         });
