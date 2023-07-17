@@ -12,6 +12,7 @@ import HomeBackground from '../../public/background_intro.svg';
 import React from '../../public/react.svg';
 import StartrilIcon from '../../public/icone_startril.svg';
 import AdsTarget from '../../public/ads_target.svg';
+import AdsTargetMobile from '../../public/ads_target_mobile.svg';
 import { ArrowUpRight, Eye, PlayCircle } from 'react-feather';
 
 import Star from '../../public/star.svg';
@@ -48,6 +49,7 @@ import { FaqCenter } from '../sections/faqCenter';
 import { Loader } from '../components/Loader';
 import Image from 'next/image';
 import { SolidButton } from '../components/Buttons/SolidButton';
+import { BePArt } from '../sections/bePart';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -56,39 +58,6 @@ export default function Home() {
         base: false,
         lg: true,
     })
-
-    // useEffect(() => {
-
-    //     const ctx = gsap.context(() => {
-    //         const sections = gsap.utils.toArray<HTMLElement>('.sectionFade');
-
-    //         console.log(sections);
-
-    //         sections.forEach((section, i) => {
-    //             const fadeShow = gsap.fromTo(section, { 
-    //                 autoAlpha: 0,
-    //                 y: 50
-    //             }, { 
-    //                 autoAlpha: 1,
-    //                 y: 0
-    //             });
-
-    //             console.log(i);
-
-    //             ScrollTrigger.create({
-    //                 trigger: section,
-    //                 animation: fadeShow,
-    //                 once: true,
-    //                 start: "top center",
-    //                 //markers: true,
-    //                 toggleActions: 'play none none none',
-    //                 //toggleClass: 'active'
-    //             });
-    //         })
-    //     });
-
-    //     return () => ctx.revert();
-    // }, []);
 
     const [firstLoad, setFirstLoad] = useState(true);
 
@@ -111,49 +80,51 @@ export default function Home() {
             setFirstLoad(false);
         }
 
-        const ctx = gsap.context(() => {
-            const progress = gsap.to("#adsAnimation", { 
-                y: 900,
-                ease: "none"
+        if(isWideVersion){
+            const ctx = gsap.context(() => {
+                const progress = gsap.to("#adsAnimation", { 
+                    y: 900,
+                    ease: "none"
+                });
+                
+                ScrollTrigger.create({
+                    trigger: "#adsIntro",
+                    scrub: true,
+                    start: "top top",
+                    animation: progress
+                });
+    
+                const fadeUp = gsap.fromTo("#adsDash", { 
+                    y: 100,
+                    autoAlpha: 0
+                },{ 
+                    y: 0,
+                    autoAlpha: 1
+                });
+                
+                ScrollTrigger.create({
+                    trigger: "#adsDash",
+                    //scrub: true,
+                    start: "top-=400px top",
+                    animation: fadeUp
+                });
+    
+                const fadeUpFace = gsap.fromTo("#faceDash", { 
+                    y: 100,
+                    autoAlpha: 0
+                },{ 
+                    y: 0,
+                    autoAlpha: 1
+                });
+                
+                ScrollTrigger.create({
+                    trigger: "#faceDash",
+                    //scrub: true,
+                    start: "top-=300px top",
+                    animation: fadeUpFace
+                });
             });
-            
-            ScrollTrigger.create({
-                trigger: "#adsIntro",
-                scrub: true,
-                start: "top top",
-                animation: progress
-            });
-
-            const fadeUp = gsap.fromTo("#adsDash", { 
-                y: 100,
-                autoAlpha: 0
-            },{ 
-                y: 0,
-                autoAlpha: 1
-            });
-            
-            ScrollTrigger.create({
-                trigger: "#adsDash",
-                //scrub: true,
-                start: "top-=400px top",
-                animation: fadeUp
-            });
-
-            const fadeUpFace = gsap.fromTo("#faceDash", { 
-                y: 100,
-                autoAlpha: 0
-            },{ 
-                y: 0,
-                autoAlpha: 1
-            });
-            
-            ScrollTrigger.create({
-                trigger: "#faceDash",
-                //scrub: true,
-                start: "top-=300px top",
-                animation: fadeUpFace
-            });
-        });
+        }
     }, []);
 
   return (
@@ -202,25 +173,39 @@ export default function Home() {
                             </Stack>
                             
                             <Stack id="adsAnimation" w={["100%", "100%", "50%", "50%"]} h="100%" pos="relative" zIndex={999} height="auto">
-                                <Flex pos="absolute" bottom="" top="0" justifyContent={"center"} margin="0 auto">
+                                <Flex pos={isWideVersion ? "absolute" : "initial"} bottom="" top="0" justifyContent={"center"} margin="0 auto">
                                     <Flex bottom="0">
-                                        <AdsAnimation/>
+                                        {
+                                            isWideVersion ? (
+                                                <AdsAnimation/>
+                                            ) : (
+                                                <Flex ml="-20px">
+                                                    <AdsAnimationMobile/>
+                                                </Flex>
+                                            )
+                                        }
                                     </Flex>
                                 </Flex>
                             </Stack>
-
-                            
                         </Stack>
 
-                        <Flex direction="column">
-                            <Flex zIndex={99} id="adsDash">
-                                <Image src="/google_ads_dash.png" width={1426} height={721} alt="Gerenciamento de Google Ads"/>
-                            </Flex>
+                        {
+                            isWideVersion && (
+                                <Flex direction="column">
+                                    <Flex zIndex={99} id="adsDash">
+                                        <Image src="/google_ads_dash.png" width={1426} height={721} alt="Gerenciamento de Google Ads"/>
+                                    </Flex>
 
-                            <Flex zIndex={999} id="faceDash" mt="-300px" p="20">
-                                <Image src="/face_dash.png" width={1426} height={721} alt="Gerenciamento de Google Ads"/>
-                            </Flex>
-                        </Flex>
+                                    <Flex zIndex={999} id="faceDash" mt="-420px" p="20">
+                                        <Image src="/face_dash.png" width={1426} height={721} alt="Gerenciamento de Google Ads"/>
+                                    </Flex>
+
+                                    {/* <Flex zIndex={9999} id="faceDash" mt="-320px" p="20" h="300px" bg="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 48.44%, rgba(0, 0, 0, 0.00) 100%);">
+                                        <Heading color="white">Qualifique os anúncios da sua empresa</Heading>
+                                    </Flex> */}
+                                </Flex>
+                            )
+                        }
                     </Stack>
                 </Flex>
 
@@ -236,7 +221,13 @@ export default function Home() {
                             </Stack>
 
                             <Stack w={["100%", "100%", "50%", "50%"]}>
-                                <AdsTarget/>
+                                {
+                                            isWideVersion ? (
+                                                <AdsTarget/>
+                                            ) : (
+                                                <AdsTargetMobile/>
+                                            )
+                                        }
                             </Stack>
                             
                         </Stack>
@@ -257,19 +248,19 @@ export default function Home() {
                             <Stack spacing="12" className="sectionFade">
                                 <Stack spacing="12" direction={["column", "column", "row", "row"]}>
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
-                                        <HStack spacing="5">
+                                        <Stack direction={["column", "column", "row", "row"]}>
                                             <Star/>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Aumentar a relevância da marca</Text>
-                                        </HStack>
+                                        </Stack>
                                         <Text>O tráfego pago aumenta a relevância do sua marca, garantindo que ela seja exibida para um público altamente segmentado, o que resulta em maior reconhecimento, credibilidade e conexão com seu público-alvo.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
 
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
-                                        <HStack spacing="5">
+                                        <Stack direction={["column", "column", "row", "row"]}>
                                             <HeartFlag/>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Ganho de autoridade</Text>
-                                        </HStack>
+                                        </Stack>
                                         <Text>Essa é uma poderosa estratégia para a construção de autoridade da sua marca, permitindo que ela se destaque diante da concorrência e seja reconhecida como uma referência no mercado.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
@@ -277,19 +268,19 @@ export default function Home() {
 
                                 <Stack spacing="12" direction={["column", "column", "row", "row"]}>
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
-                                        <HStack spacing="5">
+                                        <Stack direction={["column", "column", "row", "row"]}>
                                             <Leads/>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Amplie sua rede de contatos</Text>
-                                        </HStack>
+                                        </Stack>
                                         <Text>Expanda sua base de clientes em potencial por meio de captura de leads e obtenção de informações valiosas.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
 
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
-                                        <HStack spacing="5">
+                                        <Stack direction={["column", "column", "row", "row"]}>
                                             <Sale/>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Conversões em vendas</Text>
-                                        </HStack>
+                                        </Stack>
                                         <Text>Maximize suas vendas convertendo visitantes em clientes e impulsionando o crescimento do seu negócio.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
@@ -368,35 +359,47 @@ export default function Home() {
 
                             <Stack className="sectionFade" pos="relative" spacing="12" w="100%" direction={["column", "column", "row", "row"]} justifyContent={"space-between"}>
                                 <Stack spacing="5">
-                                    <Img src="/ads.png" w="120px" zIndex={1}/>
-                                    <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Plataforma</Text>
-                                    <Stack>
-                                        <Text>Google</Text>
-                                        <Text>Youtube</Text>
-                                        <Text>Adsense</Text>
+                                    <Stack direction={["row", "row", "column", "column"]} alignItems={!isWideVersion ? "center" : ""}>
+                                        <Img src="/ads.png" w="120px" zIndex={1}/>
+                                        <Text fontSize={"xl"} color="white" fontWeight={"semibold"} pl="2">Plataforma</Text>
+                                    </Stack>
+                                    <Stack pl={isWideVersion ? "2" : "32"} direction={["row", "row", "column", "column"]}>
+                                        <Text>- Google Ads</Text>
+                                        <Text>- Meta Ads</Text>
+                                        <Text>- Linkedin</Text>
                                     </Stack>
                                 </Stack>
 
                                 <Stack spacing="5">
-                                    <Img src="/net.png" w="120px" zIndex={1}/>
-                                    <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Seu site</Text>
-                                    <Stack>
-                                        <Text>Simulação</Text>
-                                        <Text>Contato</Text>
-                                        <Text>Whatsapp</Text>
+                                    <Stack direction={["row", "row", "column", "column"]} alignItems={!isWideVersion ? "center" : ""}>
+                                        <Img src="/net.png" w="120px" zIndex={1}/>
+                                        <Text fontSize={"xl"} color="white" fontWeight={"semibold"} pl="2">Seu site</Text>
+                                    </Stack>
+                                    <Stack pl={isWideVersion ? "2" : "32"} direction={["row", "row", "column", "column"]}>
+                                        <Text>- Lead</Text>
+                                        <Text>- Venda</Text>
+                                        <Text>- Whatsapp</Text>
                                     </Stack>
                                 </Stack>
                                 <Stack spacing="5">
-                                    <Img src="/folder.png" w="120px" zIndex={1}/>
-                                    <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Seu gerenciamento</Text>
-                                    <Stack>
-                                        <Text>E-mail</Text>
-                                        <Text>CRM</Text>
-                                        <Text>Planilhas</Text>
+                                    <Stack direction={["row", "row", "column", "column"]} alignItems={!isWideVersion ? "center" : ""}>
+                                        <Img src="/folder.png" w="120px" zIndex={1}/>
+                                        <Text fontSize={"xl"} color="white" fontWeight={"semibold"} pl="2">Seu gerenciamento</Text>
+                                    </Stack>
+                                    <Stack pl={isWideVersion ? "2" : "32"} direction={["row", "row", "column", "column"]}>
+                                        <Text>- E-mail</Text>
+                                        <Text>- CRM</Text>
+                                        <Text>- Planilhas</Text>
                                     </Stack>
                                 </Stack>
 
-                                <Box pos="absolute" w="82%" h="2px" bg="rgba(255,255,255,0.4)" top="21%" left="0"/>
+                                {
+                                    isWideVersion ? (
+                                        <Box pos="absolute" w="82%" h="2px" bg="rgba(255,255,255,0.4)" top="21%" left="0"/>
+                                    ) : (
+                                        <Box pos="absolute" w="2px" h="80%" bg="rgba(255,255,255,0.4)" top="" left="14"/>
+                                    )
+                                }
                             </Stack>
 
                             <Stack className="sectionFade" pos="relative" spacing="12" w="100%" direction={["column", "column", "row", "row"]} justifyContent={"space-between"}>
@@ -435,20 +438,7 @@ export default function Home() {
                     </Stack>
                 </Flex>
 
-                <Flex id="" w="100%" bg="#080510" overflow="hidden" py="20">
-                    <Stack px="6" w="100%" maxW="1000px" bg="rgba(255,255,255,0.05)" border="1px solid" borderColor={"rgba(255,255,255,0.1)"} m="0 auto" py="20" spacing="10" justifyContent={"center"} textAlign={"center"} alignItems={"center"} p="24">
-                        <HStack>
-                            <Flex><CustomersImage/></Flex>
-                            <Text textTransform={"uppercase"}>faça parte do nosso time <br></br>de parceiros de sucesso</Text>
-                        </HStack>
-                            
-                        <Heading bg="linear-gradient(90deg, #3BA1F0 -1.31%, #7260DF 91.65%);" backgroundClip={"text"} __css={{webkitTextFillColor: "transparent"}}>Dê o primeiro passo para o sucesso do seu negócio agora mesmo.</Heading>
-                    
-                        <Text>Entre em contato conosco e vamos tirar sua ideia do papel!</Text>
-
-                        <SolidButton onClick={() => router.push('/contato')}>Criar Briefing</SolidButton>
-                    </Stack>
-                </Flex>
+                <BePArt/>
 
             </Flex>
         </Flex>
