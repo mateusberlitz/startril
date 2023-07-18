@@ -18,6 +18,8 @@ import Star from '../../public/star.svg';
 import HeartFlag from '../../public/heart-flag.svg';
 import Leads from '../../public/leads.svg';
 import Sale from '../../public/sale.svg';
+import Branding from '../../public/branding.svg';
+import Asterisk from '../../public/asterisk.svg';
 
 import Medal from '../../public/medal.svg';
 import HandShake from '../../public/hand-shake.svg';
@@ -43,6 +45,8 @@ import { ServicesBox } from '../sections/servicesBox';
 import { useEffect, useState } from 'react';
 import Whatsapp from '../../public/whatsapp.svg';
 import CustomersImage from '../../public/customers.svg';
+import UiBoards from '../../public/ui-boards-v2.svg';
+import UiBoardsMobile from '../../public/ui-boards-mobile.svg';
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
@@ -54,7 +58,7 @@ import { BePArt } from '../sections/bePart';
 import { StarTag } from '../components/StarTag';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Desenvolvimento() {
+export default function Design() {
     const router = useRouter();
     const isWideVersion = useBreakpointValue({
         base: false,
@@ -145,26 +149,36 @@ export default function Desenvolvimento() {
             <Flex flexDir="column">
                 
 
-                {/* <Flex pos="absolute" zIndex={-1} w='100%' top={isWideVersion ? "-215px" : "0px"}>
-                    <Img src="./mateus_video.jpg"/>
-                </Flex> */}
+                <Flex pos="absolute" zIndex={-1} w='100%' top={isWideVersion ? "-215px" : "0px"}>
+                    <HomeBackground/>
+                </Flex>
 
-                <Flex w="100%" direction={"column"} id="adsIntro" bgImage={"./mateus_video_black.jpg"} bgSize={"cover"} bgPos={isWideVersion ? "center top" : "-540px"}>
+                <Flex w="100%" direction={"column"} id="adsIntro">
                     <Header/>
 
                     <Box w="100%" h="120px" pos="absolute" bg="linear-gradient(180deg, rgba(14, 17, 25, 0) 0%, #080510 100%);" bottom="0"/>
 
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb={["0","20","20","32","40"]} spacing="32" h="80vh">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb={["0","20","20","32","40"]} spacing="32">
 
                         <Stack alignItems={"flex-start"} direction={["column","column","row","row"]} spacing="16" className="sectionFade">
-                            <Stack w={["100%", "100%", "55%", "55%"]} spacing="12">
-                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>O Desenvolvimento de sites e sistemas em outro nível.</Heading>
-                                <Text color="gray.300">Destaque-se na internet, demonstre a sua autoridade e crie conexão com os seus clientes.</Text>
+                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Conquiste corações e fidelize seus clientes.</Heading>
+                                <Text color="gray.300">Criamos o ambiente perfeito para que seus clientes acessem e adquiram seus produtos ou serviços sem complicações, gerando experiências incríveis que os motivam a recomendar a todos.</Text>
 
                                 <HStack spacing="8">
                                     <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
-                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button>
+                                    {/* <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button> */}
                                 </HStack>
+                            </Stack>
+
+                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
+                                {
+                                    isWideVersion ? (
+                                        <UiBoards/>
+                                    ) : (
+                                        <UiBoardsMobile/>
+                                    )
+                                }
                             </Stack>
                             
                         </Stack>
@@ -175,9 +189,9 @@ export default function Desenvolvimento() {
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
                         <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
-                                <ColoredTag>FEITO POR ESPECIALISTAS</ColoredTag>
-                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Escalamos um time competente para criar seu projeto.</Heading>
-                                <Text color="gray.300">Tenha acesso a uma programação de excelência no desenvolvimento de sites, sistemas e plataformas, oferecendo soluções rápidas e tecnológicas de ponta para impulsionar sua presença online.</Text>
+                                <ColoredTag>TUDO O QUE SEU PROJETO PRECISA</ColoredTag>
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Alinhando experiência com sofisticação</Heading>
+                                <Text color="gray.300">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
 
                                 {/* <HStack spacing="8">
                                     <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
@@ -187,11 +201,11 @@ export default function Desenvolvimento() {
 
                             <Stack w={["100%", "100%", "50%", "50%"]} minH="500px">
                                 <Flex>
-                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="#3BA1F0" filter="blur(120px)"/>
-                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="#3BA1F0"/>
-                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="linear-gradient(350deg, #17507C 0%, rgba(59, 161, 240, 0.00) 100%);"/>
+                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="#7260DF" filter="blur(120px)"/>
+                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="#7260DF"/>
+                                    <Box h={isWideVersion ? "450px" : "350px"} w={isWideVersion ? "450px" : "350px"} pos="absolute" borderRadius="full" bg="linear-gradient(350deg, #2E2372 0%, rgba(59, 161, 240, 0.00) 100%, rgba(114, 96, 223, 0.00) 100%);"/>
                                 </Flex>
-                                <Img src="./laptop.webp" zIndex={9} className="sectionFade"/>
+                                <Img src="./uiux.webp" zIndex={9} className="sectionFade"/>
                             </Stack>
                         </Stack>
                     </Stack>
@@ -202,10 +216,10 @@ export default function Desenvolvimento() {
                         <Stack pt="10" spacing="20" pos="relative" direction={["column", "column", "column", "column"]}>
                             <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} spacing="12">
                                 <Stack spacing="6">
-                                    <ColoredTag>PROJETOS ESCALÁVEIS</ColoredTag>
+                                    <ColoredTag>Proporcione a melhor experiência</ColoredTag>
                                 </Stack>
-                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Com programadores especialistas</Heading>
-                                <Text color="gray.500">Lorem ipsum dolor sit amet consectetur. Non amet viverra sem elementum duis enim ac sed ornare.</Text>
+                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Quais vantagens do UI & UX em um projeto?</Heading>
+                                <Text color="gray.500">UI (Interface do Usuário) se concentra na aparência e interação visual de um produto, enquanto UX (Experiência do Usuário) trata da experiência geral do usuário ao interagir com o produto, visando facilidade de uso, satisfação e eficiência. </Text>
                             </Stack>
 
                             <Stack spacing="12" className="sectionFade">
@@ -256,31 +270,37 @@ export default function Desenvolvimento() {
 
                 <Flex w="100%" bg="#080510" overflow="hidden">
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                        <Stack pt="32" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
+                        <Stack pt="12" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <HStack w={["100%", "100%", "50%", "50%"]}>
                                 {
                                     isWideVersion && (
-                                        <SiteAnimation/>
+                                        <Branding/>
                                     ) 
                                 }
                             </HStack>
 
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12">
                                 <Stack spacing="6">
-                                    <ColoredTag>FRONT MOTION</ColoredTag>
+                                    <ColoredTag>IDENTIDADE VISUAL</ColoredTag>
                                 </Stack>
-                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Sua aplicação no próximo nível</Heading>
+                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Uma nova identidade para o seu negócio.</Heading>
                                 
                                 
-                                {
+                                {/* {
                                     !isWideVersion && (
                                         <Stack w="100%">
                                             <SiteAnimation/>
                                         </Stack>
                                     )
                                 }
-                                
-                                <Text color="gray.500">Entregamos animações capazes de representar sua empresa e impactar ainda mais os seus clientes.</Text>
+                                 */}
+                                <Text color="gray.500">Tornamos a sua marca única e impactante com nossa expertise em identidade visual.</Text>
+                                <Stack>
+                                    <HStack><Asterisk/> <Text>Logomarcas</Text></HStack>
+                                    <HStack><Asterisk/> <Text>Paleta de cores e aplicações</Text></HStack>
+                                    <HStack><Asterisk/> <Text>Textos e conceitos de abordagem</Text></HStack>
+                                    <HStack><Asterisk/> <Text>Apresentação e materiais gráficos</Text></HStack>
+                                </Stack>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
                                 onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
                                     Crie o seu
@@ -293,9 +313,9 @@ export default function Desenvolvimento() {
                 <Flex w="100%" bg="#080510" overflow="hidden" bgImage={"./chip_bg.webp"} bgSize={"cover"} bgPos={isWideVersion ? "center center" : "-540px"}>
                     <Stack px="6" w="100%" maxW="800px" m="0 auto" py="20" spacing="0">
                         <Stack pt="32" spacing="10" direction={["column", "column"]} className="sectionFade" alignItems={"center"} textAlign={"center"}>
-                            <ColoredTag>TIPOS DE WEBSITES</ColoredTag>
-                            <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos a tela ideal para o seu negócio!</Heading>
-                            <Text maxW="600px">Entregamos um design clean e objetivo, focado na conversão dos seus leads conforme seu objetivo.</Text>
+                            <ColoredTag>FRONT MOTION</ColoredTag>
+                            <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos o desenvolvimento ideal para o seu negócio!</Heading>
+                            <Text maxW="600px">Entregamos o seu projeto com o desenvolvimento necessário para realizar as funções que você precisa para o seu negócio alavancar.</Text>
                             <Stack alignItems={"center"} spacing="6">
                                 <HStack spacing="6">
                                     <Stack spacing="6" direction={["column", "column", "row", "row"]}>
@@ -322,15 +342,34 @@ export default function Desenvolvimento() {
                     </Stack>
                 </Flex>
 
-                <Flex w="100%" bg="#080510" overflow="hidden">
-                    <Flex direction="column" px="6" w="100%" maxW="1200px" m="0 auto" py="20" pt="32" alignItems={"center"}>
-                        <Brands/>
-                        <Stack maxW="800px" mt={["0","-6","-12"]} pt="0" spacing="10" direction={["column", "column"]} className="sectionFade" alignItems={"center"} textAlign={"center"}>
-                            <ColoredTag>NOS INSPIRAMOS NAS</ColoredTag>
-                            <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Tecnologia das Gigantes!</Heading>
-                            <Text maxW="600px">Software é, e sempre será seu aliado no futuro. Por isso, não deixe de investir em uma boa base para continuar construindo.</Text>
+                <Flex w="100%" bg="#080510">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
+                                <ColoredTag>CASES DE SUCESSO</ColoredTag>
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Inspire-se com cases reais e transforme o futuro do seu negócio.</Heading>
+                                <Text color="gray.300">Conheça alguns dos nossos cases de clientes que passaram pela renovação digital e alcançaram resultados excepcionais, confiando em nosso trabalho para impulsionar seu sucesso.</Text>
+
+                                {/* <HStack spacing="8">
+                                    <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
+                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button>
+                                </HStack> */}
+                            </Stack>
+
+                            <Stack w={["100%", "100%", "50%", "50%"]} minH="500px">
+                                <HStack spacing="8">
+                                    <Stack spacing="8">
+                                        <Img src="./lance_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ane_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                    <Stack spacing="8" pt="20">
+                                        <Img src="./ql_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ss_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                </HStack>
+                            </Stack>
                         </Stack>
-                    </Flex>
+                    </Stack>
                 </Flex>
 
                 <BePArt/>

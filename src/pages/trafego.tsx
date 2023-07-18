@@ -52,7 +52,7 @@ import { SolidButton } from '../components/Buttons/SolidButton';
 import { BePArt } from '../sections/bePart';
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home() {
+export default function Trafego() {
     const router = useRouter();
     const isWideVersion = useBreakpointValue({
         base: false,
