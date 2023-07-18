@@ -130,8 +130,8 @@ export default function Desenvolvimento() {
   return (
     <Box pos="relative" className='main'>
         <Head>
-            <title>Startril</title>
-            <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
+            <title>Desenvolvimento - Startril</title>
+            <meta name="description" content="Crie seu site, sistema ou aplicação web com tecnologias sofisticadas, design especializado para entregar aquilo que precisa ser entregue." />
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 

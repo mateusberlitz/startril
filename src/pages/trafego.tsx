@@ -24,6 +24,13 @@ import EyeGradient from '../../public/eye-gradient.svg';
 import MessageGradient from '../../public/message-gradient.svg';
 import CamGradient from '../../public/eye-gradient.svg';
 
+import InstaIcon from '../../public/insta-icon.svg';
+import LinkedinIcon from '../../public/linkedin-icon.svg';
+import FacebookIcon from '../../public/facebook-icon.svg';
+import GoogleIcon from '../../public/google-icon.svg';
+import YoutubeIcon from '../../public/youtube-icon.svg';
+import TiktokIcon from '../../public/tiktok-icon.svg';
+
 import { ProductAnimation } from '../components/ProductAnimation';
 import { SiteAnimation } from '../components/SiteAnimation';
 import { AdsAnimation } from '../components/AdsAnimation';
@@ -82,47 +89,47 @@ export default function Trafego() {
 
         if(isWideVersion){
             const ctx = gsap.context(() => {
-                const progress = gsap.to("#adsAnimation", { 
-                    y: 900,
-                    ease: "none"
-                });
+                // const progress = gsap.to("#adsAnimation", { 
+                //     y: 900,
+                //     ease: "none"
+                // });
                 
-                ScrollTrigger.create({
-                    trigger: "#adsIntro",
-                    scrub: true,
-                    start: "top top",
-                    animation: progress
-                });
+                // ScrollTrigger.create({
+                //     trigger: "#adsIntro",
+                //     scrub: true,
+                //     start: "top top",
+                //     animation: progress
+                // });
     
-                const fadeUp = gsap.fromTo("#adsDash", { 
-                    y: 100,
-                    autoAlpha: 0
-                },{ 
-                    y: 0,
-                    autoAlpha: 1
-                });
+                // const fadeUp = gsap.fromTo("#adsDash", { 
+                //     y: 100,
+                //     autoAlpha: 0
+                // },{ 
+                //     y: 0,
+                //     autoAlpha: 1
+                // });
                 
-                ScrollTrigger.create({
-                    trigger: "#adsDash",
-                    //scrub: true,
-                    start: "top-=400px top",
-                    animation: fadeUp
-                });
+                // ScrollTrigger.create({
+                //     trigger: "#adsDash",
+                //     //scrub: true,
+                //     start: "top-=400px top",
+                //     animation: fadeUp
+                // });
     
-                const fadeUpFace = gsap.fromTo("#faceDash", { 
-                    y: 100,
-                    autoAlpha: 0
-                },{ 
-                    y: 0,
-                    autoAlpha: 1
-                });
+                // const fadeUpFace = gsap.fromTo("#faceDash", { 
+                //     y: 100,
+                //     autoAlpha: 0
+                // },{ 
+                //     y: 0,
+                //     autoAlpha: 1
+                // });
                 
-                ScrollTrigger.create({
-                    trigger: "#faceDash",
-                    //scrub: true,
-                    start: "top-=300px top",
-                    animation: fadeUpFace
-                });
+                // ScrollTrigger.create({
+                //     trigger: "#faceDash",
+                //     //scrub: true,
+                //     start: "top-=300px top",
+                //     animation: fadeUpFace
+                // });
             });
         }
     }, []);
@@ -130,8 +137,8 @@ export default function Trafego() {
   return (
     <Box pos="relative" className='main'>
         <Head>
-            <title>Startril</title>
-            <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
+            <title>Tráfego Pago - Startril</title>
+            <meta name="description" content="Somos uma agência de tráfego pago que vai gerenciar e te encaminhar para alcançar grandes resultados em visibilidade e mais vendas com anúncios nas maiores plataformas." />
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 
@@ -151,8 +158,8 @@ export default function Trafego() {
 
                 <Stack w={["100%", "100%", "35%", "22%" , "37%"]} h="100vh" pos="absolute" right="0">
                     <Flex pos="absolute" bottom="0" top="0" left="0" right="0" justifyContent={"left"} margin="0 auto">
-                        <Box pos="absolute" bg="gradient" h="100%" w={"45px"} filter="blur(73px)"/>
-                        <Box pos="absolute" bg="gradient" h="100%" w={"3px"}/>
+                        <Box pos="absolute" bg="gradient" h="50%" w={"45px"} filter="blur(73px)"/>
+                        <Box pos="absolute" bg="gradient" h="50%" w={"3px"}/>
                     </Flex>
                 </Stack>
 
@@ -173,7 +180,7 @@ export default function Trafego() {
                             </Stack>
                             
                             <Stack id="adsAnimation" w={["100%", "100%", "50%", "50%"]} h="100%" pos="relative" zIndex={999} height="auto">
-                                <Flex pos={isWideVersion ? "absolute" : "initial"} bottom="" top="0" justifyContent={"center"} margin="0 auto">
+                                <Flex pos={isWideVersion ? "initial" : "initial"} bottom="" top="0" justifyContent={"center"} margin="0 auto">
                                     <Flex bottom="0">
                                         {
                                             isWideVersion ? (
@@ -189,7 +196,7 @@ export default function Trafego() {
                             </Stack>
                         </Stack>
 
-                        {
+                        {/* {
                             isWideVersion && (
                                 <Flex direction="column">
                                     <Flex zIndex={99} id="adsDash">
@@ -199,13 +206,62 @@ export default function Trafego() {
                                     <Flex zIndex={999} id="faceDash" mt="-420px" p="20">
                                         <Image src="/face_dash.png" width={1426} height={721} alt="Gerenciamento de Google Ads"/>
                                     </Flex>
-
-                                    {/* <Flex zIndex={9999} id="faceDash" mt="-320px" p="20" h="300px" bg="linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 48.44%, rgba(0, 0, 0, 0.00) 100%);">
-                                        <Heading color="white">Qualifique os anúncios da sua empresa</Heading>
-                                    </Flex> */}
                                 </Flex>
                             )
-                        }
+                        } */}
+                    </Stack>
+                </Flex>
+
+                <Flex id="" w="100%" bg="#080510" overflow="hidden">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Stack pt="10" spacing="20" pos="relative" direction={["column", "column", "row", "row"]} alignItems={"center"}>
+                            <Stack w={["100%", "100%", "50%", "50%"]}>
+                                <Img src="./dashboards.webp" zIndex={9} className="sectionFade" alt="Dashboards Google e Facebook ads"/>
+                            </Stack>
+
+                            <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} spacing="12">
+                                <Stack spacing="6">
+                                    <ColoredTag>INVISTA EM</ColoredTag>
+                                </Stack>
+                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Grandes empresas como suas aliadas</Heading>
+                                <Text color="gray.500">Anuncie nas maiores redes sociais para alcançar o seu público alvo</Text>
+                                <Stack spacing="8">
+                                    <HStack spacing="8">
+                                        <HStack>
+                                            <InstaIcon/>
+                                            <Text>Instagram</Text>
+                                        </HStack>
+
+                                        <HStack>
+                                            <GoogleIcon/>
+                                            <Text>Google</Text>
+                                        </HStack>
+
+                                        <HStack>
+                                            <LinkedinIcon/>
+                                            <Text>Linkedin</Text>
+                                        </HStack>
+                                    </HStack>
+
+                                    <HStack spacing="8">
+                                        <HStack>
+                                            <FacebookIcon/>
+                                            <Text>Facebook</Text>
+                                        </HStack>
+
+                                        <HStack>
+                                            <YoutubeIcon/>
+                                            <Text>Youtube</Text>
+                                        </HStack>
+
+                                        <HStack>
+                                            <TiktokIcon/>
+                                            <Text>Tiktok</Text>
+                                        </HStack>
+                                    </HStack>
+                                </Stack>
+                            </Stack>
+                        </Stack>
                     </Stack>
                 </Flex>
 

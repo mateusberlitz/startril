@@ -36,6 +36,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import { FaqCenter } from '../sections/faqCenter';
 import { Loader } from '../components/Loader';
+import { VideoSection } from '../sections/videoSection';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -169,30 +170,7 @@ export default function Home() {
 
                 <ListMethodsHorizontal/>
 
-                <Flex  borderTop="0px solid" pos="relative" borderColor="rgba(255,255,255,0.1)" bgImage={"./mateus_video.jpg"} bgSize={"cover"} bgPos={isWideVersion ? "center right" : "-540px"}>
-                {/* _hover={{cursor:"url(./play_cursor.png), auto"}} */}
-                    <Flex pos="absolute" top="0" left="0" bottom="0" right="0" bg="linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 75.68%);">
-                        {/* <Img src="./mateus_video.jpg" border={"2px solid"} borderColor="rgba(255,255,255,0.1)"/> */}
-                    </Flex>
-
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="0" spacing="14" h={["90vh", "90vh", "90vh", "100vh", "95vh"]} maxH="940px" pos="relative" justifyContent={"center"}>
-                        <Stack spacing="14" className="sectionFade">
-                            {/* <PlayCircle/> */}
-                            <Stack maxW="500px" spacing="10">
-                                <ColoredTag>Cenário atual</ColoredTag>
-                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>É necessário se destacar</Heading>
-                            </Stack>
-
-                            <Stack spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
-                                <Stack w={["100%", "100%", "50%", "50%"]}>
-                                    <Text>
-                                        Destaque-se da concorrência em um mercado cada vez mais competitivo, atraindo um número crescente de clientes. Sobressaia-se ao evidenciar seus diferenciais exclusivos, conquiste a admiração e a confiança por meio da implementação de estratégias digitais eficazes e automação inteligente em suas operações.
-                                    </Text>
-                                </Stack>
-                            </Stack>
-                        </Stack>
-                    </Stack>
-                </Flex>
+                <VideoSection/>
 
                 <Flex w="100%" bg="#080510" overflow="hidden">
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">

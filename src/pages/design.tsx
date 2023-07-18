@@ -134,8 +134,8 @@ export default function Design() {
   return (
     <Box pos="relative" className='main'>
         <Head>
-            <title>Startril</title>
-            <meta name="description" content="Transformamos seu negócio com sites, sistemas, anúncios e design" />
+            <title>Design - Startril</title>
+            <meta name="description" content="Criamos o design de sites, sistemas e aplicativos. Trabalhamos conceitos de UX nas telas do seu projeto." />
             <link rel="icon" href="/icone_startril.svg" />
         </Head>
 

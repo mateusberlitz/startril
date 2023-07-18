@@ -8,6 +8,7 @@ import AdsIcon from '../../public/ads.svg';
 import Ui from '../../public/ui.svg';
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import Link from "next/link";
 
 export function ServicesBox(){
     const router = useRouter();
@@ -97,8 +98,9 @@ export function ServicesBox(){
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                             <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
-                            {/* <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton> */}
-                            
+                            <Link href="/design">
+                                <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton>
+                            </Link>
                         </Stack>
 
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
@@ -109,7 +111,10 @@ export function ServicesBox(){
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Desenvolvimento</Text>
                             <Text color="gray.500">Programamos a sua plataforma digital com todas as interações e transações necessárias entre a sua equipe e seu consumidor final, com alta performance e segurança.</Text>
-                            {/* <OutlineButton onClick={() => router.push('/dev')}>Acessar página</OutlineButton> */}
+                            
+                            <Link href="/desenvolvimento">
+                                <OutlineButton onClick={() => router.push('/dev')}>Acessar página</OutlineButton>
+                            </Link>
                         </Stack>
 
                         <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" maxW={["100%","100%","33%","33%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)"}} transition="all ease 0.5s">
@@ -120,7 +125,10 @@ export function ServicesBox(){
                             </HStack>
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Anúncios e Impulsão</Text>
                             <Text color="gray.500">Posicionamos e direcionamos a sua empresa ao público certo, para impulsionar as suas vendas e visibilidade pelos meios digitais.</Text>
-                            {/* <OutlineButton onClick={() => router.push('/ads')}>Acessar página</OutlineButton> */}
+                            
+                            <Link href="/trafego">
+                                <OutlineButton>Acessar página</OutlineButton>
+                            </Link>
                         </Stack>
                     </Stack>
                 </Stack>

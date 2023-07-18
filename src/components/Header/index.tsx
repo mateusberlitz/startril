@@ -62,6 +62,7 @@ export function Header(){
                         <HStack spacing="7">
                             <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                             <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
+                            <Link href="#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
 
                             {/* <Text fontWeight={"regular"} color="gray.600">|</Text>
                             <HStack>
@@ -95,6 +96,7 @@ export function Header(){
                                         </HStack> */}
                                         <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                                         <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
+                                        <Link href="#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
                                         <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
                                     </Stack>
                                 </DrawerContent>
