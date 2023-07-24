@@ -161,6 +161,7 @@ export default function Contato(){
             setStep(2);
             setIsSubmitting(false);
             localStorage.setItem('@startril/lead', JSON.stringify(result.data));
+            gtag.track('conversion', { sendTo: 'AW-11246386468/n7OVCLnflbsYEKT62PIp', value: 0, currency: 'BRL'});
             setBriefingLeadData(result.data);
             AnimationStartSecondPart();
         }catch(error: unknown){ //AxiosError
@@ -275,7 +276,7 @@ export default function Contato(){
             setStep(3);
             setIsSubmitting(false);
             localStorage.setItem('@startril/briefing', JSON.stringify(result.data));
-            gtag.track('conversion', { sendTo: 'AW-11246386468/n7OVCLnflbsYEKT62PIp', value: 0, currency: 'BRL'});
+            //gtag.track('conversion', { sendTo: 'AW-11246386468/n7OVCLnflbsYEKT62PIp', value: 0, currency: 'BRL'});
             AnimationFinish();
         }catch(error: unknown){ //AxiosError
             if(!axios.isAxiosError(error)){
