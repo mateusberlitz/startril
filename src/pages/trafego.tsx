@@ -225,8 +225,8 @@ export default function Trafego() {
                                 </Stack>
                                 <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Grandes empresas como suas aliadas</Heading>
                                 <Text color="gray.500">Anuncie nas maiores redes sociais para alcançar o seu público alvo</Text>
-                                <Stack spacing="8">
-                                    <HStack spacing="8">
+                                <Stack spacing="8" direction={["row", "row", "column", "column"]}>
+                                    <Stack spacing="8" direction={["column", "column", "row", "row"]}>
                                         <HStack>
                                             <InstaIcon/>
                                             <Text>Instagram</Text>
@@ -241,9 +241,9 @@ export default function Trafego() {
                                             <LinkedinIcon/>
                                             <Text>Linkedin</Text>
                                         </HStack>
-                                    </HStack>
+                                    </Stack>
 
-                                    <HStack spacing="8">
+                                    <Stack spacing="8" direction={["column", "column", "row", "row"]}>
                                         <HStack>
                                             <FacebookIcon/>
                                             <Text>Facebook</Text>
@@ -258,7 +258,7 @@ export default function Trafego() {
                                             <TiktokIcon/>
                                             <Text>Tiktok</Text>
                                         </HStack>
-                                    </HStack>
+                                    </Stack>
                                 </Stack>
                             </Stack>
                         </Stack>

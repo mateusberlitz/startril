@@ -297,22 +297,22 @@ export default function Desenvolvimento() {
                             <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos a tela ideal para o seu negócio!</Heading>
                             <Text maxW="600px">Entregamos um design clean e objetivo, focado na conversão dos seus leads conforme seu objetivo.</Text>
                             <Stack alignItems={"center"} spacing="6">
-                                <HStack spacing="6">
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>LANDING PAGE</StarTag>
                                         <StarTag>SITE INSTITUCIONAL</StarTag>
                                     </Stack>
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>E-COMMERCE</StarTag>
                                         <StarTag>PÁGINA DE VENDAS</StarTag>
                                     </Stack>
                                 </HStack>
-                                <HStack spacing="6">
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SITE ONEPAGE</StarTag>
                                         <StarTag>PORTFÓLIO</StarTag>
                                     </Stack>
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SISTEMAS</StarTag>
                                         <StarTag>BLOG</StarTag>
                                     </Stack>

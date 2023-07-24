@@ -317,7 +317,7 @@ export default function Design() {
                             <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos o desenvolvimento ideal para o seu negócio!</Heading>
                             <Text maxW="600px">Entregamos o seu projeto com o desenvolvimento necessário para realizar as funções que você precisa para o seu negócio alavancar.</Text>
                             <Stack alignItems={"center"} spacing="6">
-                                <HStack spacing="6">
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
                                     <Stack spacing="6" direction={["column", "column", "row", "row"]}>
                                         <StarTag>LANDING PAGE</StarTag>
                                         <StarTag>SITE INSTITUCIONAL</StarTag>
@@ -327,12 +327,12 @@ export default function Design() {
                                         <StarTag>PÁGINA DE VENDAS</StarTag>
                                     </Stack>
                                 </HStack>
-                                <HStack spacing="6">
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SITE ONEPAGE</StarTag>
                                         <StarTag>PORTFÓLIO</StarTag>
                                     </Stack>
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SISTEMAS</StarTag>
                                         <StarTag>BLOG</StarTag>
                                     </Stack>
