@@ -215,7 +215,7 @@ export default function Desenvolvimento() {
                                             <LockIcon/>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Boas práticas em segurança</Text>
                                         </Stack>
-                                        <Text>A segurança essencial para aplicações e websites. Implementamos as melhores práticas e esteja em conformidade com a LGPD para proteger dados e garantir confiança dos usuários.</Text>
+                                        <Text>A segurança é um pilar essencial para aplicações e websites. Implementamos as melhores práticas e que estejam em conformidade com a LGPD, para proteger dados e garantir confiança dos usuários.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
 
