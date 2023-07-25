@@ -19,10 +19,10 @@ import HeartFlag from '../../public/heart-flag.svg';
 import Leads from '../../public/leads.svg';
 import Sale from '../../public/sale.svg';
 
-import Medal from '../../public/medal.svg';
-import HandShake from '../../public/hand-shake.svg';
+import LockIcon from '../../public/LockIcon.svg';
+import PenIcon from '../../public/PenIcon.svg';
 import ShieldCheck from '../../public/shield-check.svg';
-import UserSwitch from '../../public/user-switch.svg';
+import DevIcon from '../../public/DevIcon.svg';
 import Brands from '../../public/brands.svg';
 
 import { ProductAnimation } from '../components/ProductAnimation';
@@ -177,7 +177,7 @@ export default function Desenvolvimento() {
                             <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                                 <ColoredTag>FEITO POR ESPECIALISTAS</ColoredTag>
                                 <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Escalamos um time competente para criar seu projeto.</Heading>
-                                <Text color="gray.300">Tenha acesso a uma programação de excelência no desenvolvimento de sites, sistemas e plataformas, oferecendo soluções rápidas e tecnológicas de ponta para impulsionar sua presença online.</Text>
+                                <Text color="gray.300">Tenha acesso a uma programação de alto nível para o desenvolvimento de sites, sistemas e plataformas. Nós proporcionamos soluções tecnologicamente avançadas para impulsionar e fortalecer sua presença digital de forma eficaz.</Text>
 
                                 {/* <HStack spacing="8">
                                     <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
@@ -202,29 +202,29 @@ export default function Desenvolvimento() {
                         <Stack pt="10" spacing="20" pos="relative" direction={["column", "column", "column", "column"]}>
                             <Stack className="sectionFade" w={["100%", "100%", "50%", "50%"]} spacing="12">
                                 <Stack spacing="6">
-                                    <ColoredTag>PROJETOS ESCALÁVEIS</ColoredTag>
+                                    <ColoredTag>VISÃO E TECNOLOGIA</ColoredTag>
                                 </Stack>
-                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Com programadores especialistas</Heading>
-                                <Text color="gray.500">Lorem ipsum dolor sit amet consectetur. Non amet viverra sem elementum duis enim ac sed ornare.</Text>
+                                <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"} fontWeight={"semibold"}>Transformamos projetos em negócios escaláveis</Heading>
+                                <Text color="gray.500">Com as melhores tecnologias de desenvolvimento web, você pode agregar inúmeras possibilidades para inovar os processos e a apresentação da sua empresa.</Text>
                             </Stack>
 
                             <Stack spacing="12" className="sectionFade">
                                 <Stack spacing="12" direction={["column", "column", "row", "row"]}>
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
                                         <Stack direction={["column", "column", "row", "row"]} spacing="5">
-                                            <UserSwitch/>
-                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Entrega qualificada da informação</Text>
+                                            <LockIcon/>
+                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Boas práticas em segurança</Text>
                                         </Stack>
-                                        <Text>Um projeto com UX e técnicas avançadas de UI proporcionará uma experiência do usuário confortável, aumentando a probabilidade de seu cliente recomendar sua aplicação e retornar sempre.</Text>
+                                        <Text>A segurança é um pilar essencial para aplicações e websites. Implementamos as melhores práticas e que estejam em conformidade com a LGPD, para proteger dados e garantir confiança dos usuários.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
 
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
                                         <Stack direction={["column", "column", "row", "row"]} spacing="5">
                                             <ShieldCheck/>
-                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Garantia de um uso prático</Text>
+                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Integração com APIs</Text>
                                         </Stack>
-                                        <Text>Uma aplicação difícil de utilizar, com problemas ou dificuldades para encontrar as informações é sempre motivo de descontentamento.</Text>
+                                        <Text>Integração de sistemas e serviços externos através de API. Expanda as funcionalidades e aplicações ao utilizar recursos externos já existentes ou criar suas próprias APIs.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
                                 </Stack>
@@ -232,19 +232,19 @@ export default function Desenvolvimento() {
                                 <Stack spacing="12" direction={["column", "column", "row", "row"]}>
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
                                         <Stack direction={["column", "column", "row", "row"]} spacing="5">
-                                            <HandShake/>
-                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Gere emoção e conexão com sua marca</Text>
+                                            <DevIcon/>
+                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Front-end e Back-end</Text>
                                         </Stack>
-                                        <Text>Que criamos em conjunto dos nossos clientes, parceiros e pessoas que acreditaram no nosso trabalho.</Text>
+                                        <Text>Utilização de tecnologias de alto nível para construção de aplicações web, tanto da interface gráfica do usuário até as funcionalidades da aplicação, integração com banco de dados e formas de pagamento.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
 
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
                                         <Stack direction={["column", "column", "row", "row"]} spacing="5">
-                                            <Medal/>
-                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>O que é único se destaca</Text>
+                                            <PenIcon/>
+                                            <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Design do Projeto</Text>
                                         </Stack>
-                                        <Text>Com a exclusividade das telas do seu projeto, a sua marca irá facilmente transmitir seu o objetivo e essência, assim se destacando da concorrência.</Text>
+                                        <Text>Desenvolvemos a sua interface com a melhor usabilidade e experiência de usuário. Aplicando elementos para compor uma aplicação que cumpra os seus objetivos.</Text>
                                         <Box pos="absolute" bg="gradient" w="100px" h="100px" right="-20px" top="-50px" borderRadius={"full"} filter="blur(40px)"/>
                                     </Stack>
                                 </Stack>
