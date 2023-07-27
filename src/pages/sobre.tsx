@@ -135,9 +135,9 @@ export default function Sobre(){
                         <Img src="./rahin.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "600px"}/>    
                         <Img src="./mateus.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
                         <Img src="./ana.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./rahin2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./mateus2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
-                        <Img src="./ana2.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./rahin.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./mateus.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
+                        <Img src="./ana.webp" border={"2px solid"} borderColor="rgba(255,255,255,0.1)" h={isMobileVersion ? "90vh" : "auto"} maxW={isMobileVersion ? "none" : "650px"}/>    
                     </HStack>
                 </Flex>
 

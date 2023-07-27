@@ -52,6 +52,8 @@ import Image from 'next/image';
 import { SolidButton } from '../components/Buttons/SolidButton';
 import { BePArt } from '../sections/bePart';
 import { StarTag } from '../components/StarTag';
+import { OutlineButton } from '../components/Buttons/OutlineButton';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Desenvolvimento() {
@@ -285,6 +287,37 @@ export default function Desenvolvimento() {
                                 onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
                                     Crie o seu
                                 </MainButton>
+                            </Stack>
+                        </Stack>
+                    </Stack>
+                </Flex>
+
+                <Flex w="100%" bg="#080510">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
+                                <ColoredTag>CASES DE SUCESSO</ColoredTag>
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Inspire-se com cases reais e transforme o futuro do seu negócio.</Heading>
+                                <Text color="gray.300">Conheça alguns dos nossos cases de clientes que passaram pela renovação digital e alcançaram resultados excepcionais, confiando em nosso trabalho para impulsionar seu sucesso.</Text>
+
+                                <HStack spacing="8">
+                                    <Link href="https://dribbble.com/Startril" target="_blank">
+                                        <OutlineButton>Ver Portfólio</OutlineButton>
+                                    </Link>
+                                </HStack>
+                            </Stack>
+
+                            <Stack w={["100%", "100%", "50%", "50%"]} minH="500px">
+                                <HStack spacing="8">
+                                    <Stack spacing="8">
+                                        <Img src="./lance_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ane_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                    <Stack spacing="8" pt="20">
+                                        <Img src="./ql_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ss_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                </HStack>
                             </Stack>
                         </Stack>
                     </Stack>

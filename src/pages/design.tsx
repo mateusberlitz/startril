@@ -56,6 +56,8 @@ import Image from 'next/image';
 import { SolidButton } from '../components/Buttons/SolidButton';
 import { BePArt } from '../sections/bePart';
 import { StarTag } from '../components/StarTag';
+import { OutlineButton } from '../components/Buttons/OutlineButton';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Design() {
@@ -350,10 +352,11 @@ export default function Design() {
                                 <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Inspire-se com cases reais e transforme o futuro do seu negócio.</Heading>
                                 <Text color="gray.300">Conheça alguns dos nossos cases de clientes que passaram pela renovação digital e alcançaram resultados excepcionais, confiando em nosso trabalho para impulsionar seu sucesso.</Text>
 
-                                {/* <HStack spacing="8">
-                                    <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
-                                    <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver serviços</Button>
-                                </HStack> */}
+                                <HStack spacing="8">
+                                    <Link href="https://dribbble.com/Startril" target="_blank">
+                                        <OutlineButton>Ver Portfólio</OutlineButton>
+                                    </Link>
+                                </HStack>
                             </Stack>
 
                             <Stack w={["100%", "100%", "50%", "50%"]} minH="500px">
