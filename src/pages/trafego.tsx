@@ -13,7 +13,7 @@ import React from '../../public/react.svg';
 import StartrilIcon from '../../public/icone_startril.svg';
 import AdsTarget from '../../public/ads_target.svg';
 import AdsTargetMobile from '../../public/ads_target_mobile.svg';
-import { ArrowUpRight, Eye, PlayCircle } from 'react-feather';
+import { ArrowUpRight, Check, Eye, PlayCircle, X } from 'react-feather';
 
 import Star from '../../public/star.svg';
 import HeartFlag from '../../public/heart-flag.svg';
@@ -57,6 +57,8 @@ import { Loader } from '../components/Loader';
 import Image from 'next/image';
 import { SolidButton } from '../components/Buttons/SolidButton';
 import { BePArt } from '../sections/bePart';
+import { Tag } from '../components/Tag';
+import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Trafego() {
@@ -305,7 +307,7 @@ export default function Trafego() {
                                 <Stack spacing="12" direction={["column", "column", "row", "row"]}>
                                     <Stack w={["100%","100%","50%","50%"]} overflow="hidden" pos="relative" spacing="6" border="1px solid" bg="rgba(255,255,255,0.05)" borderColor="rgba(255,255,255,0.1)" px="8" py="8">
                                         <Stack direction={["column", "column", "row", "row"]}>
-                                            <Star/>
+                                            <Flex w="45px" h="45px"><Star/></Flex>
                                             <Text fontSize={"xl"} color="white" fontWeight={"semibold"}>Aumentar a relevância da marca</Text>
                                         </Stack>
                                         <Text>O tráfego pago aumenta a relevância do sua marca, garantindo que ela seja exibida para um público altamente segmentado, o que resulta em maior reconhecimento, credibilidade e conexão com seu público-alvo.</Text>
@@ -492,6 +494,89 @@ export default function Trafego() {
                         </Stack>
                             
                     </Stack>
+                </Flex>
+
+                <Flex w="100%" bg="#080510" overflow="hidden">
+                    <Flex direction="column" px="6" w="100%" maxW="1200px" m="0 auto" py="20" pt="32" alignItems={"center"}>
+                        <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]} w="100%">
+                            <Stack bg="rgba(255,255,255,0.05)" p={["8","10","10"]} spacing="8" w={["100%", "50%", "50%"]}>
+                                <Tag w="100px">BÁSICO</Tag>
+                                <Stack>
+                                    <Text>Investimento mensal abaixo de</Text>
+                                    <Heading color="white" fontSize={"2xl"}>R$5.000,00</Heading>
+                                    <HStack color="white" fontSize={"md"}>
+                                        <Text>R$750,00 ao mês</Text>
+                                        <Text>-</Text>
+                                        <Text>por plataforma</Text>
+                                    </HStack>
+                                </Stack>
+
+                                <Stack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Criação de imagens</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Relatórios</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Acompanhamento</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Reunião mensal</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Planejamento</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Melhorias contínuas</Text></HStack>
+                                    <HStack><X stroke="#fff" opacity={"0.7"}/><Text opacity={"0.7"}>Escalabilidade de resultados</Text></HStack>
+                                    <HStack><X stroke="#fff" opacity={"0.7"}/><Text opacity={"0.7"}>Variações de objetivo em campanhas</Text></HStack>
+                                </Stack>
+
+                                <Text opacity={"0.7"}>Planos de mais de 3 meses com DESCONTO</Text>
+
+                                <Link href="https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades." target='_blank'>
+                                    <SolidButton>Adquirir</SolidButton>
+                                </Link>
+                            </Stack>
+
+                            <Stack bg="white" p={["8","10","10"]} spacing="8" color="#000" w={["100%", "50%", "50%"]}>
+                                <HStack justifyContent={"space-between"}>
+                                    <Tag w="120px" borderColor="rgba(0,0,0,0.1)" color="black">PREMIUM</Tag>
+                                    <HStack>
+                                        <Flex w="20px">
+                                            <Star/>
+                                        </Flex>
+                                        <Text>Recomendado</Text>
+                                    </HStack>
+                                </HStack>
+
+                                <Stack>
+                                    <Text>Investimento mensal abaixo de</Text>
+                                    <Heading color="black" fontSize={"2xl"}>R$5.000,00</Heading>
+                                    <HStack color="black" fontSize={"md"}>
+                                        <Text>15% ao mês</Text>
+                                        <Text>-</Text>
+                                        <Text>por plataforma</Text>
+                                    </HStack>
+                                </Stack>
+
+                                {/* <Stack>
+                                    <Text opacity={"0.7"}>Em até 8x sem juros</Text>
+                                    <HStack>
+                                        <Text opacity={"0.7"}>Seção adicional:</Text>
+                                        <Text opacity={"1"}>R$390,00</Text>
+                                    </HStack>
+                                </Stack> */}
+
+                                <Stack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Criação de imagens</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Relatórios</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Acompanhamento</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Reunião mensal</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Planejamento</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Melhorias contínuas</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Escalabilidade de resultados</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Variações de objetivo em campanhas</Text></HStack>
+                                </Stack>
+
+                                <Text opacity={"0.7"}>Planos de mais de 3 meses com DESCONTO</Text>
+
+                                <Link href="/contato">
+                                    <MainButton>Adquirir</MainButton>
+                                </Link>
+                            </Stack>
+                        </Stack>
+                    </Flex>
                 </Flex>
 
                 <BePArt/>
