@@ -99,7 +99,7 @@ export function ServicesBox(){
                             <Text fontSize={"2xl"} fontWeight="regular" color="white">Design de Interfaces</Text>
                             <Text color="gray.500">Desenvolvemos as telas mais coerentes possíveis para a experiência do seu usuário, transmitindo as sensações corretas da sua marca.</Text>
                             <Link href="/design">
-                                <OutlineButton onClick={() => router.push('/design')}>Acessar página</OutlineButton>
+                                <OutlineButton>Acessar página</OutlineButton>
                             </Link>
                         </Stack>
 
@@ -113,7 +113,7 @@ export function ServicesBox(){
                             <Text color="gray.500">Programamos a sua plataforma digital com todas as interações e transações necessárias entre a sua equipe e seu consumidor final, com alta performance e segurança.</Text>
                             
                             <Link href="/desenvolvimento">
-                                <OutlineButton onClick={() => router.push('/dev')}>Acessar página</OutlineButton>
+                                <OutlineButton>Acessar página</OutlineButton>
                             </Link>
                         </Stack>
 

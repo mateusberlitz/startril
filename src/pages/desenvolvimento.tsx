@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Icon, Img, Stack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Icon, Img, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
@@ -12,7 +12,7 @@ import HomeBackground from '../../public/background_intro.svg';
 import React from '../../public/react.svg';
 import StartrilIcon from '../../public/icone_startril.svg';
 import AdsTarget from '../../public/ads_target.svg';
-import { ArrowUpRight, Eye, PlayCircle } from 'react-feather';
+import { ArrowUpRight, Check, Eye, PlayCircle, X } from 'react-feather';
 
 import Star from '../../public/star.svg';
 import HeartFlag from '../../public/heart-flag.svg';
@@ -52,6 +52,9 @@ import Image from 'next/image';
 import { SolidButton } from '../components/Buttons/SolidButton';
 import { BePArt } from '../sections/bePart';
 import { StarTag } from '../components/StarTag';
+import { OutlineButton } from '../components/Buttons/OutlineButton';
+import Link from 'next/link';
+import { Tag } from '../components/Tag';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Desenvolvimento() {
@@ -290,6 +293,37 @@ export default function Desenvolvimento() {
                     </Stack>
                 </Flex>
 
+                <Flex w="100%" bg="#080510">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
+                        <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                            <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
+                                <ColoredTag>CASES DE SUCESSO</ColoredTag>
+                                <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Inspire-se com cases reais e transforme o futuro do seu negócio.</Heading>
+                                <Text color="gray.300">Conheça alguns dos nossos cases de clientes que passaram pela renovação digital e alcançaram resultados excepcionais, confiando em nosso trabalho para impulsionar seu sucesso.</Text>
+
+                                <HStack spacing="8">
+                                    <Link href="https://dribbble.com/Startril" target="_blank">
+                                        <OutlineButton>Ver Portfólio</OutlineButton>
+                                    </Link>
+                                </HStack>
+                            </Stack>
+
+                            <Stack w={["100%", "100%", "50%", "50%"]} minH="500px">
+                                <HStack spacing="8">
+                                    <Stack spacing="8">
+                                        <Img src="./lance_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ane_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                    <Stack spacing="8" pt="20">
+                                        <Img src="./ql_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                        <Img src="./ss_laptop.webp" zIndex={9} className="sectionFade" borderRadius={2}/>
+                                    </Stack>
+                                </HStack>
+                            </Stack>
+                        </Stack>
+                    </Stack>
+                </Flex>
+
                 <Flex w="100%" bg="#080510" overflow="hidden" bgImage={"./chip_bg.webp"} bgSize={"cover"} bgPos={isWideVersion ? "center center" : "-540px"}>
                     <Stack px="6" w="100%" maxW="800px" m="0 auto" py="20" spacing="0">
                         <Stack pt="32" spacing="10" direction={["column", "column"]} className="sectionFade" alignItems={"center"} textAlign={"center"}>
@@ -297,22 +331,22 @@ export default function Desenvolvimento() {
                             <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Criamos a tela ideal para o seu negócio!</Heading>
                             <Text maxW="600px">Entregamos um design clean e objetivo, focado na conversão dos seus leads conforme seu objetivo.</Text>
                             <Stack alignItems={"center"} spacing="6">
-                                <HStack spacing="6">
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>LANDING PAGE</StarTag>
                                         <StarTag>SITE INSTITUCIONAL</StarTag>
                                     </Stack>
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>E-COMMERCE</StarTag>
                                         <StarTag>PÁGINA DE VENDAS</StarTag>
                                     </Stack>
                                 </HStack>
-                                <HStack spacing="6">
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                <HStack spacing="6" w={["100%","100%","auto","auto"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SITE ONEPAGE</StarTag>
                                         <StarTag>PORTFÓLIO</StarTag>
                                     </Stack>
-                                    <Stack spacing="6" direction={["column", "column", "row", "row"]}>
+                                    <Stack spacing="6" w={["100%","100%","auto","auto"]} direction={["column", "column", "row", "row"]}>
                                         <StarTag>SISTEMAS</StarTag>
                                         <StarTag>BLOG</StarTag>
                                     </Stack>
@@ -329,6 +363,91 @@ export default function Desenvolvimento() {
                             <ColoredTag>NOS INSPIRAMOS NAS</ColoredTag>
                             <Heading color="white" fontSize={isWideVersion ? "5xl" : "4xl"} fontWeight={"semibold"}>Tecnologia das Gigantes!</Heading>
                             <Text maxW="600px">Software é, e sempre será seu aliado no futuro. Por isso, não deixe de investir em uma boa base para continuar construindo.</Text>
+                        </Stack>
+                    </Flex>
+                </Flex>
+
+                <Flex w="100%" bg="#080510" overflow="hidden">
+                    <Flex direction="column" px="6" w="100%" maxW="1200px" m="0 auto" py="20" pt="32" alignItems={"center"}>
+                        <Stack pt="20" spacing="20" pos="relative" direction={["column", "column", "row", "row"]} w="100%">
+                            <Stack bg="rgba(255,255,255,0.05)" p={["8","10","10"]} spacing="8" w={["100%", "40%", "40%"]}>
+                                <Tag w="100px">BÁSICO</Tag>
+                                <Stack>
+                                    <Heading color="white" fontSize={"2xl"}>Landing Pages</Heading>
+                                    <HStack color="white" fontSize={"lg"}>
+                                        <Text>R$1.990,00</Text>
+                                        <Text>-</Text>
+                                        <Text>5 Seções</Text>
+                                    </HStack>
+                                </Stack>
+
+                                <Stack>
+                                    <Text opacity={"0.7"}>Em até 8x sem juros</Text>
+                                    <HStack>
+                                        <Text opacity={"0.7"}>Seção adicional:</Text>
+                                        <Text opacity={"1"}>R$390,00</Text>
+                                    </HStack>
+                                </Stack>
+
+                                <Stack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">SSL</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Domínio</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">A partir de 5 seções</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Você escolhe as seções</Text></HStack>
+                                    <HStack><Check stroke="#fff"/><Text color="white">Suas cores, fotos e detalhes</Text></HStack>
+                                    <HStack><X stroke="#fff" opacity={"0.7"}/><Text opacity={"0.7"}>Design personalizado</Text></HStack>
+                                    <HStack><X stroke="#fff" opacity={"0.7"}/><Text opacity={"0.7"}>Seções e funcionalidades predefinidas</Text></HStack>
+                                </Stack>
+
+                                <HStack color="white">
+                                    <Text fontSize={"lg"}>à Vista por:</Text>
+                                    <Text fontSize={"2xl"}>R$1.690,00</Text>
+                                </HStack>
+
+                                <Link href="https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar uma landing page." target='_blank'>
+                                    <SolidButton>Adquirir</SolidButton>
+                                </Link>
+                            </Stack>
+
+                            <Stack bg="white" p={["8","10","10"]} spacing="8" color="#000" w={["100%", "60%", "60%"]}>
+                                <HStack justifyContent={"space-between"}>
+                                    <Tag w="120px" borderColor="rgba(0,0,0,0.1)" color="black">PREMIUM</Tag>
+                                    <HStack>
+                                        <Flex w="20px">
+                                            <Star/>
+                                        </Flex>
+                                        <Text>Recomendado</Text>
+                                    </HStack>
+                                </HStack>
+                                <Stack>
+                                    <Heading color="black" fontSize={"2xl"}>Site Personalizado ou Sistemas</Heading>
+                                </Stack>
+
+                                {/* <Stack>
+                                    <Text opacity={"0.7"}>Em até 8x sem juros</Text>
+                                    <HStack>
+                                        <Text opacity={"0.7"}>Seção adicional:</Text>
+                                        <Text opacity={"1"}>R$390,00</Text>
+                                    </HStack>
+                                </Stack> */}
+
+                                <Stack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Sem limite de páginas ou seções</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Funções personalizadas</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Painel de gerenciamento</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Estrutura criada para escalar</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Animações (Front-motion)</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Design exclusivo criado um especialista UI&UX</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Definitivamente não há limites</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Integrações com API e sistemas externos</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">Domínio</Text></HStack>
+                                    <HStack><Check stroke="#000"/><Text color="black">SSL</Text></HStack>
+                                </Stack>
+
+                                <Link href="/contato">
+                                    <MainButton>Solicitar Orçamento</MainButton>
+                                </Link>
+                            </Stack>
                         </Stack>
                     </Flex>
                 </Flex>
