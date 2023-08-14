@@ -62,7 +62,7 @@ export function Header(){
                         <HStack spacing="7">
                             <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                             <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
-                            <Link href="#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
+                            <Link href="/#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
 
                             {/* <Text fontWeight={"regular"} color="gray.600">|</Text>
                             <HStack>
