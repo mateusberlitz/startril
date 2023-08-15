@@ -375,7 +375,7 @@ export default function Desenvolvimento() {
                                 <Stack>
                                     <Heading color="white" fontSize={"2xl"}>Landing Pages</Heading>
                                     <HStack color="white" fontSize={"lg"}>
-                                        <Text>R$1.990,00</Text>
+                                        <Text>R$2.190,00</Text>
                                         <Text>-</Text>
                                         <Text>5 Seções</Text>
                                     </HStack>
@@ -384,7 +384,7 @@ export default function Desenvolvimento() {
                                 <Stack>
                                     <Text opacity={"0.7"}>Em até 8x sem juros</Text>
                                     <HStack>
-                                        <Text opacity={"0.7"}>Seção adicional:</Text>
+                                        <Text opacity={"0.7"}>Seção adicional a partir de:</Text>
                                         <Text opacity={"1"}>R$390,00</Text>
                                     </HStack>
                                 </Stack>
@@ -401,7 +401,7 @@ export default function Desenvolvimento() {
 
                                 <HStack color="white">
                                     <Text fontSize={"lg"}>à Vista por:</Text>
-                                    <Text fontSize={"2xl"}>R$1.690,00</Text>
+                                    <Text fontSize={"2xl"}>R$1.890,00</Text>
                                 </HStack>
 
                                 <Link href="https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar uma landing page." target='_blank'>
