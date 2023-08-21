@@ -1,4 +1,4 @@
-import { Button, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, HStack, Icon, Img, Stack, Switch, Text, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
+import { Button, Drawer, DrawerCloseButton, DrawerContent, DrawerOverlay, HStack, Icon, Img, Stack, Switch, Text, useBreakpointValue, useColorMode, useDisclosure } from "@chakra-ui/react";
 import gsap from "gsap";
 import Link from "next/link";
 import { ChangeEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export function Header(){
     const navRef = useRef(null);
     const router = useRouter();
+    const { toggleColorMode, colorMode } = useColorMode();
 
     useEffect(() => {
         const attach = gsap.fromTo(navRef.current, { 
@@ -23,7 +24,7 @@ export function Header(){
             position: "fixed",
             top: "10px",
             duration: 0.5,
-            background: "rgba(0,0,0,0.4)",
+            background: colorMode === "dark" ? "rgba(0,0,0,0.4)" : "rgba(255,255,255,0.4)",
             backdropFilter: "blur(30px)"
         });
 
@@ -39,7 +40,7 @@ export function Header(){
         });
           
         return () => ctx.revert();
-    }, [])
+    }, [colorMode])
 
     const [isPortugueseLanguage, setIsPortugueseLanguage] = useState(true);
 
@@ -55,14 +56,23 @@ export function Header(){
              {/* bg="rgb(8,5,16,0.7)" backdropFilter="blur(40px)" */}
             <HStack ref={navRef} zIndex={1200} w="100%" m="0 auto" maxW="1200px" py="2" px="6" justify="space-between" h="80px" borderRadius="3">
             {/* pos="fixed" top="12px" bg="rgba(0,0,0,0.4)" backdropFilter={"blur(40px)"} */}
-                <Link href="/"><Img src="startril.svg" maxW="150px"/></Link>
+                <Link href="/">
+                    {
+                        colorMode === "dark" ? (
+                            <Img src="startril.svg" maxW="150px"/>
+                        ) : (
+                            <Img src="startril-white.svg" maxW="150px"/>
+                        )
+                    }
+                </Link>
 
                 {
                     isWideVersion ? (
                         <HStack spacing="7">
-                            <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
-                            <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
-                            <Link href="/#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
+                            <Link href="/"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Home</Text></Link>
+                            <Link href="/sobre"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Sobre nós</Text></Link>
+                            <Link href="/#services"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Soluções</Text></Link>
+                            <Link href="/blog"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Blog</Text></Link>
 
                             {/* <Text fontWeight={"regular"} color="gray.600">|</Text>
                             <HStack>
@@ -97,6 +107,7 @@ export function Header(){
                                         <Link href="/"><Text _hover={{color: "white"}} transition="all ease 0.5s">Home</Text></Link>
                                         <Link href="/sobre"><Text _hover={{color: "white"}} transition="all ease 0.5s">Sobre nós</Text></Link>
                                         <Link href="/#services"><Text _hover={{color: "white"}} transition="all ease 0.5s">Soluções</Text></Link>
+                                        <Link href="/blog"><Text _hover={{color: "white"}} transition="all ease 0.5s">blog</Text></Link>
                                         <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
                                     </Stack>
                                 </DrawerContent>

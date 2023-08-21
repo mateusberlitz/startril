@@ -1,4 +1,4 @@
-import { InputGroup, InputLeftElement, FormControl, InputProps, Icon, Input as ChakraInput, FormErrorMessage, Text, Link, FormLabel } from "@chakra-ui/react";
+import { InputGroup, InputLeftElement, FormControl, InputProps, Icon, Input as ChakraInput, FormErrorMessage, Text, Link, FormLabel, useColorMode } from "@chakra-ui/react";
 import { ReactNode, Ref, useEffect, useState } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
 import { mask as applyMask } from "../../../utils/ReMask";
@@ -21,6 +21,7 @@ interface FormInputProps extends InputProps{
 
 export function Input({ name, type, icon, variant = "", inputLink, value = "", label = "", mask = "", register = undefined, onChange, isRequired, inputRef, control, error, maxW, colorScheme, ...rest }: FormInputProps){
     const [controlledValue, setControlledValue] = useState<string>("");
+    const { colorMode } = useColorMode();
 
     const handleReturnMaskedInputValue = (value: string = "") => {
         if(mask){
@@ -111,7 +112,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
         <FormControl pos="relative" isInvalid={!!error} maxW={maxW}>
             {
                 label && (
-                    <FormLabel zIndex="1" cursor="text" color="white" transition="ease 0.2s" fontWeight="normal" fontSize={"11px"} textTransform={"uppercase"}>{label}{isRequired && '*'}</FormLabel>
+                    <FormLabel zIndex="1" cursor="text" color={colorMode === "dark" ? "white" : "black"} transition="ease 0.2s" fontWeight="normal" fontSize={"11px"} textTransform={"uppercase"}>{label}{isRequired && '*'}</FormLabel>
                 )
             }
 
@@ -124,7 +125,7 @@ export function Input({ name, type, icon, variant = "", inputLink, value = "", l
 
                 {...getControlledInputAttributes()}
                 
-                name={name} h="50px" pl="4" type={type} fontSize="sm" bgColor={'transparent'} border="1px solid" fontWeight="normal" borderColor="rgba(255,255,255,0.2)" size="lg" _hover={{borderColor: 'white'}} transition="all ease 0.5s" _focus={{borderColor:"white", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} _placeholder={{color: "rgba(255,255,255,0.4)", fontWeight: "normal"}} color="white" borderRadius="1px" {...rest}
+                name={name} h="50px" pl="4" type={type} fontSize="sm" bgColor={'transparent'} border="1px solid" fontWeight="normal" borderColor={colorMode === "dark" ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)"} size="lg" _hover={{borderColor: colorMode === "dark" ? "white" : "black"}} transition="all ease 0.5s" _focus={{borderColor: colorMode === "dark" ? "white" : "black", boxShadow: "0 3px 10px 0 rgb(34 41 47 / 10%)"}} _placeholder={{color: colorMode === "dark" ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.4)", fontWeight: "normal"}} color={colorMode === "dark" ? "white" : "black"} borderRadius="1px" {...rest}
             />
         
             { !!error && (

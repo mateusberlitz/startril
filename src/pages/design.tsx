@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Icon, Img, Stack, Tag, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, GridItem, Heading, HStack, Icon, Img, Stack, Tag, Text, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
@@ -61,6 +61,7 @@ import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Design() {
+    const {toggleColorMode, colorMode } = useColorMode();
     const router = useRouter();
     const isWideVersion = useBreakpointValue({
         base: false,
@@ -70,6 +71,10 @@ export default function Design() {
     const [firstLoad, setFirstLoad] = useState(true);
 
     useEffect(() => {
+        if(colorMode === "light"){
+            toggleColorMode();
+        }
+
         const sections = document.querySelectorAll(".sectionFade");
 
         function scrollAnimate() {

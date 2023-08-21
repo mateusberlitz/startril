@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack, Icon, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Icon, Stack, Text, useBreakpointValue, useColorMode } from '@chakra-ui/react'
 import Head from 'next/head'
 import { MainButton } from '../components/Buttons/MainButton'
 import { Header } from '../components/Header'
@@ -45,6 +45,7 @@ export default function Home() {
         base: false,
         lg: true,
     })
+    const {toggleColorMode, colorMode } = useColorMode();
 
     // useEffect(() => {
 
@@ -82,6 +83,10 @@ export default function Home() {
     const [firstLoad, setFirstLoad] = useState(true);
 
     useEffect(() => {
+        if(colorMode === "light"){
+            toggleColorMode();
+        }
+
         const sections = document.querySelectorAll(".sectionFade");
 
         function scrollAnimate() {

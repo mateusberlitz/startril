@@ -1,9 +1,10 @@
-import { extendTheme } from '@chakra-ui/react';
+import { StyleFunctionProps, extendTheme } from '@chakra-ui/react';
 import { switchTheme } from './switch';
 import { checkboxTheme } from './checkbox';
 import { radioTheme } from './checkbox copy';
 import { accordionTheme } from './accordion';
 import { tabsTheme } from './tabs';
+import { mode } from '@chakra-ui/theme-tools';
 
 export const theme = extendTheme({
     shadows: {
@@ -61,17 +62,25 @@ export const theme = extendTheme({
         body: 'Prompt'
     },
     styles: {
-        global: {
+        global: (props: StyleFunctionProps) => ({
             body: {
-                bg: '#080510',
-                color: 'gray.text',
+                bg: mode('white', '#080510')(props),
+                color: mode('gray.900', 'gray.text')(props),
             },
-        }
+            // body: {
+            //     bg: '#080510',
+            //     color: 'gray.text',
+            // },
+        })
     },
     components: {
-        Heading: {
-            color: "#fff"
-        },
+        Heading: (props: StyleFunctionProps) => ({
+            color: mode('black', 'white')(props),
+            fontFamily: 'Epilogue'
+        }),
+        // Heading: {
+        //     color: "#fff"
+        // },
         Switch: switchTheme,
         Checkbox: checkboxTheme,
         Radio: radioTheme,

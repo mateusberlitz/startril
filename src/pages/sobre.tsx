@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, Icon, Img, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Icon, Img, Stack, Text, useBreakpointValue, useColorMode } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import ContactAnimation from '../../public/contact_animation.svg';
 import { MainButton } from "../components/Buttons/MainButton";
@@ -17,6 +17,8 @@ import Head from "next/head";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Sobre(){
+    const {toggleColorMode, colorMode } = useColorMode();
+
     const letsTalkSection = useRef(null);
 
     const isMobileVersion = useBreakpointValue({
@@ -25,6 +27,10 @@ export default function Sobre(){
     })
 
     useEffect(() => {
+        if(colorMode === "light"){
+            toggleColorMode();
+        }
+        
         const ctx = gsap.context(() => {
             const arrows = gsap.utils.toArray<HTMLElement>('.bg_angles_svg__backgroundArrow');
             const sections = gsap.utils.toArray<HTMLElement>('.section');

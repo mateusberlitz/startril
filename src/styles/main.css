@@ -43,8 +43,12 @@ select option {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-background: #1B1F2C;
-cursor: pointer
+    background: #1B1F2C;
+    cursor: pointer
+}
+
+h1,h2,h3{
+    font-family: 'Epilogue' !important;
 }
 
 @keyframes logoBordas{

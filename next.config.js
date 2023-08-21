@@ -14,6 +14,8 @@ const nextConfig = {
     LOCAL_API_URL: 'http://startril-backend.test/',
     API_URL: 'https://api.startril.com.br/public/',
     META_PIXEL: '289858882437346',
+    BLOG_URL: 'https://graphql.datocms.com/',
+    BLOG_TOKEN: '59c0973154505046d9f8f4b1ccf7c4',
   },
 }
 

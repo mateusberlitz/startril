@@ -1,4 +1,4 @@
-import { Box, Checkbox, Divider, Flex, FormControl, FormErrorMessage, HStack, Heading, Icon, IconButton, Radio, RadioGroup, Spinner, Stack, Text, useBreakpointValue, useToast } from "@chakra-ui/react";
+import { Box, Checkbox, Divider, Flex, FormControl, FormErrorMessage, HStack, Heading, Icon, IconButton, Radio, RadioGroup, Spinner, Stack, Text, useBreakpointValue, useColorMode, useToast } from "@chakra-ui/react";
 
 import ContactAnimation from '../../public/contact_animation.svg';
 import { Header } from "../components/Header";
@@ -84,6 +84,7 @@ const ConcurrentFormSchema = yup.object().shape({
 });
 
 export default function Contato(){
+    const {toggleColorMode, colorMode } = useColorMode();
     const [step, setStep] = useState(1);
 
     const toast = useToast();
@@ -101,6 +102,10 @@ export default function Contato(){
     })
 
     useEffect(() => {
+        if(colorMode === "light"){
+            toggleColorMode();
+        }
+
         const storedBriefingLead = localStorage.getItem('@startril/lead');
 
         if(storedBriefingLead && storedBriefingLead != undefined){
