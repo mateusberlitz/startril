@@ -1,14 +1,11 @@
-import { Box, Flex, Grid, Heading, HStack, Icon, Img, Stack, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Grid, Heading, HStack, Stack, Text, useColorMode } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
 import { Card } from "../components/Card";
 import { Header } from "../components/Header";
-import { TextTag } from "../components/TextTag";
 import Head from "next/head";
-import { gql } from '@apollo/client';
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { ChevronRight, Moon, Sun } from "react-feather";
-import client from "../services/apollo";
+import { useEffect } from "react";
+import { ChevronRight } from "react-feather";
 import { blog } from "../services/blogApi";
 import { Input } from "../components/Forms/Inputs/Input";
 import { MainButton } from "../components/Buttons/MainButton";
