@@ -1,16 +1,13 @@
-import { Link, Flex, Img, Stack, Text, HStack, Box, Icon, useBreakpointValue, useColorMode, Heading } from "@chakra-ui/react";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { Link, Flex, Img, Stack, Text, HStack, Box, useBreakpointValue, useColorMode, Heading } from "@chakra-ui/react";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { ShareLinks } from "../components/ShareLinks";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import DefaultErrorPage from 'next/error'
-import { TextTag } from "../components/TextTag";
 import { useEffect, useState } from "react";
-import { ArrowDown, ChevronDown, ChevronRight, ChevronsUp, ChevronUp, Moon, Sun } from "react-feather";
-import { gql } from "@apollo/client";
-import client from "../services/apollo";
+import { ChevronRight } from "react-feather";
 import { blog } from "../services/blogApi";
 import { ColorModebutton } from "../components/ColorModeButton";
 
