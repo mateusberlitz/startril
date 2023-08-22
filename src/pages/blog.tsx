@@ -4,7 +4,7 @@ import { Card } from "../components/Card";
 import { Header } from "../components/Header";
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ChevronRight } from "react-feather";
 import { blog } from "../services/blogApi";
 import { Input } from "../components/Forms/Inputs/Input";
@@ -28,12 +28,14 @@ interface BlogProps{
 
 export default function Blog({posts}: BlogProps){
     const { toggleColorMode, colorMode } = useColorMode();
+    const [firstLoad, setFirstLoad] = useState(false);
 
     useEffect(() => {
-        if(colorMode === "dark"){
+        if(colorMode === "dark" && !firstLoad){
             toggleColorMode();
+            setFirstLoad(true);
         }
-    }, [colorMode]);
+    }, [colorMode, firstLoad, setFirstLoad]);
 
     useEffect(() => {
         const sections = document.querySelectorAll(".sectionFade");
