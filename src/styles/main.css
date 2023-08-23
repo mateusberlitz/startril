@@ -47,8 +47,17 @@ select option {
     cursor: pointer
 }
 
-h1,h2,h3{
+h1,h2,h3,pre{
     font-family: 'Epilogue' !important;
+}
+
+.postContent p, .postContent code{
+    max-width: 100%;
+    text-wrap: wrap;
+}
+
+.postContent blockquote{
+    font-style: italic;
 }
 
 @keyframes logoBordas{

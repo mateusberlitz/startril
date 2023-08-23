@@ -66,14 +66,14 @@ export default function Post({post} : PostProps){
             <ColorModebutton/>
 
             <Flex w="100%" maxW="900px" m="0 auto" px="8" py="32" flexDirection={["column","column"]} mb="8" pt="16" align="flex-start" justifyContent="space-between">
-                <Stack spacing="12">
-                    <HStack fontSize={"md"}>
+                <Stack spacing="12" w="100%">
+                    <HStack w="100%" fontSize={"md"}>
                         <Link href="/"><Text _hover={{textDecor:"underline"}} color="gray.800">Blog</Text></Link>
                         <Text><ChevronRight color="rgba(67, 67, 67, 0.5)"/></Text>
                         <Text>{post.title}</Text>
                     </HStack>
 
-                    <Flex overflow="hidden" mb="9" borderRadius="4px">
+                    <Flex w="100%" overflow="hidden" mb="9" borderRadius="4px">
                         <Img src={post.cover} w="100%" h="fit-content" />
                     </Flex>
 
@@ -81,7 +81,7 @@ export default function Post({post} : PostProps){
 
                     <Heading fontSize={["4xl", "5xl","6xl"]} mb="6" fontWeight="medium" lineHeight={"1.1em"}>{post.title}</Heading>
 
-                    <Box className="postContent" fontSize={"lg"} fontWeight={"light"} dangerouslySetInnerHTML={{__html: post.content}} />
+                    <pre className="postContent" dangerouslySetInnerHTML={{__html: post.content}} />
 
                     <Text color="blue.primary" opacity="0.6">Publicado em {post.updatedAt}</Text>
 
@@ -115,7 +115,7 @@ export const getServerSideProps: GetServerSideProps = async ({req, params }) => 
                         url
                         }
                         detach
-                        content
+                        content(markdown: true)
                         description
                         publishDate
                     } 
