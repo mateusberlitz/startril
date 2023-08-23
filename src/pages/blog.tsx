@@ -11,6 +11,7 @@ import { Input } from "../components/Forms/Inputs/Input";
 import { MainButton } from "../components/Buttons/MainButton";
 import { ColorModebutton } from "../components/ColorModeButton";
 import { Footer } from "../components/Footer";
+import { Newsletter } from "../components/Newsletter";
 
 interface Post{
     slug: string;
@@ -36,20 +37,6 @@ export default function Blog({posts}: BlogProps){
             setFirstLoad(true);
         }
     }, [colorMode, firstLoad, setFirstLoad]);
-
-    useEffect(() => {
-        const sections = document.querySelectorAll(".sectionFade");
-
-        function scrollAnimate() {
-            sections.forEach(e => {
-                let t = e.getBoundingClientRect().top;
-                t <= (window.innerHeight || document.documentElement.clientHeight) / 1.1 && e.classList.add("active")
-            })
-        }
-
-        scrollAnimate()
-        window.addEventListener("scroll", scrollAnimate);
-    }, []);
     
     return(
         <Box position="relative">
@@ -73,16 +60,7 @@ export default function Blog({posts}: BlogProps){
                         </HStack>
                     </Stack>
 
-                    <Flex id="" w="100%" bg={colorMode === "dark" ? "#080510" : "white"} overflow="hidden" py="0" className="sectionFade" px="0">
-                        <Stack w="100%" maxW="1200px" bg={colorMode === "dark" ? "rgba(255,255,255,0.05)" : "gray.100"} border="1px solid" borderColor={colorMode === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"} m="0 auto" spacing="6" justifyContent={"center"} textAlign={"center"} alignItems={"center"} p="14" px={["6","10","14"]}>
-                            <Heading fontSize={"3xl"} color={colorMode === "dark" ? "white" : "black"} fontWeight={"semibold"}>Conteúdos para elevar seu nível</Heading>
-                            <Text>Inscreva-se para receber dicas, novidades e ofertas exclusivas!</Text>
-                            <HStack alignItems={"flex-end"}>
-                                <Input name="email" type="text" placeholder="joao@email.com" label="Seu e-mail"/>
-                                <MainButton>Cadastrar</MainButton>
-                            </HStack>
-                        </Stack>
-                    </Flex>
+                    <Newsletter/>
 
                     <Grid templateColumns="repeat(3, 1fr)" gap={12}>
 
