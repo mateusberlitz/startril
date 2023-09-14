@@ -290,7 +290,7 @@ export default function Desenvolvimento() {
                                 
                                 <Text color="gray.500">Entregamos animações capazes de representar sua empresa e impactar ainda mais os seus clientes.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
-                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
                                     Crie o seu
                                 </MainButton>
                             </Stack>
@@ -409,7 +409,7 @@ export default function Desenvolvimento() {
                                     <Text fontSize={"2xl"}>R$1.890,00</Text>
                                 </HStack>
 
-                                <Link href="https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar uma landing page." target='_blank'>
+                                <Link href="https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de criar uma landing page." target='_blank'>
                                     <SolidButton>Adquirir</SolidButton>
                                 </Link>
                             </Stack>

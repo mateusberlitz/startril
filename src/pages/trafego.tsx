@@ -530,7 +530,7 @@ export default function Trafego() {
 
                                 <Text opacity={"0.7"}>Planos de mais de 3 meses com DESCONTO</Text>
 
-                                <Link href="https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades." target='_blank'>
+                                <Link href="https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades." target='_blank'>
                                     <SolidButton>Adquirir</SolidButton>
                                 </Link>
                             </Stack>

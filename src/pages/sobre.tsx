@@ -237,7 +237,7 @@ export default function Sobre(){
                         <ColoredTag>Para começar</ColoredTag>
                         <Heading color="white" fontSize={"5xl"} fontWeight={"semibold"}>Vamos falar sobre o seu projeto?</Heading>
                     </Stack>
-                    <MainButton leftIcon={<Icon as={Whatsapp}/>} onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de conversar sobre o meu projeto.`, '_blank')}>Whatsapp</MainButton>
+                    <MainButton leftIcon={<Icon as={Whatsapp}/>} onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de conversar sobre o meu projeto.`, '_blank')}>Whatsapp</MainButton>
                 </Stack>
             </Flex>
 

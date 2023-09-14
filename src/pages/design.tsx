@@ -309,7 +309,7 @@ export default function Design() {
                                     <HStack><Asterisk/> <Text>Apresentação e materiais gráficos</Text></HStack>
                                 </Stack>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
-                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
                                     Crie o seu
                                 </MainButton>
                             </Stack>

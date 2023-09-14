@@ -197,7 +197,7 @@ export default function Home() {
                                 
                                 <Text color="gray.500">Construímos junto com você o seu negócio dentro do digital, como um e-commerce, SaaS, aplicativo, e entre outros.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
-                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus! Tenho o interesse em desenvolver um sistema personalizado que atenda às demandas específicas da minha empresa.`, '_blank')}>
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís! Tenho o interesse em desenvolver um sistema personalizado que atenda às demandas específicas da minha empresa.`, '_blank')}>
                                     Desenvolva o seu
                                 </MainButton>
                             </Stack>
@@ -238,7 +238,7 @@ export default function Home() {
                                 
                                 <Text color="gray.500">Podemos criar tudo aquilo que for necessário para engajar o usuário dentro do seu site, entendemos ele como ninguém e entregamos as melhores funcionalidades. Sites desenvolvidos por nós só conhecem alta velocidade e performance.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>}
-                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
+                                onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís!\nGostaria de criar meu site personalizado e feito a mão.Olá Mateus! Estou interessado em desenvolver um site personalizado e exclusivo, criado sob medida para atender às minhas necessidades.`, '_blank')}>
                                     Crie o seu
                                 </MainButton>
                             </Stack>
@@ -261,7 +261,7 @@ export default function Home() {
                                 }
                                 <Text color="gray.500">Posicionamos estrategicamente o seu negócio no digital para ter o maior alcance ao público alvo, aumentando suas vendas e engajamento para sua marca. Com maior visibilidade, atraia novos clientes e fortaleça o relacionamento com os atuais.</Text>
                                 <MainButton leftIcon={<Icon as={Whatsapp} fontSize={"16px"}/>} 
-                                    onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551991090700&text=Olá Mateus! Estou interessado em investir estrategicamente em tráfego pago para potencializar o reconhecimento da minha marca e impulsionar o crescimento do meu negócio.`, '_blank')}>
+                                    onClick={() => window.open(`https://api.whatsapp.com/send?phone=5551994720653&text=Olá Thaís! Estou interessado em investir estrategicamente em tráfego pago para potencializar o reconhecimento da minha marca e impulsionar o crescimento do meu negócio.`, '_blank')}>
                                         Invista agora
                                 </MainButton>
                             </Stack>
