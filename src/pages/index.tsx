@@ -142,7 +142,7 @@ export default function Home() {
                                 <Text color="gray.300">Destaque-se na internet, demonstre a sua autoridade e crie conexão com os seus clientes.</Text>
 
                                 <HStack spacing="8">
-                                    <MainButton rightIcon={<Icon as={ArrowUpRight} fill={"#fff"} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
+                                    <MainButton rightIcon={<Icon as={ArrowUpRight} fontSize={"20px"}/>} onClick={() => router.push('/contato')}>Contratar</MainButton>
                                     <Button variant='link' color="white" fontWeight={"normal"} transition="all ease 0.5s" onClick={() => router.push('/#services')}>Ver soluções</Button>
                                 </HStack>
                             </Stack>
