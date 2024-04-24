@@ -39,7 +39,7 @@ import { useRouter } from 'next/router';
 import { Services } from '../sections/services';
 import { ProductAnimationMobile } from '../components/ProductAnimation/ProductAnimationMobile';
 import { AdsAnimationMobile } from '../components/AdsAnimation/AdsAnimationMobile';
-import { Customers } from '../sections/customers';
+import { Customers } from '../sections/customersOld';
 import { Purpose } from '../sections/purpose';
 import { OurWork } from '../sections/ourWork';
 import { ListMethodsHorizontal } from '../sections/listMethodsHorizontal';

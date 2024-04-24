@@ -47,9 +47,9 @@ export function Footer(){
 
                             <Stack>
                                 <Text fontSize={"14px"} color="gray.700">Whatsapp</Text>
-                                <Link href={"https://api.whatsapp.com/send?phone=5551994720653"} target="_blank">
+                                <Link href={"https://api.whatsapp.com/send?phone=5551998154553"} target="_blank">
                                     <Text w="fit-content" color="white" _hover={{color:"white", _before: { bg: "white", transition:"all ease 0.3s"}}} transition={"all ease 0.3s"} pos="relative" _before={{content: '""', pos:"absolute", width: "100%", bottom: "-1", h: "1px", bg: "gray.800", transition:"all ease 0.3s"}}>
-                                        (51) 99472-0653
+                                        (51) 99815-4553
                                     </Text>
                                 </Link>
                             </Stack>

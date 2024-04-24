@@ -3,9 +3,9 @@ import { ColoredTag } from "../components/ColoredTag";
 import { OutlineButton } from "../components/Buttons/OutlineButton";
 import { useRouter } from "next/router";
 
-import DevIcon from '../../public/dev.svg';
-import AdsIcon from '../../public/ads.svg';
-import Ui from '../../public/ui.svg';
+import DevIcon from '../../public/job3.svg';
+import AdsIcon from '../../public/job2.svg';
+import Ui from '../../public/job1.svg';
 import { useEffect, useRef, useState } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
@@ -79,10 +79,10 @@ export function Services(){
                 <Stack pt="0" spacing="20" direction={["column", "column", "row", "row"]} alignItems={""}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" justifyContent={"center"} className="sectionFade">
                         <Stack spacing="6">
-                            <TextTag>O Trabalho</TextTag>
+                            <TextTag>Nossa Metodologia</TextTag>
                             <StarDivider maxW="120px"/>
                         </Stack>
-                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>Soluções digitais para:</Heading>
+                        <Heading color="white" fontSize="6xl" fontWeight={"semibold"}>Priorizamos Resultados Palpáveis</Heading>
 
                         <Stack spacing={["6","6","4","4","4","10"]}>
                             <HStack onClick={() => handleSwitchService(1)} pos="relative" className="serviceItem" role="group" border="1px solid" borderColor={activeItem === 1 ? "transparent" : "rgba(255,255,255,0.1)"} color={activeItem === 1 ? "white" : ""} bg={"transparent"} w="100%" justifyContent={"space-between"} p="4" px="6" cursor={"pointer"} _hover={{borderColor: "transparent", color: "white", transition: "all ease .5s"}} transition="all ease .5s">
@@ -92,7 +92,7 @@ export function Services(){
                                         <Icon as={Ui} fontSize={"40px"}/>
                                     </Flex>
                                     {/* <Ui/> */}
-                                    <Text>UI/UX Design</Text>
+                                    <Text>Agilidade de Execução</Text>
                                 </HStack>
                                 <Flex zIndex={1}>
                                     <ArrowRight/>
@@ -106,7 +106,7 @@ export function Services(){
                                         <Icon as={AdsIcon} fontSize={"40px"}/>
                                     </Flex>
                                     {/* <Ui/> */}
-                                    <Text>Tráfego pago</Text>
+                                    <Text>Gestão de Resultados</Text>
                                 </HStack>
                                 <Flex zIndex={1}>
                                     <ArrowRight/>
@@ -120,7 +120,7 @@ export function Services(){
                                         <Icon as={DevIcon} fontSize={"40px"}/>
                                     </Flex>
                                     {/* <Ui/> */}
-                                    <Text>Desenvolvimento</Text>
+                                    <Text>Melhoria Continua</Text>
                                 </HStack>
                                 <Flex zIndex={1}>
                                     <ArrowRight/>
@@ -133,37 +133,37 @@ export function Services(){
                         
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 1 ? "visible" : "hidden"} opacity={activeItem === 1 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
-                                <Heading color="white" fontSize={"2xl"}>Design de</Heading>
-                                <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading>
+                                <Heading color="white" fontSize={"2xl"}>Agilidade</Heading>
+                                <Heading color="purple.500" fontSize={"2xl"}>na Execução</Heading>
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Desenvolvemos telas coerentes para proporcionar a melhor experiência aos seus usuários, com o objetivo de transmitir de forma correta as ideias e sensações da sua marca.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Priorizamos pela execução ágil, não brincamos com o dinheiro do cliente ou deixamos dinheiro onde não da resultado.</Text>     
                         
-                            <Link href="/design">
+                            {/* <Link href="/design">
                                 <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
-                            </Link>
+                            </Link> */}
                         </Stack> 
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 2 ? "visible" : "hidden"} opacity={activeItem === 2 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
-                                <Heading color="blue.400" fontSize={"2xl"}>Tráfego</Heading>
-                                <Heading color="white" fontSize={"2xl"}>pago</Heading>
+                                <Heading color="blue.400" fontSize={"2xl"}>Resultados</Heading>
+                                <Heading color="white" fontSize={"2xl"}>Visiveis</Heading>
                                 {/* <Heading color="purple.500" fontSize={"2xl"}>Interfaces</Heading> */}
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Posicionamos e direcionamos a sua empresa ao público certo, para impulsionar as suas vendas e visibilidade pelos meios digitais.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Buscamos gerar bons resultados e principalmente que pagem o investimento e gerem resultados superiores ao esperado.</Text>     
                         
-                            <Link href="/trafego">
+                            {/* <Link href="/trafego">
                                 <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
-                            </Link>
+                            </Link> */}
                         </Stack>
                         <Stack maxW="300px" h="360px" pt="20" spacing="5" justifyContent={"right"} visibility={activeItem === 3 ? "visible" : "hidden"} opacity={activeItem === 3 ? "1" : 0} transition="all ease .5s">
                             <HStack justifyContent={"right"} alignItems={"flex-end"} pt="16">
-                                <Heading color="white" fontSize={"2xl"}>Desenvolvimento</Heading>
+                                <Heading color="white" fontSize={"2xl"}>Ajustes diários</Heading>
                                 
                             </HStack>
-                            <Text color="white" fontWeight={"regular"} maxW="280px">Programamos a sua plataforma digital com todas as interações e transações necessárias para interligar a sua equipe ao seu consumidor final, sempre com alta performance e segurança.</Text>     
+                            <Text color="white" fontWeight={"regular"} maxW="280px">Temos uma rotina diária de acompanhamento do seu negócio, analisando a performance e como podemos manter e melhorar o fluxo de recebimento de clientes.</Text>     
                         
-                            <Link href="/desenvolvimento">
+                            {/* <Link href="/desenvolvimento">
                                 <Button alignSelf={"flex-end"} rightIcon={<Icon as={ArrowUpRight}/>} w="fit-content" p="0" pt="10" bg="transparent" color="white" _hover={{bg: "transparent"}} _focus={{bg: "transparent"}}>Explorar agora</Button>
-                            </Link>
+                            </Link> */}
                         </Stack>
                     </Stack>
 

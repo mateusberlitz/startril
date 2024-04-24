@@ -15,11 +15,11 @@ export function OurWork(){
                 <Stack pt="24" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
-                            <TextTag>Aonde Atuamos</TextTag>
+                            <TextTag>Como trabalhamos</TextTag>
                             <StarDivider maxW="120px"/>
                         </Stack>
-                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>A etapa inicial das suas vendas pela internet</Heading>
-                        <Text color="gray.500">Construa ou aprimore seu processo de captação e vendas pela internet através de tráfego e aplicações.</Text>
+                        <Heading color="white" fontSize={isWideVersion ? "6xl" : "4xl"}  fontWeight={"semibold"}>Os pilares do nosso método</Heading>
+                        <Text color="gray.500">Metodologia validada e um processo quase como científico.</Text>
 
                     </Stack>
 

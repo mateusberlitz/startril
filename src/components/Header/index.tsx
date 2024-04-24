@@ -71,8 +71,8 @@ export function Header(){
                         <HStack spacing="7">
                             <Link href="/"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Home</Text></Link>
                             <Link href="/sobre"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Sobre nós</Text></Link>
-                            <Link href="/#services"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Soluções</Text></Link>
-                            <Link href="/blog"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Blog</Text></Link>
+                            {/* <Link href="/#services"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Soluções</Text></Link> */}
+                            {/* <Link href="/blog"><Text _hover={{color: colorMode === "dark" ? "white" : "gray.700"}} transition="all ease 0.5s">Blog</Text></Link> */}
 
                             {/* <Text fontWeight={"regular"} color="gray.600">|</Text>
                             <HStack>
@@ -81,7 +81,9 @@ export function Header(){
                                 <Text onClick={() => setIsPortugueseLanguage(false)} cursor="pointer" color={!isPortugueseLanguage ? "white" : ""}>EN</Text>
                             </HStack> */}
                             
-                            <OutlineButton onClick={() => router.push("/contato")} size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
+                            <Link href="https://api.whatsapp.com/send?phone=5551998154553">
+                                <OutlineButton  size="lg" hasAnimation={true}>Iniciar Projeto</OutlineButton>
+                            </Link>
                         </HStack>
                     ) : (
                         <>
