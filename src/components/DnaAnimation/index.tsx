@@ -42,11 +42,11 @@ export function DnaAnimation(){
     }, [])
 
     return(
-        <Stack spacing="3" className={styles.dnaAnimation}>
+        <Stack scale={[0.5,0.8,1,1,1]} spacing="3" className={styles.dnaAnimation}>
             {
                 rows.map((row, index) => {
                     return(
-                        <Flex key={`dna_line_${index}`} w="200px" h="2px" bg="gradient" opacity="0.4" justifyContent={"space-between"} 
+                        <Flex key={`dna_line_${index}`} w={["200px","200px","200px","200px"]} h="2px" bg="gradient" opacity="0.4" justifyContent={"space-between"} 
                         _after={{content: "''", h: "8px", w: "5px", borderRadius: "6px", bg: "gradient", display: "block", transform : "translateY(-2px)"}}
                         _before={{content: "''", h: "8px", w: "5px", borderRadius: "6px", bg: "gradient", display: "block", transform : "translateY(-2px)"}}/>
                     )

@@ -12,7 +12,7 @@ export function OurWork(){
     return(
         <Flex w="100%" bg="#080510">
             <Stack px="6" w="100%" maxW="1200px" m="0 auto" py="20" spacing="0">
-                <Stack pt="24" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
+                <Stack pt="0" spacing="20" pos="relative" direction={["column", "column", "row", "row"]}>
                     <Stack w={["100%", "100%", "50%", "50%"]} spacing="12" className="sectionFade">
                         <Stack spacing="6">
                             <TextTag>Como trabalhamos</TextTag>

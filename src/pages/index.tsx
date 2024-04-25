@@ -160,7 +160,7 @@ export default function Home() {
                 <Purpose/>
 
                 <Flex w="100%" pos="relative">
-                    <Box w="100%" h="120px" pos="absolute" bg="linear-gradient(180deg, rgba(14, 17, 25, 0) 0%, #080510 100%);" bottom="0"/>
+                    {/* <Box w="100%" h="120px" pos="absolute" bg="linear-gradient(180deg, rgba(14, 17, 25, 0) 0%, #080510 100%);" bottom="0"/> */}
 
                     <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb={["0","20","20","32","40"]} spacing="0">
 
@@ -194,7 +194,13 @@ export default function Home() {
 
                             </Stack>
 
-                            <Divider orientation='vertical' h="650px" />
+                            {
+                                isWideVersion ? (
+                                    <Divider orientation={'vertical'} h="650px" />
+                                ):(
+                                    <Divider orientation={'horizontal'} w="100%" />
+                                )
+                            }
 
                             <Stack w={["100%", "100%", "50%", "50%"]} textAlign={"center"}>
                                 <Box padding={"5"} bg="linear-gradient(90deg, rgba(59, 161, 240, 0.25) -1.31%, rgba(114, 96, 223, 0.25) 91.65%);" borderRadius={"10px"}>
@@ -229,14 +235,14 @@ export default function Home() {
                             </Stack>
                         </Stack>
 
-                        <Box w={"100%"} textAlign={"center"}>
-                            <Heading fontSize={"3xl"} color={"#ffffff"} mt={"70px"} textDecoration={"underline"}>Qual empresa você prefere para ser seu parceiro estratégico?</Heading>
+                        <Box w={"100%"} textAlign={"center"} pb="20">
+                            <Heading fontSize={["2xl","3xl","3xl"]} color={"#ffffff"} mt={"70px"} textDecoration={"underline"}>Qual empresa você prefere para ser seu parceiro estratégico?</Heading>
                         </Box>
 
 
 
                         <Box w="100%" textAlign={"center"}>
-                            <Heading fontSize={"5xl"} color={"#ffffff"} fontWeight={"bold"} mt={"70px"}>Mostramos o seu produto/serviço para o cliente ideal e <Text as={"span"} color={"#7260DF"}>geramos urgência</Text> para ele comprar.</Heading>
+                            <Heading fontSize={["3xl","4xl","5xl"]} color={"#ffffff"} fontWeight={"bold"} mt={"70px"}>Mostramos o seu produto/serviço para o cliente ideal e <Text as={"span"} color={"#7260DF"}>geramos urgência</Text> para ele comprar.</Heading>
                         </Box>
 
                     </Stack>
@@ -255,7 +261,7 @@ export default function Home() {
                 <Flex w="100%" pos="relative">
                     <Box w="100%" h="120px" pos="absolute" bg="linear-gradient(180deg, rgba(14, 17, 25, 0) 0%, #080510 100%);" bottom="0"/>
 
-                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="20" pb={["0","20","20","32","40"]} spacing="0">
+                    <Stack px="6" w="100%" maxW="1200px" m="0 auto" pt="5" pb={["0","20","20","32","40"]} spacing="0">
 
                         <Stack w={"100%"} direction={["column", "column", "row", "row"]}>
                             <Stack zIndex={3} backdropFilter={"blur(15px)"} spacing="8" bg="rgba(255,255,255,0.03)" w={["100%","100%","25%","25%"]} p="10" border="0px solid" borderColor="gray.900" _hover={{boxShadow: "0px 0px 130px 0px rgba(123,69,173,0.1)", transform: "translate(0px, -10px)", background: "#5545B5"}} transition="all ease 0.5s">
@@ -379,7 +385,7 @@ export default function Home() {
                             </HStack>
                         </Stack> */}
 
-                        <Stack pt="32" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
+                        <Stack pt="0" spacing="20" direction={["column", "column", "row", "row"]} className="sectionFade">
                             <HStack w={["100%", "100%", "50%", "50%"]}>
                                 {
                                     isWideVersion && (
